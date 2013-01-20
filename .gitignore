@@ -4,15 +4,13 @@ protected/runtime/*
 themes/classic/views/
 .idea/
 
-^\.idea/.*
-^webstat/.*
-^nbproject/.*
 
-^admin/www/assets/\w.*
-^admin/runtime/\w.*
-^frontend/www/assets/\w.*
-^frontend/runtime/\w.*
-^console/runtime/\w.*
-^data/.*/\w+
-^frontend/www/css/compiled/\w.*
-^admin/www/css/compiled/\w.*
+
+admin/www/assets/*
+admin/runtime/*
+frontend/www/assets/*
+frontend/runtime/*
+console/runtime/*
+data/*
+frontend/www/css/compiled/*
+admin/www/css/compiled/*

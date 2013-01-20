@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /rating-mak/
+Sitemap: http://luk.org.ua/sitemap.xml

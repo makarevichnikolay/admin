@@ -1,0 +1,96 @@
+2013/01/15 20:43:47 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in Z:\home\localhost\www\framework\YiiBase.php:193
+Stack trace:
+#0 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(148): YiiBase::createComponent(Array, 'migrate', Object(CConsoleCommandRunner))
+#1 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(64): CConsoleCommandRunner->createCommand('migrate')
+#2 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#4 Z:\home\localhost\www\yii-admin\console\yiic.php(20): CApplication->run()
+#5 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 20:43:47 [error] [exception.CException] exception 'CException' with message 'Object configuration must be an array containing a "class" element.' in Z:\home\localhost\www\framework\YiiBase.php:193
+Stack trace:
+#0 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(148): YiiBase::createComponent(Array, 'migrate', Object(CConsoleCommandRunner))
+#1 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(64): CConsoleCommandRunner->createCommand('migrate')
+#2 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#4 Z:\home\localhost\www\yii-admin\console\yiic.php(20): CApplication->run()
+#5 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/17 21:14:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'menu_items' already exists. The SQL statement executed was: CREATE TABLE `menu_items` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`menu_id` int(11) NOT NULL,
+	`parent_id` int(11) NOT NULL,
+	`position` int(11) NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`module_id` int(11) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`show` tinyint(1) NOT NULL
+).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1321)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (228)
+2013/01/17 21:14:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'menu_items' already exists. The SQL statement executed was: CREATE TABLE `menu_items` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`menu_id` int(11) NOT NULL,
+	`parent_id` int(11) NOT NULL,
+	`position` int(11) NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`module_id` int(11) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`show` tinyint(1) NOT NULL
+)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('menu_items', Array, NULL)
+#2 Z:\home\localhost\www\yii-admin\common\migrations\m130115_165234_create_table_menu_items.php(16): CDbMigration->createTable('menu_items', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130115_165234_create_table_menu_items->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130115_165234_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\yii-admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/17 21:14:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'menu_items' already exists. The SQL statement executed was: CREATE TABLE `menu_items` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`menu_id` int(11) NOT NULL,
+	`parent_id` int(11) NOT NULL,
+	`position` int(11) NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`module_id` int(11) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`show` tinyint(1) NOT NULL
+).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1321)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (228)
+2013/01/17 21:14:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'menu_items' already exists. The SQL statement executed was: CREATE TABLE `menu_items` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`menu_id` int(11) NOT NULL,
+	`parent_id` int(11) NOT NULL,
+	`position` int(11) NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`module_id` int(11) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`show` tinyint(1) NOT NULL
+)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('menu_items', Array, NULL)
+#2 Z:\home\localhost\www\yii-admin\common\migrations\m130115_165234_create_table_menu_items.php(16): CDbMigration->createTable('menu_items', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130115_165234_create_table_menu_items->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130115_165234_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\yii-admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

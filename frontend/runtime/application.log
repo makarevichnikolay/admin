@@ -1,0 +1,1276 @@
+2013/01/14 14:48:38 [trace] [system.CModule] Loading "request" application component
+in Z:\home\localhost\www\framework\YiiBase.php (446)
+in Z:\home\localhost\www\framework\base\CModule.php (384)
+in Z:\home\localhost\www\framework\base\CModule.php (103)
+2013/01/14 14:48:38 [trace] [system.CModule] Loading "assetManager" application component
+in Z:\home\localhost\www\framework\YiiBase.php (446)
+in Z:\home\localhost\www\framework\base\CModule.php (384)
+in Z:\home\localhost\www\framework\base\CModule.php (103)
+2013/01/14 14:48:38 [trace] [system.CModule] Loading "log" application component
+in Z:\home\localhost\www\framework\YiiBase.php (446)
+in Z:\home\localhost\www\framework\base\CModule.php (384)
+in Z:\home\localhost\www\framework\base\CModule.php (523)
+2013/01/14 14:48:38 [trace] [system.CModule] Loading "less" application component
+in Z:\home\localhost\www\framework\YiiBase.php (446)
+in Z:\home\localhost\www\framework\base\CModule.php (384)
+in Z:\home\localhost\www\framework\base\CModule.php (523)
+2013/01/14 14:48:38 [trace] [system.CModule] Loading "coreMessages" application component
+in Z:\home\localhost\www\framework\YiiBase.php (446)
+in Z:\home\localhost\www\framework\base\CModule.php (384)
+in Z:\home\localhost\www\framework\YiiBase.php (577)
+2013/01/14 14:48:38 [trace] [system.CModule] Loading "errorHandler" application component
+in Z:\home\localhost\www\framework\YiiBase.php (446)
+in Z:\home\localhost\www\framework\base\CModule.php (384)
+in Z:\home\localhost\www\framework\base\CApplication.php (447)
+2013/01/14 17:22:53 [error] [php] include(protected/components/Frontend/URLRule.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:395)
+Stack trace:
+#0 Z:\home\localhost\www\framework\YiiBase.php(196): import()
+#1 Z:\home\localhost\www\framework\web\CUrlManager.php(366): createComponent()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl()
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#4 Z:\home\localhost\www\yii-admin\frontend\www\index.php(22): FWebApplication->run()
+REQUEST_URI=/yii-admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (395)
+in Z:\home\localhost\www\framework\YiiBase.php (395)
+2013/01/14 17:24:41 [error] [exception.CException] exception 'CException' with message 'Псевдоним "Pages.PagesModule" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\YiiBase.php(196): YiiBase::import('Pages.PagesModu...', true)
+#1 Z:\home\localhost\www\framework\base\CModule.php(282): YiiBase::createComponent('Pages.PagesModu...', 'Pages', NULL, Array)
+#2 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(6): CModule->getModule('Pages')
+#3 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(25): URLRule::getModuleComponent('Pages')
+#4 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 Z:\home\localhost\www\yii-admin\frontend\www\index.php(22): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:26:58 [error] [exception.CException] exception 'CException' with message 'Псевдоним "Pages.PagesModule" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\YiiBase.php(196): YiiBase::import('Pages.PagesModu...', true)
+#1 Z:\home\localhost\www\framework\base\CModule.php(282): YiiBase::createComponent('Pages.PagesModu...', 'Pages', NULL, Array)
+#2 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(6): CModule->getModule('Pages')
+#3 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(25): URLRule::getModuleComponent('Pages')
+#4 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:29:59 [error] [exception.CException] exception 'CException' with message 'Псевдоним "Pages.PagesModule" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\YiiBase.php(196): YiiBase::import('Pages.PagesModu...', true)
+#1 Z:\home\localhost\www\framework\base\CModule.php(282): YiiBase::createComponent('Pages.PagesModu...', 'Pages', NULL, Array)
+#2 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(6): CModule->getModule('Pages')
+#3 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(25): URLRule::getModuleComponent('Pages')
+#4 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:30:00 [error] [exception.CException] exception 'CException' with message 'Псевдоним "Pages.PagesModule" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\YiiBase.php(196): YiiBase::import('Pages.PagesModu...', true)
+#1 Z:\home\localhost\www\framework\base\CModule.php(282): YiiBase::createComponent('Pages.PagesModu...', 'Pages', NULL, Array)
+#2 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(6): CModule->getModule('Pages')
+#3 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(25): URLRule::getModuleComponent('Pages')
+#4 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:36:02 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.modules.Pages.ModulePages" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\YiiBase.php(196): YiiBase::import('common.modules....', true)
+#1 Z:\home\localhost\www\framework\base\CModule.php(282): YiiBase::createComponent('common.modules....', 'Pages', NULL, Array)
+#2 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(6): CModule->getModule('Pages')
+#3 Z:\home\localhost\www\yii-admin\frontend\components\URLRule.php(25): URLRule::getModuleComponent('Pages')
+#4 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#8 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:36:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:38:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:39:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:40:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:42:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:43:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:44:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:44:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:48:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:48:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:48:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:48:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 17:50:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:04:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:04:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:07:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:07:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:10:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:10:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:12:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:13:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:13:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:13:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Main/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:13:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:14:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:14:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:14:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:16:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:16:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:16:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:16:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:18:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:18:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:18:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:18:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:19:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:19:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:19:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:19:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:20:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:20:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:20:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:20:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Pages/FrontendPages/index?id=2887
+HTTP_REFERER=http://localhost/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Pages/FrontendPages/index?id=2887
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/Pages/FrontendPages/index?id=2887
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:31:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:31:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/14 18:31:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/test
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:27:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/my
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:34:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/my
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:34:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:37:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/my
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:37:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:38:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:39:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:39:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:39:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:40:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:40:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:40:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:42:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:42:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:42:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:43:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:43:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:43:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:43:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:43:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:43:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:46:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:46:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:46:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:46:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:46:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:46:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController(NULL)
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Gii".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/styles.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/styles.css')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Gii".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/styles.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/styles.css')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Gii".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/styles.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/styles.css')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:47:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Gii".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/styles.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/styles.css')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Gii".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/styles.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/styles.css')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Gii".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/styles.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/styles.css')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Gii".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Gii')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/styles.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/styles.css')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/css/styles.css
+HTTP_REFERER=http://localhost/yii-admin/Gii
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 13:48:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/15 20:15:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\yii-admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

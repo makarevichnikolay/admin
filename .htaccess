@@ -1,0 +1,19 @@
+AddDefaultCharset utf-8
+
+php_value upload_max_filesize 20M
+php_value post_max_size 20M
+php_flag display_errors On
+php_value error_reporting 32767
+
+RewriteEngine on
+
+RewriteRule ^data	- [L]
+RewriteRule ^files	- [L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteRule ^admin/(.*)$ admin/www/$1 [L]
+
+RewriteCond %{REQUEST_URI} !^frontend
+RewriteRule ^(.*)$ frontend/www/$1 [L]

@@ -1,0 +1,30 @@
+syntax:glob
+
+#Mac OS X files
+.DS_Store
+
+#Linux files
+.directory
+
+syntax:regexp
+
+# IDEs
+^\.idea/.*
+^webstat/.*
+^nbproject/.*
+
+# .empty files for empty folders
+^admin/www/assets/\w.*
+^admin/runtime/\w.*
+^frontend/www/assets/\w.*
+^frontend/runtime/\w.*
+^console/runtime/\w.*
+^data/.*/\w+
+^frontend/www/css/compiled/\w.*
+^admin/www/css/compiled/\w.*
+
+# configs
+^common/config/local.php$
+
+
+

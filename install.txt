@@ -1,0 +1,26 @@
+1. run bin/init.sh (*nix only)
+2. copy common/config/main.local.demo.php => common/config/main.local.php
+   configure DB access and path to Yii
+
+Project setup:
+exclude from indexing:
+- admin/runtime
+- admin/www/assets
+- console/runtime
+- frontend/runtime
+- frontend/www/assets
+
+also in yii framework
+- cli/views
+- yii.php
+- yiilite.php
+
+see also 
+http://www.yiiframework.com/wiki/92/configuring-phpstorm-ide-for-yii/
+http://yiiframework.ru/doc/cookbook/ru/ide
+
+Requirements:
+- PHP 5.2.x
+- GD
+- MySQL + PDO
+

@@ -1,9 +1,7 @@
-
 assets/*
 protected/runtime/*
 themes/classic/views/
 .idea/
-
 admin/www/assets/*
 admin/runtime/*
 frontend/www/assets/*

@@ -13,9 +13,11 @@ class m130115_165234_create_table_menu_items extends CDbMigration
             'module_id' => 'integer NOT NULL',
             'url' => 'string NOT NULL',
             'show' => 'boolean NOT NULL',
+            'role'=>'string NOT NULL',
         ));
         $this->createIndex('menu_id', 'menu_items', 'menu_id');
         $this->createIndex('parent_id', 'menu_items', 'parent_id');
+        $this->insert('menu_items',array('title'=>'menu','url'=>'admin/Menu/AdminMenu'));
 	}
 
 	public function down()

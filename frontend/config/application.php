@@ -5,7 +5,7 @@ define('BASE_URL_REGEXP', '|/[^/]+?/[^/]+?$|');
 
 return array(
 
-	'name'=>'test site',
+	'name'=>'Site',
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'language' => 'ru',
 	'preload' => array('bootstrap'),

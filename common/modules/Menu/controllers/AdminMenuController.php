@@ -11,7 +11,7 @@ class AdminMenuController extends Controller
 
     public function actionCreate(){
         $model = new MenuItems();
-
+        $url = $this->createUrl('/Menu/AdminMenu/Create');
         $this->performAjaxValidation($model);
 
             if(Yii::app()->getRequest()->getIsAjaxRequest()){
@@ -21,10 +21,10 @@ class AdminMenuController extends Controller
                         $model->save();
                         echo CJSON::encode(array('result'=>'save'));
                     }else{
-                        echo CJSON::encode(array('result'=>$this->renderPartial('create',array('model'=>$model),true,true)));
+                        echo CJSON::encode(array('result'=>$this->renderPartial('_form',array('model'=>$model,'url'=>$url),true,true)));
                     }
                 }else{
-                    $this->renderPartial('create',array('model'=>$model),false,true);
+                    $this->renderPartial('_form',array('model'=>$model,'url'=>$url),false,true);
                 }
                 Yii::app()->end();
             }
@@ -32,7 +32,7 @@ class AdminMenuController extends Controller
 
     public function actionUpdate($id){
         $model=$this->loadModel($id);
-
+        $url = $this->createUrl('/Menu/AdminMenu/Update',array('id'=>$id));
         $this->performAjaxValidation($model);
 
         if(Yii::app()->getRequest()->getIsAjaxRequest()){
@@ -42,10 +42,10 @@ class AdminMenuController extends Controller
                     $model->save();
                     echo CJSON::encode(array('result'=>'save'));
                 }else{
-                    echo CJSON::encode(array('result'=>$this->renderPartial('create',array('model'=>$model),true,true)));
+                    echo CJSON::encode(array('result'=>$this->renderPartial('_form',array('model'=>$model,'url'=>$url),true,true)));
                 }
             }else{
-                $this->renderPartial('update',array('model'=>$model),false,true);
+                $this->renderPartial('_form',array('model'=>$model,'url'=>$url),false,true);
             }
             Yii::app()->end();
         }
@@ -74,9 +74,9 @@ class AdminMenuController extends Controller
          foreach($data as $val){
              if($val->parent_id == $id){
                  if($children = $this->getChildrenRecursiveJSON($data,$val->id)){
-                     $child [] = array('id'=>$val->id,'label'=>$val->title,'children'=>$children);
+                     $child [] = array('id'=>$val->id,'label'=>$val->title, 'url'=>Yii::app()->createUrl($val->url),'children'=>$children);
                  }else{
-                     $child [] = array('id'=>$val->id,'label'=>$val->title);
+                     $child [] = array('id'=>$val->id,'label'=>$val->title,'url'=>Yii::app()->createUrl($val->url),);
                  }
              }
          }

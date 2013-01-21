@@ -1274,3 +1274,351 @@ REQUEST_URI=/yii-admin/assets/lib/bootstrap/less/mixins.less
 HTTP_REFERER=http://localhost/yii-admin/assets/e3ecaab1/css/yii.css
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:52:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\localhost\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendP...')
+#5 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#7 {main}
+REQUEST_URI=/admin/Pages/FrontendPages/index?id=2887
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "site/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/site/index
+HTTP_REFERER=http://localhost/admin/Pages/FrontendPages/index?id=2887
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:54:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:56:15 [error] [php] include(hURLRule.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\framework\YiiBase.php(196): import()
+#1 Z:\home\localhost\www\framework\web\CUrlManager.php(366): createComponent()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl()
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Default/index
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/01/21 11:56:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:59:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:59:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 11:59:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 12:00:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 12:00:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 12:00:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 12:00:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 13:52:24 [error] [php] include(AdminController.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminPageTypesController.php(4): spl_autoload_call()
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(354): require()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(338): FWebApplication->createController()
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(276): FWebApplication->createController()
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#5 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#6 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/AdminPageTypes/index
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/01/21 18:39:00 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:39:49 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:39:51 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:40:21 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:40:25 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:40:31 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:40:33 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:40:36 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:40:42 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/21 18:40:45 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

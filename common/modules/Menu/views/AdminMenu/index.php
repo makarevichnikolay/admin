@@ -26,7 +26,7 @@ $this->breadcrumbs=array(
 </div>
 
 <div class="cf nestable-lists">
-    <div class="dd" id="nestable"></div>
+
 </div>
 
 <script>
@@ -35,19 +35,19 @@ $this->breadcrumbs=array(
            {tag:'ol',class:'dd-list',children:function() {return($.json2html(this.dd_item,transforms.dd_item));}}
        ],
        children:[
-           {tag:'div',class:'dd-handle',html:'<span class="label label-info">${label}</span>'},
+           {tag:'div',class:'dd-handle',html:'<span class="text-info">${label}</span> <span class="muted">URL: ${url}</span>'},
            {tag:'div',class:'dd-control',html:'<div class="pull-right">' +
-                   '<button class="btn btn-mini btn-info" type="button" onclick="openUpdate(${id});">' +
-                   '<i class="icon-pencil icon-eye-open icon-white"></i></button> ' +
+                   '<a href="${url}" class="btn btn-mini btn-info" target="_blank" >' +
+                   '<i class="icon-pencil icon-eye-open icon-white"></i></a> ' +
                    '<button class="btn btn-mini btn-success" type="button" onclick="openUpdate(${id});">' +
                    '<i class="icon-pencil icon-white"></i></button> ' +
                    '<button class="btn btn-mini btn-danger" type="button"><i class="icon-remove icon-white"></i></button></div>'}
        ],
        children_list:[
-           {tag:'div',class:'dd-handle',html:'<span class="label label-info">${label}</span>'},
+           {tag:'div',class:'dd-handle',html:'<span class="text-info">${label}</span> <span class="muted">URL: ${url}</span>'},
            {tag:'div',class:'dd-control',html:'<div class="pull-right">' +
-                   '<button class="btn btn-mini btn-info" type="button" onclick="openUpdate(${id});">' +
-                   '<i class="icon-pencil icon-eye-open icon-white"></i></button> ' +
+                   '<a href="${url}" class="btn btn-mini btn-info" type="button" target="_blank">' +
+                   '<i class="icon-pencil icon-eye-open icon-white"></i></a> ' +
                    '<button class="btn btn-mini btn-success" type="button" onclick="openUpdate(${id});">' +
                    '<i class="icon-pencil icon-white"></i></button> ' +
                    '<button class="btn btn-mini btn-danger" type="button"><i class="icon-remove icon-white"></i></button></div>'},
@@ -64,24 +64,32 @@ $this->breadcrumbs=array(
             url: url
         }).done(function( data ) {
                   $('#result').html(data);
-                    showHideModal();
+                    adminModal('show');
                 });
         return false;
     }
 
     function openUpdate(id){
-        alert(id);
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->createUrl('/Menu/AdminMenu/Update'); ?>"+'/?id='+id
+        }).done(function( data ) {
+                $('#result').html(data);
+                adminModal('show');
+            });
+        return false;
     }
-
     function renderMenu(){
         $.ajax({
             type: "POST",
             url: '<?php echo $this->createUrl('/Menu/AdminMenu/GetMenuJSON') ?>'
         }).done(function( data ) {
-                    $('#nestable').html('')
+                $('#nestable').remove();
+                $('.nestable-lists').append('<div class="dd" id="nestable"></div>');
+                    $('#nestable')
                       .json2html(data,transforms.dd_list)
-                      .nestable({group: 1
-                                })
+                      .nestable({group: 1})
+                      .on('change', function(){sendMenu();});
         });
     }
 
@@ -95,17 +103,21 @@ $this->breadcrumbs=array(
    }
 
 
- function showHideModal(){
-     $('.admin-modal').toggleClass('in out');
+ function adminModal(params){
+   if(params == 'hide'){
+       $('.admin-modal').toggleClass('in out').hide();
+   }else if(params == 'show'){
+       $('.admin-modal').toggleClass('in out').show();
+   }
+
  }
 
 
     $(document).ready(function()
     {
         renderMenu();
-        $('#nestable').on('change', function(){sendMenu();});
         $('.close').on('click', function () {
-            showHideModal();
+            adminModal('hide');
         });
     });
 </script>

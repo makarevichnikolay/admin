@@ -11,7 +11,9 @@ return array(
     'import'=>array(
         'application.components.*',
     ),
-	'components' => array(
+    'defaultController' => 'Default',
+
+    'components' => array(
 		'errorHandler' => array(
 			'errorAction' => 'Default/error',
 		),

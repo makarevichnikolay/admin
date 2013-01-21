@@ -29,8 +29,7 @@ return array(
         'dataRelPath' => 'data/',
 		'tempRelPath' => 'data/temp/',
 		'dataUserPath' => 'data/users/',
-
-		// @todo why /luk/
+        'defaultModule'=>'Pages'
        
 	),
 

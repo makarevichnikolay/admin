@@ -1,5 +1,4 @@
 <?php
-$cs = Yii::app()->getClientScript();
 Yii::app()->clientScript->scriptMap['jquery.js'] = false;
 ?>
 
@@ -45,7 +44,7 @@ Yii::app()->clientScript->scriptMap['jquery.js'] = false;
                     'label' => 'Сохранить',
                     'type' => 'primary',
                     'size' => 'normal',
-                    'url' => $this->createUrl('/Menu/AdminMenu/Create'),
+                    'url' => $url,
                     'htmlOptions' => array(
                         'id' => 'menu-create',
                         "live" => false
@@ -57,7 +56,7 @@ Yii::app()->clientScript->scriptMap['jquery.js'] = false;
                         'success' => 'js:function(data){
                                           if(data.result==="save"){
                                                renderMenu();
-                                               $(".admin-modal").hide();
+                                               adminModal("hide");
                                            }else{
                                                $("#result").html(data.result);
                                            }

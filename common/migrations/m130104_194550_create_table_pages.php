@@ -1,18 +1,21 @@
 <?php
 
-class m130104_194550_create_table_page extends CDbMigration
+class m130104_194550_create_table_pages extends CDbMigration
 {
 	public function up()
 	{
 		$this->createTable('pages', array(
             'id' => 'pk',
-            'type_id'=>'integer',
-            'url' => 'string NOT NULL',
+            'type_id'=>'int UNSIGNED NOT NULL',
             'title' => 'string NOT NULL',
             'keywords' => 'string NOT NULL',
             'description' => 'string NOT NULL',
+            'url' => 'string NOT NULL',
             'content' => 'text NOT NULL',
-            'publish'=> 'boolean NOT NULL',
+            'image' => 'boolean NOT NULL',
+            'visible'=> 'boolean NOT NULL',
+            'allow_comments'=> 'boolean NOT NULL',
+            'user_id'=>'int UNSIGNED NOT NULL'
         ));
 
 		$this->createIndex('url', 'pages', 'url', true);

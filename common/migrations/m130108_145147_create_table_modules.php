@@ -10,6 +10,7 @@ class m130108_145147_create_table_modules extends CDbMigration
             'title' => 'string NOT NULL',
             'module' => 'string NOT NULL',
             'controller' => 'string NOT NULL',
+            'action' => 'string NOT NULL',
             'view' => 'string NOT NULL',
         ));
         $this->createIndex('url', 'modules', 'url', true);

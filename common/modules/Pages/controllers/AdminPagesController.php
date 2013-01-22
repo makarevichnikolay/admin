@@ -36,8 +36,28 @@ class AdminPagesController extends AdminController
         if(isset($_POST['Pages']))
         {
             $model->attributes=$_POST['Pages'];
-            if($model->save())
+            if($model->save()){
+                if(isset($_POST['image_name_temp']) && !empty($_POST['image_name_temp'])){
+                    $tempPath = Yii::app()->params['tempPath'];
+                    if( file_exists($tempPath.$_POST['image_name_temp'])){
+                        $model->image = true;
+                        $image_name = Yii::app()->params['Pages']['mainImage']['name'];
+                        $model->update(array('image'));
+                        $savePath = Yii::app()->params['dataPath'].'pages/'.$model->id.'/images/main';
+                        if(!is_dir($savePath)){
+                            Yii::app()->file->createDir(0777,$savePath);
+                        }else{
+                            Yii::app()->file->set($savePath)->delete(true);
+                            Yii::app()->file->createDir(0777,$savePath);
+                        }
+                        Yii::app()->file->set($tempPath.$_POST['image_name_temp'])->move($savePath.'/'.$image_name);
+                        //$image = new Image($savePath.'/'.$image_name);
+                        //$image->resize(300, 300)->save($savePath.'/'.$model->image_main );
+                    }
+                }
                 $this->redirect(array('index','id'=>$model->id));
+            }
+
         }
 
         $pageTypes = PageTypes::model()->findAll(array(
@@ -64,8 +84,27 @@ class AdminPagesController extends AdminController
         if(isset($_POST['Pages']))
         {
             $model->attributes=$_POST['Pages'];
-            if($model->save())
+            if($model->save()){
+                if(isset($_POST['image_name_temp']) && !empty($_POST['image_name_temp'])){
+                    $tempPath = Yii::app()->params['tempPath'];
+                    if( file_exists($tempPath.$_POST['image_name_temp'])){
+                        $model->image = true;
+                        $image_name = Yii::app()->params['Pages']['mainImage']['name'];
+                        $model->update(array('image'));
+                        $savePath = Yii::app()->params['dataPath'].'pages/'.$model->id.'/images/main';
+                        if(!is_dir($savePath)){
+                            Yii::app()->file->createDir(0777,$savePath);
+                        }else{
+                            Yii::app()->file->set($savePath)->delete(true);
+                            Yii::app()->file->createDir(0777,$savePath);
+                        }
+                        Yii::app()->file->set($tempPath.$_POST['image_name_temp'])->move($savePath.'/'.$image_name);
+                        //$image = new Image($savePath.'/'.$image_name);
+                        //$image->resize(300, 300)->save($savePath.'/'.$model->image_main );
+                    }
+                }
                 $this->redirect(array('index','id'=>$model->id));
+            }
         }
 
         $pageTypes = PageTypes::model()->findAll(array(
@@ -91,7 +130,33 @@ class AdminPagesController extends AdminController
     }
 
 
+    public  function actionImageUpload(){
+        Yii::import("common.ext.EAjaxUpload.qqFileUploader");
 
+        $tempPath = Yii::app()->params['tempPath'];
+        $uploader =
+            new qqFileUploader(Yii::app()->params['Pages']['mainImage']['ext'], Yii::app()->params['Pages']['mainImage']['maxSize']);
+
+        $result = $uploader->handleUpload($tempPath,true);
+
+        if (isset($result['success'])) {
+        }
+        echo CJSON::encode($result);
+        Yii::app()->end();
+    }
+
+    public function actionDeleteImage(){
+            if(isset($_POST['id']) && !empty($_POST['id'])){
+                $pages = $this->loadModel($_POST['id']);
+                $field ='image';
+                $pages->$field = false;
+                $pages->update(array('image'));
+                if(is_dir(Yii::app()->params['dataPath'].'news/'.$_POST['id'].'/images/'))
+                    Yii::app()->file->set(Yii::app()->params['dataPath'].'news/'.$_POST['id'].'/images/')->delete(true);
+            }
+
+        Yii::app()->end();
+    }
 
     public function loadModel($id)
     {

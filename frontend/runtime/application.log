@@ -1622,3 +1622,30 @@ Stack trace:
 REQUEST_URI=/admin/
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/22 12:44:12 [error] [exception.CDbException] exception 'CDbException' with message 'ActiveRecord "PageTypes" пытается выбрать недопустимый столбец "type.module". Примечание: столбец должен существовать в таблице или являться выражением с алиасом.' in Z:\home\localhost\www\framework\db\ar\CActiveFinder.php:917
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(1239): CJoinElement->getColumnSelect('type.module ,ty...')
+#1 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(748): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(420): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\localhost\www\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1302): CActiveFinder->query(Object(CDbCriteria), false)
+#5 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#6 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(23): CActiveRecord->find(Array)
+#7 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), '', '')
+#8 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), '', '')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/22 19:49:59 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php:26)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl()
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/test
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php (26)
+in Z:\home\localhost\www\admin\frontend\components\URLRule.php (27)

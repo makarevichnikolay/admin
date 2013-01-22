@@ -17,6 +17,9 @@ return array(
 		'errorHandler' => array(
 			'errorAction' => 'Default/error',
 		),
+        'file'=>array(
+            'class'=>'common.ext.CFile',
+        ),
         'less'=>array(
             'forceCompile'=>true,
             'paths'=>array(

@@ -32,7 +32,7 @@ $this->widget(
                         'header'=>'Тип',
                        'name'=>'type_id',
                        'value'=>function($data){
-                                 return $data->type->title;
+                                // return $data->type->title;
                                 }
                     ),
                     'title',

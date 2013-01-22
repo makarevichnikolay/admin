@@ -13,7 +13,7 @@
 class PageTypes extends CActiveRecord
 {
 
-    public  $defaulModule = 'Pages';
+    public  $defaulModule_id = 1;
     public  $defaultController = 'FrontendPages';
     public  $defaultAction = 'index';
     public  $defaultView = 'index';
@@ -44,10 +44,11 @@ class PageTypes extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title', 'required'),
-			array('title, module, controller, view, action', 'length', 'max'=>255),
+			array('title, controller, view, action', 'length', 'max'=>255),
+            array('module_id','numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, module, controller, view, action', 'safe', 'on'=>'search'),
+			array('id, title, module_id, controller, view, action', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,7 +71,7 @@ class PageTypes extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'title' => 'Title',
-			'module' => 'Module',
+			'module_id' => 'Module',
 			'controller' => 'Controller',
 			'view' => 'View',
             'action' => 'Action',
@@ -79,8 +80,8 @@ class PageTypes extends CActiveRecord
 
 
     public function beforeValidate(){
-        if(empty($this->module))
-            $this->module = $this->defaulModule;
+        if(empty($this->module_id))
+            $this->module_id = $this->defaulModule_id;
 
         if(empty($this->controller))
             $this->controller = $this->defaultController;
@@ -108,7 +109,7 @@ class PageTypes extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
-		$criteria->compare('module',$this->module,true);
+		$criteria->compare('module_id',$this->module_id);
 		$criteria->compare('controller',$this->controller,true);
 		$criteria->compare('view',$this->view,true);
 

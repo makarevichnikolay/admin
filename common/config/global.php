@@ -29,7 +29,15 @@ return array(
         'dataRelPath' => 'data/',
 		'tempRelPath' => 'data/temp/',
 		'dataUserPath' => 'data/users/',
-        'defaultModule'=>'Pages'
+        'defaultModule'=>'Pages',
+        'Pages'=>array(
+            'mainImage'=>array(
+                'name'=>'main.jpg',
+                'ext' => array('jpg', 'jpeg'),
+                'maxSize'=>20 * 1024 * 1024,
+            ),
+
+        ),
        
 	),
 

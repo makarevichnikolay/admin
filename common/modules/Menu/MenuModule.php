@@ -26,9 +26,9 @@ class MenuModule extends CWebModule
         foreach($data as $val){
             if($val->parent_id == $id){
                 if($children = $this->getMenuItemsRecursive($data,$val->id)){
-                    $items[] = array('label'=>$val->title, 'url'=>$val->url,'items'=>$children);
+                    $items[] = array('label'=>$val->title, 'url'=>Yii::app()->createUrl($val->url),'items'=>$children);
                 }else{
-                    $items[] = array('label'=>$val->title,'url'=>$val->url);
+                    $items[] = array('label'=>$val->title,'url'=>Yii::app()->createUrl($val->url));
                 }
             }
         }

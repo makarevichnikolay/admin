@@ -4,6 +4,7 @@ $cs->registerCoreScript('jquery');
 Yii::app()->clientScript->registerCoreScript('jquery.ui');
 $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.nestable.js', CClientScript::POS_END);
 $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.json2html-3.1-min.js', CClientScript::POS_END);
+$cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/admin.js', CClientScript::POS_END);
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" >

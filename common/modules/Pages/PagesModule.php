@@ -16,7 +16,7 @@ class PagesModule extends CWebModule implements IURLRule
 	}
 
     public function parseUrlF($manager,$request,$pathInfo,$rawPathInfo){
-        $page = Pages::model()->with(array('type'=> array('select'=>'type.module ,type.controller,type.action,type.view')))->find(array(
+        $page = Pages::model()->with(array('type'))->find(array(
                                             'condition'=>'url=:url',
                                             'params'=>array(':url'=>$pathInfo),
                                             'select'=>'id'

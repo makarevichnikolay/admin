@@ -13,7 +13,8 @@
 class Pages extends CActiveRecord
 {
 
-
+    public $image_name_temp;
+    public $categories_id;
     public  $defaultPageTypeId = 1;
 	/**
 	 * Returns the static model of the specified AR class.
@@ -41,14 +42,14 @@ class Pages extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('url', 'required'),
+			array('url,title', 'required'),
             array('url','unique','message'=>'{attribute}:{value} already exists!'),
-            array('publish, type_id', 'numerical', 'integerOnly'=>true),
+            array('visible, image, allow_comments, type_id', 'numerical', 'integerOnly'=>true),
 			array('url, title, keywords, description', 'length', 'max'=>255),
 			array('content', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, url, title, content, publish', 'safe', 'on'=>'search'),
+			array('id, url, title, content, visible', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,7 +76,7 @@ class Pages extends CActiveRecord
 			'title' => 'Title',
             'type_id'=>'Type',
 			'content' => 'Content',
-			'publish' => 'Publish',
+			'visible' => 'visible',
 		);
 	}
 
@@ -89,14 +90,14 @@ class Pages extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-        //$criteria->with = array('type');
-        //$criteria->together = true;
+        $criteria->with = array('type');
+        $criteria->together = true;
 		$criteria->compare('id',$this->id);
         $criteria->compare('type.title',$this->title,true);
 		$criteria->compare('url',$this->url,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('content',$this->content,true);
-		$criteria->compare('publish',$this->publish);
+		$criteria->compare('visible',$this->visible);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

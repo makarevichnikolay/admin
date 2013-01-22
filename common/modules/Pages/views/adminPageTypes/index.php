@@ -27,7 +27,7 @@ $this->widget(
             'htmlOptions'=>array('style'=>'width:20px;'),
        ),
        'title',
-       'module',
+       'module_id',
        'controller',
        'action',
        'view',

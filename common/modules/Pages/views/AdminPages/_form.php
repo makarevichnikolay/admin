@@ -6,7 +6,8 @@
 
 <div class="form">
 
-<?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+<?php
+    $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id'=>'horizontalForm',
     'type'=>'horizontal',
     'enableClientValidation'=>true,
@@ -37,13 +38,14 @@
         <?php echo $form->textFieldRow($model, 'keywords', array('class'=>'input-xxlarge')); ?>
         <?php echo $form->textFieldRow($model, 'description', array('class'=>'input-xxlarge')); ?>
         <div class="control-group">
+            <?php echo $form->labelEx($model,'categories',array('class'=>'control-label')); ?>
             <div class="controls">
                 <?php
-                $data = array(1=>'test',2=>'test2');
+
                 $this->widget('common.ext.EchMultiselect.EchMultiselect', array(
                     'model' => $model,
-                    'dropDownAttribute' => 'categories_id',
-                    'data' => $data,
+                    'dropDownAttribute' => 'categories',
+                    'data' => $Categories,
                     'options'=>array(
                         'selectedList'=>4
                     ),
@@ -132,7 +134,13 @@
                 ?>
             </div>
         </div>
+        <div class="control-group">
+            <div class="controls">
+        <?php
 
+        ?>
+             </div>
+            </div>
         <?php echo $form->checkBoxRow($model, 'visible'); ?>
         <?php echo $form->checkBoxRow($model, 'allow_comments'); ?>
     </fieldset>

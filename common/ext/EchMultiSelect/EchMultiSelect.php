@@ -80,7 +80,7 @@ class EchMultiselect extends CJuiInputWidget
 		
 		$cs = Yii::app()->getClientScript();
 		$assets = Yii::app()->getAssetManager()->publish(dirname(__FILE__) . '/assets');
-		$cs->registerScriptFile($assets . '/jquery.ui.widget.min.js');
+		//$cs->registerScriptFile($assets . '/jquery.ui.widget.min.js');
 		$cs->registerScriptFile($assets . '/jquery.multiselect.js');
 		$cs->registerCssFile($assets . '/jquery.multiselect.css');
 		if($this->options['filter'] === true) {

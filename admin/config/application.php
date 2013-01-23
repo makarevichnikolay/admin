@@ -17,6 +17,7 @@ return array(
 		'errorHandler' => array(
 			'errorAction' => 'Default/error',
 		),
+
         'file'=>array(
             'class'=>'common.ext.CFile',
         ),
@@ -33,6 +34,8 @@ return array(
                 '/'=>'Default/index',
                 'Pages/Types/<action:\w+>'=>'Pages/AdminPageTypes/<action>',
                 'Pages/Types'=>'Pages/AdminPageTypes/index',
+                'Pages/Categories/<action:\w+>'=>'Pages/AdminCategories/<action>',
+                'Pages/Categories'=>'Pages/AdminCategories/index',
                 'Pages/<action:\w+>'=>'Pages/AdminPages/<action>',
                 'Pages'=>'Pages/AdminPages/index',
                 '<module:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',

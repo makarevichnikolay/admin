@@ -60,14 +60,16 @@ class AdminPagesController extends AdminController
 
         }
 
-        $pageTypes = PageTypes::model()->findAll(array(
-            'select'=>'id,title'
+        $Categories = CHtml::listData(Categories::model()->findAll(),'id','title');
+        $pageCategories = PagesCategories::model()->findAll(array(
+            'condition'=>'page_id = :page_id',
+            'params'=>array(':page_id'=>$model->id),
         ));
-
+        $model->categories = $pageCategories;
 
         $this->render('create',array(
             'model'=>$model,
-            'pageTypes'=>$pageTypes,
+            'Categories'=>$Categories,
         ));
     }
 
@@ -107,13 +109,16 @@ class AdminPagesController extends AdminController
             }
         }
 
-        $pageTypes = PageTypes::model()->findAll(array(
-            'select'=>'id,title'
+        $Categories = CHtml::listData(Categories::model()->findAll(),'id','title');
+        $pageCategories = PagesCategories::model()->findAll(array(
+            'condition'=>'page_id = :page_id',
+            'params'=>array(':page_id'=>$model->id),
         ));
+        $model->categories = CHtml::listData($pageCategories,'category_id','category_id');
 
         $this->render('update',array(
             'model'=>$model,
-            'pageTypes'=>$pageTypes,
+            'Categories'=>$Categories,
         ));
     }
 

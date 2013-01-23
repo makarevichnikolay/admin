@@ -1649,3 +1649,13 @@ REQUEST_URI=/admin/test
 in Z:\home\localhost\www\framework\base\CApplication.php (793)
 in Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php (26)
 in Z:\home\localhost\www\admin\frontend\components\URLRule.php (27)
+2013/01/23 11:52:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

@@ -15,4 +15,4 @@ $this->menu=array(
 
 <h1>Create Page</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model,'pageTypes'=>$pageTypes)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model,'Categories'=>$Categories)); ?>

@@ -14,7 +14,7 @@ class Pages extends CActiveRecord
 {
 
     public $image_name_temp;
-    public $categories_id;
+    public $categories;
     public  $defaultPageTypeId = 1;
 	/**
 	 * Returns the static model of the specified AR class.
@@ -46,7 +46,7 @@ class Pages extends CActiveRecord
             array('url','unique','message'=>'{attribute}:{value} already exists!'),
             array('visible, image, allow_comments, type_id', 'numerical', 'integerOnly'=>true),
 			array('url, title, keywords, description', 'length', 'max'=>255),
-			array('content', 'safe'),
+			array('content,categories', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, url, title, content, visible', 'safe', 'on'=>'search'),
@@ -77,8 +77,39 @@ class Pages extends CActiveRecord
             'type_id'=>'Type',
 			'content' => 'Content',
 			'visible' => 'visible',
+            'categories' => 'categories'
 		);
 	}
+
+    public function afterSave(){
+       if(is_array($this->categories) && !empty($this->categories)){
+           PagesCategories::model()->deleteAll('page_id=:page_id',array(':page_id'=>$this->id));
+           foreach($this->categories as $category_id){
+             $category = PagesCategories::model()->find(array(
+                                             'condition'=>'page_id = :page_id AND category_id = :category_id',
+                                             'params'=>array(':page_id'=>$this->id,':category_id'=>$category_id)
+              ));
+              if(!$category){
+                  $pageCategory = new PagesCategories();
+                  $pageCategory->page_id = $this->id;
+                  $pageCategory->category_id = $category_id;
+                  $pageCategory->save();
+              }
+           }
+       }
+       return parent::afterSave();
+    }
+
+    protected function beforeDelete(){
+           PagesCategories::model()->deleteAll(
+                                               'page_id = :page_id',
+                                               array(':page_id'=>$this->id)
+                                            ) ;
+
+       return parent::beforeDelete();
+    }
+
+
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

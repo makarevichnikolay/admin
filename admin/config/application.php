@@ -10,6 +10,7 @@ return array(
 	),
     'import'=>array(
         'application.components.*',
+        'common.ext.CArray'
     ),
     'defaultController' => 'Default',
 

@@ -128,13 +128,21 @@
   border:1px solid rgba(0,0,0,0.3);
   border-radius:6px 6px 6px 6px;
   box-shadow:0 3px 7px rgba(0,0,0,0.3);
-  left:50%;
-  margin-left:-280px;
+  margint:0 auto;
   outline:medium none;
-  position:absolute;
-  top:10%;
+  position:fixed;
+  top:6%;
   z-index:9999;
 }
+.pages-modal { padding:10px; }
+.pages-modal #result {
+  margin-top:-40px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  max-height:700px;
+}
+.pages-form { margin:0; }
+.pages-form input { margin-top:4px; }
 .image-upload {
   border:1px dashed;
   border-radius:4px;
@@ -143,8 +151,9 @@
   height:auto;
   margin-top:10px;
 }
-#ImagesUpload {
+#ImageUpload {
   width:150px;
   display:inline-block;
 }
 .ui-multiselect { height:30px; }
+.images-box { width:230px; }

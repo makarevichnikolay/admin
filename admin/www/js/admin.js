@@ -1,4 +1,6 @@
-    function transliterate(text) {
+
+
+function transliterate(text) {
         var table = {
             'а' : 'a',
             'б' : 'b',

@@ -135,7 +135,7 @@ class AdminPagesController extends AdminController
     }
 
 
-    public  function actionImageUpload(){
+    public  function actionMainImageUpload(){
         Yii::import("common.ext.EAjaxUpload.qqFileUploader");
 
         $tempPath = Yii::app()->params['tempPath'];
@@ -150,7 +150,26 @@ class AdminPagesController extends AdminController
         Yii::app()->end();
     }
 
-    public function actionDeleteImage(){
+    public  function actionImageUpload($id){
+        if(!empty($id)){
+            Yii::import("common.ext.EAjaxUpload.qqFileUploader");
+            Yii::import('common.ext.image.Image');
+            $tempPath = Yii::app()->params['dataPath'].'pages/'.$id.'/images/';
+            Yii::app()->file->createDir(0777,$tempPath );
+            $uploader = new qqFileUploader(Yii::app()->params['Pages']['mainImage']['ext'], Yii::app()->params['Pages']['mainImage']['maxSize']);
+            $result = $uploader->handleUpload($tempPath);
+            $image = new Image( $tempPath.$result['filename']);
+            $image->resize(300, 200 , 4)->crop(300,200)->save();
+            //$pages_image = new PagesImages();
+
+            if (isset($result['success'])) {
+            }
+            echo CJSON::encode($result);
+        }
+        Yii::app()->end();
+    }
+
+    public function actionMainImageDelete(){
             if(isset($_POST['id']) && !empty($_POST['id'])){
                 $pages = $this->loadModel($_POST['id']);
                 $field ='image';

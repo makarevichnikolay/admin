@@ -33,10 +33,18 @@ return array(
         'Pages'=>array(
             'mainImage'=>array(
                 'name'=>'main.jpg',
-                'ext' => array('jpg', 'jpeg'),
+                'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
             ),
-
+            'images'=>array(
+                'ext' => array('jpg', 'jpeg', 'png'),
+                'maxSize'=>20 * 1024 * 1024,
+                'maxCount'=>16,
+                'dimensions' => array(
+                    'thumb'	=> array('width'=>300, 'height'=>200),
+                    'large'	=> array('width'=>600, 'height'=>800),
+                ),
+            )
         ),
        
 	),

@@ -130,16 +130,18 @@
   box-shadow:0 3px 7px rgba(0,0,0,0.3);
   margint:0 auto;
   outline:medium none;
-  position:fixed;
-  top:6%;
+  position:absolute;
+  top:12%;
   z-index:9999;
 }
 .pages-modal { padding:10px; }
-.pages-modal #result {
-  margin-top:-40px;
-  overflow-y:auto;
-  overflow-x:hidden;
-  max-height:700px;
+.save-image {
+  transition:all ease 1s;
+  -moz-transition:all ease 1s;
+}
+.save-image-ok {
+  background-image:none;
+  background-color:#468847;
 }
 .pages-form { margin:0; }
 .pages-form input { margin-top:4px; }

@@ -31,7 +31,7 @@ class AdminPagesController extends AdminController
         $model=new Pages;
 
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+         $this->performAjaxValidation($model);
 
         if(isset($_POST['Pages']))
         {
@@ -81,7 +81,7 @@ class AdminPagesController extends AdminController
         $model=$this->loadModel($id);
 
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+         $this->performAjaxValidation($model);
 
         if(isset($_POST['Pages']))
         {
@@ -135,6 +135,37 @@ class AdminPagesController extends AdminController
     }
 
 
+    public function actionGetImagesJSON($page_id){
+       $images = PagesImages::model()->findAll('page_id = :page_id',array(':page_id'=>$page_id));
+       $data = array();
+        foreach($images as $val){
+            $data[] = array('id'=>$val->id,'src'=>PagesImages::getImageSrc($page_id,$val->id,$val->file_name),'title'=>$val->title);
+        }
+        $data['curCount'] = count($images);
+        $data['maxCount'] =  Yii::app()->params['Pages']['images']['maxCount'];
+        echo CJSON::encode($data);
+        Yii::app()->end();
+    }
+
+    public function actionImageDelete(){
+        if(isset($_POST['id']) && !empty($_POST['id'])){
+            $image = PagesImages::model()->findByPk($_POST['id']);
+            $image->delete();
+        }
+        Yii::app()->end();
+    }
+
+    public function actionImageUpdate(){
+        if(isset($_POST['id']) && !empty($_POST['id'])){
+            $image = PagesImages::model()->findByPk($_POST['id']);
+            $image->title = htmlspecialchars($_POST['title']);
+            $image->update('title');
+        }
+        Yii::app()->end();
+    }
+
+
+
     public  function actionMainImageUpload(){
         Yii::import("common.ext.EAjaxUpload.qqFileUploader");
 
@@ -152,18 +183,42 @@ class AdminPagesController extends AdminController
 
     public  function actionImageUpload($id){
         if(!empty($id)){
-            Yii::import("common.ext.EAjaxUpload.qqFileUploader");
-            Yii::import('common.ext.image.Image');
-            $tempPath = Yii::app()->params['dataPath'].'pages/'.$id.'/images/';
-            Yii::app()->file->createDir(0777,$tempPath );
-            $uploader = new qqFileUploader(Yii::app()->params['Pages']['mainImage']['ext'], Yii::app()->params['Pages']['mainImage']['maxSize']);
-            $result = $uploader->handleUpload($tempPath);
-            $image = new Image( $tempPath.$result['filename']);
-            $image->resize(300, 200 , 4)->crop(300,200)->save();
-            //$pages_image = new PagesImages();
-
-            if (isset($result['success'])) {
+            $id = (int)$id;
+            $count = PagesImages::model()->count('page_id = :page_id',array(':page_id'=>$id));
+            $config = Yii::app()->params['Pages']['images'];
+            if($count <  $config['maxCount']){
+                Yii::import("common.ext.EAjaxUpload.qqFileUploader");
+                $dataPath = Yii::app()->params['dataPath'].'pages/'.$id.'/images/';
+                Yii::app()->file->createDir(0777,$dataPath );
+                $uploader = new qqFileUploader($config['ext'], $config['maxSize']);
+                $result = $uploader->handleUpload($dataPath);
+                if (isset($result['success'])) {
+                    Yii::import('common.ext.image.Image');
+                    $pages_image = new PagesImages();
+                    $pages_image->page_id = $id;
+                    $pages_image->file_name = $result['filename'];
+                    $pages_image->save();
+                    $largePath = $dataPath.'/'.$pages_image->id.'/large/';
+                    $thumbPath = $dataPath.'/'.$pages_image->id.'/thumb/';
+                    $originPath = $dataPath.'/'.$pages_image->id.'/origin/';
+                    Yii::app()->file->createDir(0777,$originPath);
+                    Yii::app()->file->createDir(0777,$largePath);
+                    Yii::app()->file->createDir(0777,$thumbPath);
+                    $image = new Image( $dataPath.$result['filename']);
+                    $image->save($originPath.$result['filename']);
+                    $image = new Image( $dataPath.$result['filename']);
+                    $image->resize($config['dimensions']['large']['width'], $config['dimensions']['large']['height'] , 4)
+                          ->crop($config['dimensions']['large']['width'],$config['dimensions']['large']['height'])->save($largePath.$result['filename']);
+                    $image = new Image( $dataPath.$result['filename']);
+                    $image->resize($config['dimensions']['thumb']['width'], $config['dimensions']['thumb']['height'] , 4)
+                        ->crop($config['dimensions']['thumb']['width'],$config['dimensions']['thumb']['height'])->save($thumbPath.$result['filename']);
+                    Yii::app()->file->set($dataPath.$result['filename'])->delete();
+                    $result['data'] = array('id'=>$pages_image->id,'src'=>PagesImages::getImageSrc($id,$pages_image->id,$result['filename']));
+                    ++$count;
+                }
             }
+            $result['curCount'] =$count;
+            $result['maxCount'] = $config['maxCount'];
             echo CJSON::encode($result);
         }
         Yii::app()->end();
@@ -175,8 +230,8 @@ class AdminPagesController extends AdminController
                 $field ='image';
                 $pages->$field = false;
                 $pages->update(array('image'));
-                if(is_dir(Yii::app()->params['dataPath'].'news/'.$_POST['id'].'/images/'))
-                    Yii::app()->file->set(Yii::app()->params['dataPath'].'news/'.$_POST['id'].'/images/')->delete(true);
+                if(is_dir(Yii::app()->params['dataPath'].'pages/'.$_POST['id'].'/images/'))
+                    Yii::app()->file->set(Yii::app()->params['dataPath'].'pages/'.$_POST['id'].'/images/')->delete(true);
             }
 
         Yii::app()->end();

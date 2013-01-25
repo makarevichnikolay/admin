@@ -12,6 +12,7 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
             <div class="span12">
                 <div class="well">
                 <h1>Фото</h1>
+                    <div class='pull-right' id="count"></div>
                 <?php
                 $this->widget('common.ext.EAjaxUpload.EAjaxUpload',
                     array('id' => 'ImagesUpload',
@@ -22,7 +23,7 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                             'minSizeLimit' => 0,
                             'multiple' => true,
                             'template' => '<div class="qq-uploader"><div class="qq-upload-drop-area"><span>Drag and drop</span></div>
-                                          <div class="qq-upload-button btn btn-success">Загрузить</div><ul class="qq-upload-list"></ul></div>',
+                                          <div class="qq-upload-button btn btn-success">Загрузить</div><ul id="images-upload-list" class="qq-upload-list"></ul></div>',
                             'fileTemplate' => '<li><span class="qq-upload-file"></span>
                                              <span class="qq-upload-spinner"></span> <span class="qq-upload-size"></span>
                                              <a class="qq-upload-cancel" href="#">' . Yii::t('eajaxupload', 'Отменить') . '</a>
@@ -30,8 +31,8 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                                               </li>',
                             'onComplete' => 'js:function(id, realFilename, responseJSON) {
                                                                          if(responseJSON.success){
-                                                                            renderImage("' . $imageSrc. '"+responseJSON.filename);
-                                                                            $(".qq-upload-list").css("display","none");
+                                                                            validMaxCount(responseJSON.curCount,responseJSON.maxCount)
+                                                                            renderImage(responseJSON.data);
                                                                            }
                                                                          }',
 
@@ -41,23 +42,6 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                 </div>
                 <div class="list-view">
                     <div class="thumbnails" id="result">
-                        <li class="images-box">
-                            <div class="thumbnail">
-                                <img src="http://placehold.it/280x180" alt="">
-
-                                <form method="post" class="pages-form">
-                                    <fieldset>
-                                        <input type="text" name="title" value="">
-
-                                        <div>
-                                            <button class="btn pull-left" type="button"><i class="icon-ok"></i></button>
-                                            <button class="btn pull-right" type="button"><i class="icon-remove"></i>
-                                            </button>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                        </li>
                     </div>
 
                 </div>
@@ -229,7 +213,7 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                         {tag:'img', src:'${src}'},
                         {tag:'form', class:'pages-form', 'method':'post', children:[
                             {tag:'fieldset', children:[
-                                {tag:'input', 'type':'text', 'name':'title', 'value':''},
+                                {tag:'input', 'type':'text', 'name':'title', 'value':'${title}'},
                                 {tag:'div', html:'<button class="btn pull-left save-image" data-id="${id}" type="button">' +
                                     '<i class="icon-ok"></i></button>' +
                                     '<button class="btn pull-right delete-image" data-id="${id}"  type="button">' +
@@ -246,34 +230,80 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
         }
         ;
 
-    function renderImage(src){
-        //$.ajax({
-        //    type: "POST",
-        //    url: '<?php //echo $this->createUrl('/Menu/AdminMenu/GetMenuJSON') ?>'
-       // }).done(function( data ) {
-        var data = [{'id':1,src:src}];
-                $('#result')
-                    .json2html(data,transforms.item)
-                   // .on('change', function(){sendMenu();});
-           // });
+
+    function getAllImages(){
+        $.ajax({
+           type: "POST",
+            url: '<?php echo $this->createUrl('/Pages/AdminPages/GetImagesJSON',array('page_id'=>$model->id)) ?>'
+        }).done(function( data ) {
+                var result = $.parseJSON(data);
+                validMaxCount(result['curCount'], result['maxCount']);
+                for(var value in result){
+                   renderImage(result[value]);
+                }
+        });
+    }
+    function renderImage(data){
+         $('#result').json2html(data,transforms.item);
+    }
+    function validMaxCount(cur,max){
+        if(cur < max){
+            $('#count').html('<i>загружено</i> <span class="badge badge-success"><span id="curCount">'+cur+'</span> c ' + max+'</span>');
+        }else{
+            setTimeout(function(){
+                $('#ImagesUpload > .qq-uploader > .qq-upload-button').addClass('disabled');
+                $('#ImagesUpload > .qq-uploader > .qq-upload-button >input').on('click',function(){return false;})
+                $("#images-upload-list").css('display','none');
+            },1000)
+            $('#count').html('<i>загружено</i> <span class="badge badge-important"><span id="curCount">'+cur+'</span> c ' + max+'</span>');
+        }
+    }
+
+    function deleteImage(data){
+        $.ajax({
+            type: "POST",
+            url: '<?php echo $this->createUrl('/Pages/AdminPages/imageDelete') ?>',
+            data:data
+        }).done(function( data ) {
+                $("#ImagesUpload > .qq-uploader > .qq-upload-button >input").unbind('click');
+                $('#ImagesUpload > .qq-uploader > .qq-upload-button').removeClass('disabled');
+                var count =$('#curCount').html();
+                $('#curCount').html(--count).parent().removeClass('badge-important').addClass('badge-success');
+            });
+    }
+
+
+    function updateImage(data){
+        $.ajax({
+            type: "POST",
+            url: '<?php echo $this->createUrl('/Pages/AdminPages/imageUpdate') ?>',
+            data:data
+        });
     }
 
     $(document).ready(function () {
-        $('.save-image').on('click',function(e){
+        getAllImages();
+        $(document).on('click', '.save-image',function(e){
             var title =$(this).parent().siblings('input').val();
             var id = $(this).data('id');
             var data = {id:id,title:title};
-            alert(window.JSON.stringify(data));
-        });
+            updateImage(data);
+            $(this).addClass('save-image-ok').delay(1000).queue(function() {
+                $(this).removeClass('save-image-ok');
+                $(this).dequeue();
+            });
+        } );
 
-        $('.delete-image').on('click',function(e){
+        $(document).on('click','.delete-image',function(e){
             var id = $(this).data('id');
             var data = {id:id};
-            alert(window.JSON.stringify(data));
+            deleteImage(data);
+            $(this).closest('li.images-box').remove();
         });
 
         $('.admin-modal-show').on('click', function () {
             $('.admin-modal').show().toggleClass('in out');
+            $('.admin-modal').scrollToMe();
         })
         $('.close').on('click', function () {
             $('.admin-modal').toggleClass('in out').hide();

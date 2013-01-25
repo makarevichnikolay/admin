@@ -37,7 +37,7 @@ class PagesImages extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('page_id, title, file_name', 'required'),
+			array('page_id, file_name', 'required'),
 			array('page_id', 'length', 'max'=>10),
 			array('title, file_name', 'length', 'max'=>255),
 			// The following rule is used by search().
@@ -70,10 +70,33 @@ class PagesImages extends CActiveRecord
 		);
 	}
 
+    protected function beforeDelete(){
+        $path = Yii::app()->params['dataPath'].'pages/'.$this->page_id.'/images/'.$this->id.'/';
+        if(is_dir($path))
+            Yii::app()->file->set($path)->delete(true);
+        return parent::beforeDelete();
+    }
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
+
+    public static function getImageSrc($page_id,$id,$filename,$size='thumb'){
+        $path = Yii::app()->params['dataUrl'].'pages/'.$page_id.'/'.'images/'.$id.'/';
+        switch($size){
+            case 'thumb':
+                $path .= $size .'/'.$filename;
+                 break;
+            case 'origin':
+                $path .= $size .'/'.$filename;
+                break;
+            case 'large':
+                $path .= $size .'/'.$filename;
+                break;
+        }
+        return $path;
+    }
+
 	public function search()
 	{
 		// Warning: Please modify the following code to remove attributes that

@@ -10,7 +10,9 @@ return array(
 	),
     'import'=>array(
         'application.components.*',
-        'common.ext.CArray'
+        'common.ext.CArray',
+        'common.ext.JToggleColumn.JToggleColumn',
+        'common.ext.JToggleColumn.ToggleAction'
     ),
     'defaultController' => 'Default',
 
@@ -36,6 +38,7 @@ return array(
                 'Pages/Types/<action:\w+>'=>'Pages/AdminPageTypes/<action>',
                 'Pages/Types'=>'Pages/AdminPageTypes/index',
                 'Pages/Categories/<action:\w+>'=>'Pages/AdminCategories/<action>',
+                'Pages/update/<id>'=>'Pages/adminPages/update',
                 'Pages/Categories'=>'Pages/AdminCategories/index',
                 'Pages/<action:\w+>'=>'Pages/AdminPages/<action>',
                 'Pages'=>'Pages/AdminPages/index',

@@ -13,7 +13,6 @@
 class Pages extends CActiveRecord
 {
 
-    public $image_name_temp;
     public $categories;
     public  $defaultPageTypeId = 1;
 	/**
@@ -44,12 +43,20 @@ class Pages extends CActiveRecord
 		return array(
 			array('url,title', 'required'),
             array('url','unique','message'=>'{attribute}:{value} already exists!'),
-            array('visible, image, allow_comments, type_id', 'numerical', 'integerOnly'=>true),
-			array('url, title, keywords, description', 'length', 'max'=>255),
-			array('content,categories', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, url, title, content, visible', 'safe', 'on'=>'search'),
+            array('title, keywords, description, url, author_name, author_image, author_description, content, main_image', 'type', 'type'=>'string'),
+            array('title, keywords, description, url, author_name, author_image, main_image, date_update, date_create', 'length', 'max'=>'255','encoding'=>'utf8'),
+            array('visible, visible_on_main, allow_comments', 'boolean'),
+            array('type_id, user_id','numerical' ,'integerOnly'=>true),
+			array('url, title, keywords, description, main_image, author_image', 'length', 'max'=>255),
+			array('categories', 'safe'),
+            array('date, date_create, date_update', 'date','format'=>'yyyy-mm-dd hh:mm:ss'),
+            array('date_update','default',
+                'value'=>new CDbExpression('NOW()'),
+                'setOnEmpty'=>false,'on'=>'update'),
+            array('date_create,date_update','default',
+                'value'=>new CDbExpression('NOW()'),
+                'setOnEmpty'=>false,'on'=>'insert'),
+			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,17 +78,63 @@ class Pages extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'url' => 'Url',
-			'title' => 'Title',
-            'type_id'=>'Type',
-			'content' => 'Content',
-			'visible' => 'visible',
-            'categories' => 'categories'
+            'id' => 'ID',
+            'type_id'=>'Тип страницы',
+            'title' => 'Заголовок',
+            'keywords' => 'Ключевые слова',
+            'description' => 'Description',
+            'url' => 'Url',
+            'date'=> 'Дата',
+            'categories'=> 'Категории',
+            'author_name'=> 'Автор',
+            'author_image'=> 'Фото автора',
+            'author_description'=> 'Описание автора',
+            'content' => 'Контент',
+            'main_image' => 'Изображение новости',
+            'visible'=> 'Отображать',
+            'visible_on_main'=>'Не публиковать в общей ленте',
+            'allow_comments'=> 'Разрешить коментарии',
+            'user_id'=>'Пользователь',
+            'date_create'=>'date_create',
+            'date_update'=>'date_update'
 		);
 	}
 
+    private function tempToData($name){
+        $tempPath = Yii::app()->params['tempPath'];
+        if( file_exists($tempPath.$this->$name)){
+            $originalPath = Yii::app()->params['dataPath'].'pages/'.$this->id.'/images/'. $name .'/';
+            $largePath = $originalPath .'large/';
+            $thumbPath = $originalPath .'thumb/';
+            if(!is_dir($originalPath)){
+                Yii::app()->file->createDir(0777,$originalPath);
+            }else{
+                Yii::app()->file->set($originalPath)->delete(true);
+                Yii::app()->file->createDir(0777,$originalPath);
+            }
+            Yii::import('common.ext.image.Image');
+            Yii::app()->file->createDir(0777,$largePath);
+            Yii::app()->file->createDir(0777,$thumbPath);
+            Yii::app()->file->set($tempPath.$this->$name)->move($originalPath.$this->$name);
+            $config = Yii::app()->params['Pages'][$name];
+            $image = new Image($originalPath.$this->$name);
+            $image->resize($config['dimensions']['large']['width'], $config['dimensions']['large']['height'] , 4)
+                ->crop($config['dimensions']['large']['width'],$config['dimensions']['large']['height'])->save($largePath.$this->$name);
+            $image = new Image($originalPath.$this->$name);
+            $image->resize($config['dimensions']['thumb']['width'], $config['dimensions']['thumb']['height'] , 4)
+                ->crop($config['dimensions']['thumb']['width'],$config['dimensions']['thumb']['height'])->save($thumbPath.$this->$name);
+        }
+    }
+
     public function afterSave(){
+        if(!empty($this->main_image)){
+            $this->tempToData('main_image');
+        }
+
+        if(!empty($this->author_image)){
+            $this->tempToData('author_image');
+        }
+
        if(is_array($this->categories) && !empty($this->categories)){
            PagesCategories::model()->deleteAll('page_id=:page_id',array(':page_id'=>$this->id));
            foreach($this->categories as $category_id){
@@ -100,17 +153,22 @@ class Pages extends CActiveRecord
        return parent::afterSave();
     }
 
-    protected function beforeDelete(){
-           PagesCategories::model()->deleteAll(
-                                               'page_id = :page_id',
-                                               array(':page_id'=>$this->id)
-                                            ) ;
 
-       return parent::beforeDelete();
+
+    protected function beforeDelete()
+    {
+        PagesCategories::model()->deleteAll(
+            'page_id = :page_id',
+            array(':page_id' => $this->id)
+        );
+
+        return parent::beforeDelete();
     }
 
 
-
+     public static function getImageSrc($field,$size,$id,$file_name){
+         return Yii::app()->params['dataUrl'] . 'pages/' . $id . '/images/' . $field . '/' . $size . '/' . $file_name;
+     }
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -121,14 +179,17 @@ class Pages extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-        $criteria->with = array('type');
-        $criteria->together = true;
+        //$criteria->with = array('type');
+       // $criteria->together = true;
 		$criteria->compare('id',$this->id);
-        $criteria->compare('type.title',$this->title,true);
+        $criteria->compare('type_id',$this->type_id);
 		$criteria->compare('url',$this->url,true);
 		$criteria->compare('title',$this->title,true);
+        $criteria->compare('author_name',$this->author_name,TRUE);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('visible',$this->visible);
+        $criteria->compare('visible_on_main',$this->visible_on_main);
+        $criteria->compare('allow_comments',$this->allow_comments);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

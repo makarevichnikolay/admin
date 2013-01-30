@@ -24,19 +24,27 @@ $this->widget(
                 'filter' => $model,
                 'template'=>"{items}",
                 'columns'=>array(
-                    array(
-                        'name'=>'id',
-                        'htmlOptions'=>array('style'=>'width:20px;'),
-                    ),
-                    array(
-                        'header'=>'Тип',
-                       'name'=>'type_id',
-                       'value'=>function($data){
-                                // return $data->type->title;
-                                }
-                    ),
                     'title',
                     'url',
+                     array(
+                         'class' => 'JToggleColumn',
+                         'name'=>'visible',
+                         'filter'=>array(0=>'невидимый',1=>'видимый'),
+                         'buttonImageName'=>'ru-active-inactive-male',
+                         'checkedButtonLabel' => 'видимый',
+                         'uncheckedButtonLabel' => 'невидимый',
+                         'htmlOptions' => array('style' => 'text-align:center;width:100px;'),
+                     ),
+                    array(
+                        'class' => 'JToggleColumn',
+                        'name'=>'allow_comments',
+                        'filter'=>array(0=>'запрещено',1=>'разрешено'),
+                        'buttonImageName'=>'ru-active-inactive-male',
+                        'checkedButtonLabel' => 'разрешено',
+                        'uncheckedButtonLabel' => 'запрещено',
+                        'htmlOptions' => array('style' => 'text-align:center;width:100px;'),
+                    ),
+
                       
                     array(
                         'class'=>'bootstrap.widgets.TbButtonColumn',

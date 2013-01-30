@@ -1659,3 +1659,12 @@ REQUEST_URI=/admin/assets/lib/bootstrap/less/mixins.less
 HTTP_REFERER=http://localhost/admin/assets/e3ecaab1/css/yii.css
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/29 12:24:40 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php:26)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl()
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/fh
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php (26)
+in Z:\home\localhost\www\admin\frontend\components\URLRule.php (27)

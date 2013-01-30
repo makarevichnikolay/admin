@@ -31,10 +31,21 @@ return array(
 		'dataUserPath' => 'data/users/',
         'defaultModule'=>'Pages',
         'Pages'=>array(
-            'mainImage'=>array(
-                'name'=>'main.jpg',
+            'main_image'=>array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
+                'dimensions' => array(
+                    'thumb'	=> array('width'=>300, 'height'=>200),
+                    'large'	=> array('width'=>600, 'height'=>800),
+                ),
+            ),
+            'author_image'=>array(
+                'ext' => array('jpg', 'jpeg', 'png'),
+                'maxSize'=>20 * 1024 * 1024,
+                'dimensions' => array(
+                    'thumb'	=> array('width'=>300, 'height'=>200),
+                    'large'	=> array('width'=>600, 'height'=>800),
+                ),
             ),
             'images'=>array(
                 'ext' => array('jpg', 'jpeg', 'png'),

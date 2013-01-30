@@ -5,69 +5,36 @@
 $previewPrefix = Yii::app()->params['tempUrl'];
 $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
 ?>
-<div class="admin-modal pages-modal hide fade out">
-    <button type="button" class="close admin-close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <div class="container">
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="well">
-                <h1>Фото</h1>
-                    <div class='pull-right' id="count"></div>
-                <?php
-                $this->widget('common.ext.EAjaxUpload.EAjaxUpload',
-                    array('id' => 'ImagesUpload',
-                        'config' => array(
-                            'action' => $this->createUrl('/Pages/adminPages/imageUpload',array('id'=>$model->id)),
-                            'allowedExtensions' => Yii::app()->params['Pages']['mainImage']['ext'],
-                            'sizeLimit' => Yii::app()->params['Pages']['mainImage']['maxSize'],
-                            'minSizeLimit' => 0,
-                            'multiple' => true,
-                            'template' => '<div class="qq-uploader"><div class="qq-upload-drop-area"><span>Drag and drop</span></div>
-                                          <div class="qq-upload-button btn btn-success">Загрузить</div><ul id="images-upload-list" class="qq-upload-list"></ul></div>',
-                            'fileTemplate' => '<li><span class="qq-upload-file"></span>
-                                             <span class="qq-upload-spinner"></span> <span class="qq-upload-size"></span>
-                                             <a class="qq-upload-cancel" href="#">' . Yii::t('eajaxupload', 'Отменить') . '</a>
-                                             <span class="qq-upload-failed-text">' . Yii::t('eajaxupload', 'Ошыбка') . '</span>
-                                              </li>',
-                            'onComplete' => 'js:function(id, realFilename, responseJSON) {
-                                                                         if(responseJSON.success){
-                                                                            validMaxCount(responseJSON.curCount,responseJSON.maxCount)
-                                                                            renderImage(responseJSON.data);
-                                                                           }
-                                                                         }',
-
-                        )
-                    ));
-                   ?>
-                </div>
-                <div class="list-view">
-                    <div class="thumbnails" id="result">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="form">
 
     <?php
     $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-        'id' => 'horizontalForm',
+        'id' => 'page-form',
         'type' => 'horizontal',
-        'enableClientValidation' => true,
+        'enableClientValidation' => false,
+        'enableAjaxValidation'=>true,
+        'clientOptions'=>array(
+            'validateOnSubmit'=>true,
+
+            'afterValidate'=>'js:function(form, data, hasError){
+                             if(hasError){
+                              $(".control-group.error:first").scrollToMe();
+                              return false;
+                             }else{
+                               return true;
+                             }
+                            }'
+        ),
     )); ?>
 
     <fieldset>
 
         <legend>Legend</legend>
-
         <?php echo $form->textFieldRow($model, 'title', array('class' => 'input-xxlarge')); ?>
         <div class="control-group">
             <?php echo $form->labelEx($model, 'url', array('class' => 'control-label')); ?>
             <div class="controls">
                 <div class="input-append">
-                    <?php echo $form->textField($model, 'url', array('size' => 60, 'maxlength' => 255, 'class' => 'span5')); ?>
+                    <?php echo $form->textField($model, 'url', array('size' => 60, 'maxlength' => 255, 'class' => 'input-xxlarge')); ?>
 
                     <?php $this->widget('bootstrap.widgets.TbButton', array('label' => 'Создать',
                         'type' => 'info',
@@ -96,35 +63,48 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                         'selectedList' => 4
                     ),
                     'dropDownHtmlOptions' => array(
-                        'class' => 'span6',
+                        'class' => 'input-xxlarge width-fix',
                     ),
                 ));
                 ?>
+                <?php echo $form->error($model, 'categories'); ?>
             </div>
-
         </div>
         <div class="control-group">
-            <?php echo $form->labelEx($model, 'content', array('class' => 'control-label')); ?>
+            <?php echo $form->labelEx($model, 'date', array('class' => 'control-label')); ?>
             <div class="controls">
-                <?php  $this->widget('common.ext.redactorjs.Redactor', array('model' => $model, 'attribute' => 'content', 'lang' => 'ru')); ?>
-                <?php echo $form->error($model, 'content'); ?>
+                <?php
+                Yii::import('common.ext.CJuiDateTimePicker.CJuiDateTimePicker');
+                $this->widget('CJuiDateTimePicker', array(
+                    'model' => $model,
+                    'attribute' => 'date',
+                    'mode' => 'datetime',
+                    'options' => array(
+                        "dateFormat"=>'yy-mm-dd',
+                        "timeFormat"=>'hh:mm:ss'
+                    ),
+                    'htmlOptions'=>array('class'=>'input-xxlarge', 'value'=>date('Y-m-d H:i:s'),'style'=>'position: relative; z-index: 3000;')
+                ));
+                ?>
+                <?php echo $form->error($model, 'date'); ?>
             </div>
         </div>
+        <?php echo $form->textFieldRow($model, 'author_name', array('class' => 'input-xxlarge')); ?>
         <div class="control-group">
-            <?php echo $form->labelEx($model, 'image', array('class' => 'control-label')); ?>
+            <?php echo $form->labelEx($model, 'author_image', array('class' => 'control-label')); ?>
             <div class="controls">
                 <div class="row-fluid">
                     <?php
-                    if ($model->image) {
-                        $display = true;
+                    if (!empty($model->author_image)) {
+                        $display_author = true;
                     } else {
-                        $display = false;
+                        $display_author = false;
                     }
                     $this->widget('common.ext.EAjaxUpload.EAjaxUpload',
-                        array('id' => 'ImageUpload',
-                            'config' => array('action' => $this->createUrl('/Pages/adminPages/MainImageUpload'),
-                                'allowedExtensions' => Yii::app()->params['Pages']['mainImage']['ext'],
-                                'sizeLimit' => Yii::app()->params['Pages']['mainImage']['maxSize'],
+                        array('id' => 'ImageUploadAuthor',
+                            'config' => array('action' => $this->createUrl('/Pages/adminPages/MainImageUpload',array('field'=>'author_image')),
+                                'allowedExtensions' => Yii::app()->params['Pages']['author_image']['ext'],
+                                'sizeLimit' => Yii::app()->params['Pages']['author_image']['maxSize'],
                                 'minSizeLimit' => 0,
                                 'multiple' => false,
                                 'template' => '<div class="qq-uploader"><div class="qq-upload-drop-area"><span>Drag and drop</span></div>
@@ -136,12 +116,11 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                                               </li>',
                                 'onComplete' => 'js:function(id, realFilename, responseJSON) {
                                                                          if(responseJSON.success){
-                                                                            $("#image").attr("src","' . $previewPrefix . '"+responseJSON.filename);
-                                                                            $("#image").show();
-                                                                            $("#del").show();
-                                                                            $("#image_name_temp").val(responseJSON.filename);
+                                                                            $("#author-image").attr("src","' . $previewPrefix . '"+responseJSON.filename);
+                                                                            $("#author-image").show();
+                                                                            $("#Pages_author_image").val(responseJSON.filename);
                                                                             $(".qq-upload-list").css("display","none");
-                                                                            $(".delete-image").show();
+                                                                            $(".author-image-delete").show();
                                                                            }
                                                                          }',
 
@@ -150,12 +129,95 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                     echo CHtml::ajaxLink('Удалить', Yii::app()->createUrl('/Pages/adminPages/MainImageDelete'),
                         array(
                             'type' => 'POST',
-                            'data' => array('id' => $model->id),
+                            'data' => array('id' => $model->id,'field'=>'author_image'),
                             'success' => "function(data)
 								  {
-								  		$('#image').hide();
+								  		$('#author-image').hide();
+								  		$('.author-image-delete').hide();
+								  		$('#Pages_author_image').val('');
+								  }",
+                        ),
+                        array(
+                            'class' => 'main-image-delete btn btn-danger',
+                            'style' => $display_author ? 'display:inline-block;' : 'display:none;',
+                            "confirm" => 'Удалить картинку?',
+                        ));
+                    echo $form->hiddenField($model,'author_image');
+                    ?>
+                </div>
+                <?php
+                if ($display_author) {
+                    echo Chtml::image(Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image), 'image-upload', array(
+                        'id' => 'author-image',
+                        'class' => 'image-upload'
+                    ));
+                } else {
+                    echo Chtml::image('#', 'image-upload', array('style' => 'display:none', 'id' => 'author-image', 'class' => 'image-upload'));
+                }
+
+                ?>
+                <?php echo $form->error($model, 'author_image'); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <?php echo $form->labelEx($model, 'author_description', array('class' => 'control-label')); ?>
+            <div class="controls">
+                <?php  $this->widget('common.ext.redactorjs.Redactor', array('model' => $model, 'attribute' => 'author_description', 'lang' => 'ru','htmlOptions'=>array('style'=>'height:200px;'))); ?>
+                <?php echo $form->error($model, 'author_description'); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <?php echo $form->labelEx($model, 'content', array('class' => 'control-label')); ?>
+            <div class="controls">
+                <?php  $this->widget('common.ext.redactorjs.Redactor', array('model' => $model, 'attribute' => 'content', 'lang' => 'ru')); ?>
+                <?php echo $form->error($model, 'content'); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <?php echo $form->labelEx($model, 'main_image', array('class' => 'control-label')); ?>
+            <div class="controls">
+                <div class="row-fluid">
+                    <?php
+                    if (!empty($model->main_image)) {
+                        $display = true;
+                    } else {
+                        $display = false;
+                    }
+                    $this->widget('common.ext.EAjaxUpload.EAjaxUpload',
+                        array('id' => 'ImageUpload',
+                            'config' => array('action' => $this->createUrl('/Pages/adminPages/MainImageUpload',array('field'=>'main_image')),
+                                'allowedExtensions' => Yii::app()->params['Pages']['main_image']['ext'],
+                                'sizeLimit' => Yii::app()->params['Pages']['main_image']['maxSize'],
+                                'minSizeLimit' => 0,
+                                'multiple' => false,
+                                'template' => '<div class="qq-uploader"><div class="qq-upload-drop-area"><span>Drag and drop</span></div>
+                                          <div class="qq-upload-button btn btn-success">Загрузить</div><ul class="qq-upload-list"></ul></div>',
+                                'fileTemplate' => '<li><span class="qq-upload-file"></span>
+                                             <span class="qq-upload-spinner"></span> <span class="qq-upload-size"></span>
+                                             <a class="qq-upload-cancel" href="#">' . Yii::t('eajaxupload', 'Отменить') . '</a>
+                                             <span class="qq-upload-failed-text">' . Yii::t('eajaxupload', 'Ошыбка') . '</span>
+                                              </li>',
+                                'onComplete' => 'js:function(id, realFilename, responseJSON) {
+                                                                         if(responseJSON.success){
+                                                                            $("#main-image").attr("src","' . $previewPrefix . '"+responseJSON.filename);
+                                                                            $("#main-image").show();
+                                                                            $("#Pages_main_image").val(responseJSON.filename);
+                                                                            $(".qq-upload-list").css("display","none");
+                                                                            $(".main-image-delete").show();
+                                                                           }
+                                                                         }',
+
+                            )
+                        ));
+                    echo CHtml::ajaxLink('Удалить', Yii::app()->createUrl('/Pages/adminPages/MainImageDelete'),
+                        array(
+                            'type' => 'POST',
+                            'data' => array('id' => $model->id,'field'=>'main_image'),
+                            'success' => "function(data)
+								  {
+								  		$('#main-image').hide();
 								  		$('.main-image-delete').hide();
-								  		$('#image_name_temp').val('');
+								  		$('#Pages_main_image').val('');
 								  }",
                         ),
                         array(
@@ -163,20 +225,21 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                             'style' => $display ? 'display:inline-block;' : 'display:none;',
                             "confirm" => 'Удалить картинку?',
                         ));
-                    echo Chtml::hiddenField('image_name_temp');
+                    echo $form->hiddenField($model,'main_image');
                     ?>
                 </div>
                 <?php
                 if ($display) {
-                    echo Chtml::image(Yii::app()->params['dataUrl'] . 'pages/' . $model->id . '/images/main/' . Yii::app()->params['Pages']['mainImage']['name'], 'image-upload', array(
-                        'id' => 'image',
+                    echo Chtml::image(Pages::getImageSrc('main_image','thumb',$model->id,$model->main_image), 'image-upload', array(
+                        'id' => 'main-image',
                         'class' => 'image-upload'
                     ));
                 } else {
-                    echo Chtml::image('#', 'image-upload', array('style' => 'display:none', 'id' => 'image', 'class' => 'image-upload'));
+                    echo Chtml::image('#', 'image-upload', array('style' => 'display:none', 'id' => 'main-image', 'class' => 'image-upload'));
                 }
 
                 ?>
+                <?php echo $form->error($model, 'main_image'); ?>
             </div>
         </div>
         <div class="control-group">
@@ -184,7 +247,7 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                 <?php
                 $button_class = $model->isNewRecord ? ' disabled' : ' admin-modal-show';
                 $this->widget('bootstrap.widgets.TbButton', array(
-                'label'=>'Загрузить Фотографии',
+                'label'=>'Галерея',
                 'type'=>'success',
                 'size'=>'normall',
                 'htmlOptions'=>array(
@@ -195,130 +258,41 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
             </div>
         </div>
         <?php echo $form->checkBoxRow($model, 'visible'); ?>
+        <?php echo $form->checkBoxRow($model, 'visible_on_main'); ?>
         <?php echo $form->checkBoxRow($model, 'allow_comments'); ?>
     </fieldset>
 
     <div class="form-actions">
-        <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'size' => 'large', 'icon' => 'ok white', 'type' => 'primary', 'label' => 'Сохранить')); ?>
+
+        <?php
+        $this->widget('bootstrap.widgets.TbButton', array(
+            'buttonType' => 'submitLink',
+            'size' => 'large',
+            'icon' => 'ok white',
+            'type' => 'primary',
+            'label' => 'Сохранить',
+            'htmlOptions' => array('submit' => '' , 'params'=>array('redirect'=>'index'))
+        ));
+        ?>
+        &nbsp
+        <?php
+        $this->widget('bootstrap.widgets.TbButton', array(
+            'buttonType' => 'submitLink',
+            'size' => 'large',
+            'icon' => 'ok white',
+            'type' => 'primary',
+            'label' => 'Сохранить и продолжыть',
+            'htmlOptions' => array('submit' => '' , 'params'=>array('redirect'=>'update'))
+        ));
+        ?>
     </div>
 
     <?php $this->endWidget(); ?>
 
-</div><!-- form -->
-<script type="text/javascript">
-    var transforms = {
-            item:[
-                {tag:'li', class:'images-box', children:[
-                    {tag:'div', class:'thumbnail', children:[
-                        {tag:'img', src:'${src}'},
-                        {tag:'form', class:'pages-form', 'method':'post', children:[
-                            {tag:'fieldset', children:[
-                                {tag:'input', 'type':'text', 'name':'title', 'value':'${title}'},
-                                {tag:'div', html:'<button class="btn pull-left save-image" data-id="${id}" type="button">' +
-                                    '<i class="icon-ok"></i></button>' +
-                                    '<button class="btn pull-right delete-image" data-id="${id}"  type="button">' +
-                                    '<i class="icon-remove"></i></button>'
-                                }
-                            ]}
-                        ]
-                        }
-                    ]
-                    }
-                ]
-                }
-            ]
-        }
-        ;
 
-
-    function getAllImages(){
-        $.ajax({
-           type: "POST",
-            url: '<?php echo $this->createUrl('/Pages/AdminPages/GetImagesJSON',array('page_id'=>$model->id)) ?>'
-        }).done(function( data ) {
-                var result = $.parseJSON(data);
-                validMaxCount(result['curCount'], result['maxCount']);
-                for(var value in result){
-                   renderImage(result[value]);
-                }
-        });
-    }
-    function renderImage(data){
-         $('#result').json2html(data,transforms.item);
-    }
-    function validMaxCount(cur,max){
-        if(cur < max){
-            $('#count').html('<i>загружено</i> <span class="badge badge-success"><span id="curCount">'+cur+'</span> c ' + max+'</span>');
-        }else{
-            setTimeout(function(){
-                $('#ImagesUpload > .qq-uploader > .qq-upload-button').addClass('disabled');
-                $('#ImagesUpload > .qq-uploader > .qq-upload-button >input').on('click',function(){return false;})
-                $("#images-upload-list").css('display','none');
-            },1000)
-            $('#count').html('<i>загружено</i> <span class="badge badge-important"><span id="curCount">'+cur+'</span> c ' + max+'</span>');
-        }
-    }
-
-    function deleteImage(data){
-        $.ajax({
-            type: "POST",
-            url: '<?php echo $this->createUrl('/Pages/AdminPages/imageDelete') ?>',
-            data:data
-        }).done(function( data ) {
-                $("#ImagesUpload > .qq-uploader > .qq-upload-button >input").unbind('click');
-                $('#ImagesUpload > .qq-uploader > .qq-upload-button').removeClass('disabled');
-                var count =$('#curCount').html();
-                $('#curCount').html(--count).parent().removeClass('badge-important').addClass('badge-success');
-            });
-    }
-
-
-    function updateImage(data){
-        $.ajax({
-            type: "POST",
-            url: '<?php echo $this->createUrl('/Pages/AdminPages/imageUpdate') ?>',
-            data:data
-        });
-    }
-
-    $(document).ready(function () {
-        getAllImages();
-        $(document).on('click', '.save-image',function(e){
-            var title =$(this).parent().siblings('input').val();
-            var id = $(this).data('id');
-            var data = {id:id,title:title};
-            updateImage(data);
-            $(this).addClass('save-image-ok').delay(1000).queue(function() {
-                $(this).removeClass('save-image-ok');
-                $(this).dequeue();
-            });
-        } );
-
-        $(document).on('click','.delete-image',function(e){
-            var id = $(this).data('id');
-            var data = {id:id};
-            deleteImage(data);
-            $(this).closest('li.images-box').remove();
-        });
-
-        $('.admin-modal-show').on('click', function () {
-            $('.admin-modal').show().toggleClass('in out');
-            $('.admin-modal').scrollToMe();
-        })
-        $('.close').on('click', function () {
-            $('.admin-modal').toggleClass('in out').hide();
-        });
-    })
-</script>
 
 <?php
-$cs = Yii::app()->getClientScript();
-$cs->registerScript('url', '
-$("#button-create-url-chunk").on("click",function() {
-$("#Pages_url").val(transliterate($("#Pages_title").val()));
-return false;
-});
-', CClientScript::POS_READY);
+
 
 
 ?>

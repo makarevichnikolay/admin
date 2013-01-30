@@ -194,3 +194,247 @@ Stack trace:
 #11 {main}
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/30 13:42:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+	`date_update` datetime CURRENT_TIMESTAMP on update CURRENT_T' at line 18. The SQL statement executed was: CREATE TABLE `pages` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int UNSIGNED NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`date` datetime NOT NULL,
+	`author_name` varchar(255) NOT NULL,
+	`author_image` varchar(255) NOT NULL,
+	`author_description` text NOT NULL,
+	`content` text NOT NULL,
+	`main_image` tinyint(1) NOT NULL,
+	`visible` tinyint(1) NOT NULL,
+	`visible_on_main` tinyint(1) NOT NULL,
+	`allow_comments` tinyint(1) NOT NULL,
+	`user_id` int UNSIGNED NOT NULL,
+	`date_create` datetime CURRENT_TIMESTAMP,
+	`date_update` datetime CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP
+).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1321)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (228)
+2013/01/30 13:42:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+	`date_update` datetime CURRENT_TIMESTAMP on update CURRENT_T' at line 18. The SQL statement executed was: CREATE TABLE `pages` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int UNSIGNED NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`date` datetime NOT NULL,
+	`author_name` varchar(255) NOT NULL,
+	`author_image` varchar(255) NOT NULL,
+	`author_description` text NOT NULL,
+	`content` text NOT NULL,
+	`main_image` tinyint(1) NOT NULL,
+	`visible` tinyint(1) NOT NULL,
+	`visible_on_main` tinyint(1) NOT NULL,
+	`allow_comments` tinyint(1) NOT NULL,
+	`user_id` int UNSIGNED NOT NULL,
+	`date_create` datetime CURRENT_TIMESTAMP,
+	`date_update` datetime CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP
+)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('pages', Array, NULL)
+#2 Z:\home\localhost\www\admin\common\migrations\m130104_194550_create_table_pages.php(26): CDbMigration->createTable('pages', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130104_194550_create_table_pages->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130104_194550_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/30 13:42:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+	`date_update` datetime CURRENT_TIMESTAMP on update CURRENT_T' at line 18. The SQL statement executed was: CREATE TABLE `pages` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int UNSIGNED NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`date` datetime NOT NULL,
+	`author_name` varchar(255) NOT NULL,
+	`author_image` varchar(255) NOT NULL,
+	`author_description` text NOT NULL,
+	`content` text NOT NULL,
+	`main_image` tinyint(1) NOT NULL,
+	`visible` tinyint(1) NOT NULL,
+	`visible_on_main` tinyint(1) NOT NULL,
+	`allow_comments` tinyint(1) NOT NULL,
+	`user_id` int UNSIGNED NOT NULL,
+	`date_create` datetime CURRENT_TIMESTAMP,
+	`date_update` datetime CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP
+).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1321)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (228)
+2013/01/30 13:42:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+	`date_update` datetime CURRENT_TIMESTAMP on update CURRENT_T' at line 18. The SQL statement executed was: CREATE TABLE `pages` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int UNSIGNED NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`date` datetime NOT NULL,
+	`author_name` varchar(255) NOT NULL,
+	`author_image` varchar(255) NOT NULL,
+	`author_description` text NOT NULL,
+	`content` text NOT NULL,
+	`main_image` tinyint(1) NOT NULL,
+	`visible` tinyint(1) NOT NULL,
+	`visible_on_main` tinyint(1) NOT NULL,
+	`allow_comments` tinyint(1) NOT NULL,
+	`user_id` int UNSIGNED NOT NULL,
+	`date_create` datetime CURRENT_TIMESTAMP,
+	`date_update` datetime CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP
+)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('pages', Array, NULL)
+#2 Z:\home\localhost\www\admin\common\migrations\m130104_194550_create_table_pages.php(26): CDbMigration->createTable('pages', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130104_194550_create_table_pages->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130104_194550_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/30 13:44:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+	`date_update` datetime on update CURRENT_TIMESTAMP
+)' at line 18. The SQL statement executed was: CREATE TABLE `pages` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int UNSIGNED NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`date` datetime NOT NULL,
+	`author_name` varchar(255) NOT NULL,
+	`author_image` varchar(255) NOT NULL,
+	`author_description` text NOT NULL,
+	`content` text NOT NULL,
+	`main_image` tinyint(1) NOT NULL,
+	`visible` tinyint(1) NOT NULL,
+	`visible_on_main` tinyint(1) NOT NULL,
+	`allow_comments` tinyint(1) NOT NULL,
+	`user_id` int UNSIGNED NOT NULL,
+	`date_create` datetime CURRENT_TIMESTAMP,
+	`date_update` datetime on update CURRENT_TIMESTAMP
+).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1321)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (228)
+2013/01/30 13:44:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+	`date_update` datetime on update CURRENT_TIMESTAMP
+)' at line 18. The SQL statement executed was: CREATE TABLE `pages` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int UNSIGNED NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`date` datetime NOT NULL,
+	`author_name` varchar(255) NOT NULL,
+	`author_image` varchar(255) NOT NULL,
+	`author_description` text NOT NULL,
+	`content` text NOT NULL,
+	`main_image` tinyint(1) NOT NULL,
+	`visible` tinyint(1) NOT NULL,
+	`visible_on_main` tinyint(1) NOT NULL,
+	`allow_comments` tinyint(1) NOT NULL,
+	`user_id` int UNSIGNED NOT NULL,
+	`date_create` datetime CURRENT_TIMESTAMP,
+	`date_update` datetime on update CURRENT_TIMESTAMP
+)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('pages', Array, NULL)
+#2 Z:\home\localhost\www\admin\common\migrations\m130104_194550_create_table_pages.php(26): CDbMigration->createTable('pages', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130104_194550_create_table_pages->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130104_194550_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/01/30 13:44:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+	`date_update` datetime on update CURRENT_TIMESTAMP
+)' at line 18. The SQL statement executed was: CREATE TABLE `pages` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int UNSIGNED NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`date` datetime NOT NULL,
+	`author_name` varchar(255) NOT NULL,
+	`author_image` varchar(255) NOT NULL,
+	`author_description` text NOT NULL,
+	`content` text NOT NULL,
+	`main_image` tinyint(1) NOT NULL,
+	`visible` tinyint(1) NOT NULL,
+	`visible_on_main` tinyint(1) NOT NULL,
+	`allow_comments` tinyint(1) NOT NULL,
+	`user_id` int UNSIGNED NOT NULL,
+	`date_create` datetime CURRENT_TIMESTAMP,
+	`date_update` datetime on update CURRENT_TIMESTAMP
+).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1321)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (228)
+2013/01/30 13:44:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURRENT_TIMESTAMP,
+	`date_update` datetime on update CURRENT_TIMESTAMP
+)' at line 18. The SQL statement executed was: CREATE TABLE `pages` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int UNSIGNED NOT NULL,
+	`title` varchar(255) NOT NULL,
+	`keywords` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	`url` varchar(255) NOT NULL,
+	`date` datetime NOT NULL,
+	`author_name` varchar(255) NOT NULL,
+	`author_image` varchar(255) NOT NULL,
+	`author_description` text NOT NULL,
+	`content` text NOT NULL,
+	`main_image` tinyint(1) NOT NULL,
+	`visible` tinyint(1) NOT NULL,
+	`visible_on_main` tinyint(1) NOT NULL,
+	`allow_comments` tinyint(1) NOT NULL,
+	`user_id` int UNSIGNED NOT NULL,
+	`date_create` datetime CURRENT_TIMESTAMP,
+	`date_update` datetime on update CURRENT_TIMESTAMP
+)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('pages', Array, NULL)
+#2 Z:\home\localhost\www\admin\common\migrations\m130104_194550_create_table_pages.php(26): CDbMigration->createTable('pages', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130104_194550_create_table_pages->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130104_194550_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

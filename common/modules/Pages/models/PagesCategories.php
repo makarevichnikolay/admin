@@ -52,7 +52,7 @@ class PagesCategories extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-            'category'    => array(self::BELONGS_TO, 'categories',    'category_id'),
+            'category_name'    => array(self::BELONGS_TO, 'categories',    'category_id'),
 		);
 	}
 

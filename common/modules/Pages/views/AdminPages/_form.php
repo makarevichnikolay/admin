@@ -74,14 +74,14 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
             <?php echo $form->labelEx($model, 'date', array('class' => 'control-label')); ?>
             <div class="controls">
                 <?php
-                Yii::import('common.ext.CJuiDateTimePicker.CJuiDateTimePicker');
-                $this->widget('CJuiDateTimePicker', array(
+                $this->widget('common.ext.CJuiDateTimePicker.CJuiDateTimePicker', array(
                     'model' => $model,
                     'attribute' => 'date',
                     'mode' => 'datetime',
                     'options' => array(
                         "dateFormat"=>'yy-mm-dd',
-                        "timeFormat"=>'hh:mm:ss'
+                        "timeFormat"=>'hh:mm:ss',
+                        'showAnim'=>'fold',
                     ),
                     'htmlOptions'=>array('class'=>'input-xxlarge', 'value'=>date('Y-m-d H:i:s'),'style'=>'position: relative; z-index: 3000;')
                 ));

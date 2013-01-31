@@ -133,7 +133,7 @@ class JToggleColumn extends CGridColumn {
      * Registers the client scripts for the button column.
      */
     protected function registerClientScript() {
-        Yii::app()->getClientScript()->registerScriptFile(Yii::app()->getAssetManager()->publish(dirname(__FILE__).'/js/jquery-ui-1.8.22.custom.min.js' ));
+       // Yii::app()->getClientScript()->registerScriptFile(Yii::app()->getAssetManager()->publish(dirname(__FILE__).'/js/jquery-ui-1.8.22.custom.min.js' ));
         Yii::app()->getClientScript()->registerScriptFile(Yii::app()->getAssetManager()->publish(dirname(__FILE__).'/js/script.js' ));
     }
 

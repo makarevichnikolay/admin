@@ -15,6 +15,8 @@ class Pages extends CActiveRecord
 
     public $categories;
     public  $defaultPageTypeId = 1;
+    public $date_from;
+    public $date_to;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -56,21 +58,11 @@ class Pages extends CActiveRecord
             array('date_create,date_update','default',
                 'value'=>new CDbExpression('NOW()'),
                 'setOnEmpty'=>false,'on'=>'insert'),
-			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments', 'safe', 'on'=>'search'),
+			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments, date_from, date_to, categories', 'safe', 'on'=>'search'),
 		);
 	}
 
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-            'type'    => array(self::BELONGS_TO, 'pageTypes',    'type_id'),
-		);
-	}
+
 
 	/**
 	 * @return array customized attribute labels (name=>label)
@@ -173,14 +165,35 @@ class Pages extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
+
+    /**
+     * @return array relational rules.
+     */
+    public function relations()
+    {
+        // NOTE: you may need to adjust the relation name and the related
+        // class name for the relations automatically generated below.
+        return array(
+            'type'    => array(self::BELONGS_TO, 'pageTypes',    'type_id'),
+            'category'    => array(self::HAS_MANY, 'pagesCategories','page_id','with'=>array('category_name')),
+            'category_search'    => array(self::HAS_MANY, 'pagesCategories','page_id'),
+        );
+    }
+
 	public function search()
 	{
 		// Warning: Please modify the following code to remove attributes that
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-        //$criteria->with = array('type');
-       // $criteria->together = true;
+        //  $criteria->with = array('category'=>array('joinType'=>'INNER JOIN'));
+        if(is_array($this->categories) && !empty($this->categories)){
+            $criteria->with = array('category_search');
+            $criteria->addInCondition('category_search.category_id',$this->categories,"OR");
+            $criteria->together = true;
+            $criteria->group = 'category_search.page_id';
+        }
+
 		$criteria->compare('id',$this->id);
         $criteria->compare('type_id',$this->type_id);
 		$criteria->compare('url',$this->url,true);
@@ -191,8 +204,16 @@ class Pages extends CActiveRecord
         $criteria->compare('visible_on_main',$this->visible_on_main);
         $criteria->compare('allow_comments',$this->allow_comments);
 
-		return new CActiveDataProvider($this, array(
+
+        if((isset($this->date_from) && trim($this->date_from) != "") && (isset($this->date_to) && trim($this->date_to) != ""))
+            $criteria->addBetweenCondition('date', ''.$this->date_from.'', ''.$this->date_to.'');
+
+
+        return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+            'pagination'=>array(
+                'pageSize'=>3
+            )
 		));
 	}
 }

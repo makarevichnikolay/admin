@@ -1629,3 +1629,219 @@ Stack trace:
 REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 12:04:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 12:46:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 17:03:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 17:03:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 17:57:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "adminUsers".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('adminUsers')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/adminUsers
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 17:57:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 17:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 17:59:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 17:59:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 18:18:15 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.components.YWebUser" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\YiiBase.php(196): YiiBase::import('common.componen...', true)
+#1 Z:\home\localhost\www\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 Z:\home\localhost\www\framework\base\CModule.php(103): CModule->getComponent('user')
+#3 Z:\home\localhost\www\admin\common\modules\Users\controllers\UsersController.php(9): CModule->__get('user')
+#4 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#5 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('login')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/log...')
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/admin/Users/Users/login
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 18:18:27 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.username".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\auth\CWebUser.php(140): CComponent->__get('username')
+#1 Z:\home\localhost\www\admin\common\modules\Users\controllers\UsersController.php(12): CWebUser->__get('username')
+#2 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#3 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('login')
+#7 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/log...')
+#8 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/admin/admin/Users/Users/login
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 18:19:42 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.username".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\auth\CWebUser.php(140): CComponent->__get('username')
+#1 Z:\home\localhost\www\admin\common\modules\Users\controllers\UsersController.php(12): CWebUser->__get('username')
+#2 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#3 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('login')
+#7 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/log...')
+#8 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/admin/admin/Users/Users/login
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 18:20:19 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "WebUser.username".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\auth\CWebUser.php(140): CComponent->__get('username')
+#1 Z:\home\localhost\www\admin\common\modules\Users\controllers\UsersController.php(10): CWebUser->__get('username')
+#2 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): UsersController->actionLogin()
+#3 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('login')
+#7 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/log...')
+#8 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#10 {main}
+REQUEST_URI=/admin/admin/Users/Users/login
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 18:28:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 18:28:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 18:31:52 [error] [php] include(Users.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\components\WebUser.php(20): spl_autoload_call()
+#1 Z:\home\localhost\www\admin\common\components\WebUser.php(13): WebUser->getModel()
+#2 Z:\home\localhost\www\framework\base\CComponent.php(111): WebUser->getRole()
+#3 Z:\home\localhost\www\framework\web\auth\CWebUser.php(140): WebUser->__get()
+#4 Z:\home\localhost\www\admin\common\components\PhpAuthManager.php(17): WebUser->__get()
+#5 Z:\home\localhost\www\framework\base\CModule.php(387): PhpAuthManager->init()
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(185): FWebApplication->getComponent()
+#7 Z:\home\localhost\www\framework\web\auth\CWebUser.php(806): FWebApplication->getAuthManager()
+#8 Z:\home\localhost\www\framework\web\auth\CAccessControlFilter.php(338): WebUser->checkAccess()
+#9 Z:\home\localhost\www\framework\web\auth\CAccessControlFilter.php(276): CAccessRule->isRoleMatched()
+#10 Z:\home\localhost\www\framework\web\auth\CAccessControlFilter.php(135): CAccessRule->isUserAllowed()
+#11 Z:\home\localhost\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter()
+#12 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminPagesController->filterAccessControl()
+#14 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#16 Z:\home\localhost\www\framework\web\CController.php(265): AdminPagesController->runActionWithFilters()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminPagesController->run()
+#18 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#19 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#20 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/Pages/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/02/01 18:33:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+HTTP_REFERER=http://localhost/admin/admin/assets/e3ecaab1/css/yii.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/01 18:33:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/lib/bootstrap/less/mixins.less".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/lib/boot...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/lib/bootstrap/less/mixins.less
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

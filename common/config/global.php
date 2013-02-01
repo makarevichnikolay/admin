@@ -11,6 +11,7 @@ return array(
 	'import' => array(
         'common.models.*',
 		'common.components.*',
+        'common.modules.Users.models.*'
 	),
 
 	'components' => array(
@@ -20,6 +21,16 @@ return array(
 		'bootstrap'=>array(
 			'class'=>'common.ext.bootstrap.components.Bootstrap',
 		),
+        'user' => array(
+            'class' => 'common.components.WebUser',
+            'allowAutoLogin' => true,
+            'autoRenewCookie' => true,
+            'loginUrl' => array('Users/Users/login'),
+        ),
+        'authManager' => array(
+            'class' => 'common.components.PhpAuthManager',
+            'defaultRoles' => array('guest'),
+        ),
 		
 	),
 
@@ -67,5 +78,8 @@ return array(
             'Menu'=>array(
                'class' => 'common.modules.Menu.MenuModule',
             ),
+           'Users'=>array(
+               'class' => 'common.modules.Users.UsersModule',
+           ),
 	),
 );

@@ -3,7 +3,7 @@ return array (
   'template' => 'default',
   'connectionId' => 'db',
   'tablePrefix' => '',
-  'modelPath' => 'common.modules.Pages.models',
+  'modelPath' => 'common.modules.Users.models',
   'baseClass' => 'CActiveRecord',
   'buildRelations' => '1',
 );

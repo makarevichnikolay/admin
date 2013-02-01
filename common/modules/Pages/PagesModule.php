@@ -23,7 +23,7 @@ class PagesModule extends CWebModule implements IURLRule
                                            ));
         if($page){
             $_GET['page_id'] = $page->id;
-            $_GET['view'] = $page->type->view;
+            //$_GET['view'] = $page->type->view;
             return $page->type->module . '/' . $page->type->controller . '/' . $page->type->action;
         }
         return false;

@@ -6,8 +6,13 @@
 	<meta name="language" content="en" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/styles.css" />
-
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <?php
+    $cs = Yii::app()->getClientScript();
+    $cs->registerCoreScript('jquery');
+    //Yii::app()->clientScript->registerCoreScript('jquery.ui');
+    $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/frontend.js', CClientScript::POS_END);
+   ?>
+    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
 	<?php Yii::app()->bootstrap->register(); ?>
 </head>
@@ -42,7 +47,10 @@
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
-
+    <?php
+        $model = new Users();
+        $this->renderPartial('Users.views.Users._login',array('model'=>$model));
+    ?>
 	<?php echo $content; ?>
 
 	<div class="clear"></div>

@@ -30,6 +30,9 @@ return array(
                 'less/styles.less'=>'css/styles.css'
             ),
         ),
+        'user' => array(
+            'loginUrl' => array('Users/AdminUsers/login'),
+        ),
         'urlManager'=>array(
             'urlFormat'=>'path',
             'showScriptName'=>false,
@@ -42,6 +45,8 @@ return array(
                 'Pages/Categories'=>'Pages/AdminCategories/index',
                 'Pages/<action:\w+>'=>'Pages/AdminPages/<action>',
                 'Pages'=>'Pages/AdminPages/index',
+                'Users'=>'Users/AdminUsers/index',
+                'Users/<action:\w+>'=>'Users/AdminUsers/<action>',
                 '<module:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

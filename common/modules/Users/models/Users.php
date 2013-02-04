@@ -18,11 +18,11 @@
  */
 class Users extends CActiveRecord
 {
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Users the static model class
-	 */
+
+    public $password_repeat;
+    public $date_from;
+    public $date_to;
+
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -44,13 +44,20 @@ class Users extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('login, password, nickname, first_name, last_name, phone, ip, role_id, last_visited, baned', 'required'),
-			array('baned', 'numerical', 'integerOnly'=>true),
+
+			array('login', 'required'),
+            array('login','email'),
+			array('baned,role_id', 'numerical', 'integerOnly'=>true),
+            array('first_name, last_name, phone, ip', 'type', 'type'=>'string'),
 			array('login, password, nickname, first_name, last_name, phone, ip', 'length', 'max'=>255),
 			array('role_id', 'length', 'max'=>10),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('id, login, password, nickname, first_name, last_name, phone, ip, role_id, last_visited, baned', 'safe', 'on'=>'search'),
+			array('id, login, password, nickname, first_name, last_name, phone, ip, role_id, last_visited, baned, date_from, date_to', 'safe', 'on'=>'search'),
+            array('password_repeat,	nickname', 'required', 'on'=>'register'),
+            array('password_repeat', 'compare', 'compareAttribute'=>'password', 'on'=>'register'),
+            array('password_repeat,password', 'required', 'on'=>'register'),
+            array('password', 'required', 'on'=>'login'),
+            array('nickname, baned,role_id,first_name, last_name, phone, ip, last_visited, password_repeat', 'safe','on'=>'login'),
+
 		);
 	}
 
@@ -72,19 +79,45 @@ class Users extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'login' => 'Login',
-			'password' => 'Password',
-			'nickname' => 'Nickname',
-			'first_name' => 'First Name',
-			'last_name' => 'Last Name',
-			'phone' => 'Phone',
+			'login' => 'Email',
+			'password' => 'Пароль',
+			'nickname' => 'Никнейм',
+			'first_name' => 'Имя',
+			'last_name' => 'Фамилия',
+			'phone' => 'Телефон',
 			'ip' => 'Ip',
-			'role_id' => 'Role',
-			'last_visited' => 'Last Visited',
-			'baned' => 'Baned',
+			'role_id' => 'Тип пользователя',
+			'last_visited' => 'Дата посещения',
+			'baned' => 'Забанен',
 		);
 	}
 
+    public function authenticate(){
+        $identity=new UserIdentity($this->login,$this->password);
+        if($identity->authenticate()){
+            Yii::app()->user->login($identity);
+            return true;
+        }
+        return false;
+    }
+
+
+   public static function GetRealIp()
+    {
+        if (!empty($_SERVER['HTTP_CLIENT_IP']))
+        {
+            $ip=$_SERVER['HTTP_CLIENT_IP'];
+        }
+        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+        {
+            $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+        }
+        else
+        {
+            $ip=$_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
+    }
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -95,7 +128,8 @@ class Users extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-
+        $criteria->with = array('role');
+        $criteria->together= true;
 		$criteria->compare('id',$this->id);
 		$criteria->compare('login',$this->login,true);
 		$criteria->compare('password',$this->password,true);
@@ -107,6 +141,8 @@ class Users extends CActiveRecord
 		$criteria->compare('role_id',$this->role_id,true);
 		$criteria->compare('last_visited',$this->last_visited,true);
 		$criteria->compare('baned',$this->baned);
+        if((isset($this->date_from) && trim($this->date_from) != "") && (isset($this->date_to) && trim($this->date_to) != ""))
+            $criteria->addBetweenCondition('last_visited', ''.$this->date_from.'', ''.$this->date_to.'');
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

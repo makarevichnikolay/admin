@@ -12,6 +12,9 @@ class UserIdentity extends CUserIdentity {
         } else {
             $this->_id = $user->id;
             $this->username = $user->nickname;
+            $user->last_visited = new CDbExpression('NOW()');
+            $user->ip = Users::GetRealIp();
+            $user->update(array('last_visited','ip'));
             $this->errorCode = self::ERROR_NONE;
         }
         return !$this->errorCode;

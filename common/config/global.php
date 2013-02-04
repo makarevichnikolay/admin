@@ -25,7 +25,7 @@ return array(
             'class' => 'common.components.WebUser',
             'allowAutoLogin' => true,
             'autoRenewCookie' => true,
-            'loginUrl' => array('Users/Users/login'),
+            //'loginUrl' => array('Users/Users/login'),
         ),
         'authManager' => array(
             'class' => 'common.components.PhpAuthManager',

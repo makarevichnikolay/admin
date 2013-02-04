@@ -1,5 +1,6 @@
 .main { min-height:800px; }
 #page { padding-top:60px; }
+.center-block { margin:10px auto; }
 .dd {
   position:relative;
   display:block;

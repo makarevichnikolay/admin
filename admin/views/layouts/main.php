@@ -24,13 +24,22 @@ $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/admin.js', CClientSc
 <?php
 $menu = Yii::app()->getModule('Menu')->getMenu();
 
-    $this->widget('bootstrap.widgets.TbNavbar',array(
-    'items'=>array(
+$this->widget('bootstrap.widgets.TbNavbar', array(
+    'items' => array(
         array(
-            'class'=>'bootstrap.widgets.TbMenu',
-            'items'=>$menu,
-    ),
-)));
+            'class' => 'bootstrap.widgets.TbMenu',
+            'items' => $menu,
+        ),
+        array(
+            'class' => 'bootstrap.widgets.TbMenu',
+            'htmlOptions' => array('class' => 'pull-right'),
+            'items' => array(
+                array('label' => Yii::app()->user->name, 'url' => '#','items'=>array(
+                    array('label' => 'Выйти', 'url' => Yii::app()->createUrl('Users/AdminUsers/Logout')),
+                )),
+            ),
+        ),
+    )));
 /*array(
 array('label'=>'Модули' ,'items'=>array(
 array('label'=>'Страницы', 'items'=>array(

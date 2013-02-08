@@ -12,7 +12,8 @@ return array(
         'application.components.*',
         'common.ext.CArray',
         'common.ext.JToggleColumn.JToggleColumn',
-        'common.ext.JToggleColumn.ToggleAction'
+        'common.ext.JToggleColumn.ToggleAction',
+        'common.modules.Pages.models.Pages'
     ),
     'defaultController' => 'Default',
 
@@ -38,6 +39,9 @@ return array(
             'showScriptName'=>false,
             'rules'=>array(
                 '/'=>'Default/index',
+                'News'=>'Pages/AdminNews/index',
+                'News/update/<id>'=>'Pages/adminNews/update',
+                'News/<action:\w+>'=>'News/AdminNews/<action>',
                 'Pages/Types/<action:\w+>'=>'Pages/AdminPageTypes/<action>',
                 'Pages/Types'=>'Pages/AdminPageTypes/index',
                 'Pages/Categories/<action:\w+>'=>'Pages/AdminCategories/<action>',

@@ -49,7 +49,7 @@ class EchMultiselect extends CJuiInputWidget
 	 */
 	public $dropDownHtmlOptions = array();
 	
-
+    public $DropDownGroup;
 
 
 	public function init()
@@ -99,11 +99,29 @@ class EchMultiselect extends CJuiInputWidget
 	{
 		list($name, $id) = $this->resolveDropDownNameID();
 		// Render drop-down element and hide it with javascript
-		if ($this->hasModel())
-			echo CHtml::activeDropDownList($this->model, $this->dropDownAttribute, $this->data, $this->dropDownHtmlOptions);
+		if ($this->hasModel()){
+            /*echo '<select id="Pages_categories" class="input-xxlarge width-fix" name="Pages[categories][]" multiple="multiple" style="display: none;">
+                  <option data-group="test" value="1111">1main</option>
+                  <option data-group="test2" value="000">1main</option>
+                  <optgroup label="test">
+                    <option value="2">1</option>
+                    <option value="3">-0-</option>
+                  </optgroup>
+                   <optgroup label="test2">
+                    <option value="4">test21</option>
+                    <option value="5">test21</option>
+                  </optgroup>
+                  </select>
+            ';*/
+            if($this->DropDownGroup){
+                echo $this->DropDownGroup;
+            }else{
+                echo CHtml::activeDropDownList($this->model, $this->dropDownAttribute, $this->data, $this->dropDownHtmlOptions);
+            }
+        }
 		else
-			echo CHtml::dropDownList($name, $this->value, $this->data, $this->dropDownHtmlOptions);	
-			
+			echo CHtml::dropDownList($name, $this->value, $this->data, $this->dropDownHtmlOptions);
+
 		// Put the script to hide the select-element directly after the element itself, so it is hidden directly after it is rendered
 		// Resource: http://www.electrictoolbox.com/jquery-hide-text-page-load-show-later/
 		// Note: You can also hide the select-element by adding the css-style 'display:none' to the dropDownHtmlOptions. 

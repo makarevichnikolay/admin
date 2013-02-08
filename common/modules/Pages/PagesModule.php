@@ -16,15 +16,15 @@ class PagesModule extends CWebModule implements IURLRule
 	}
 
     public function parseUrlF($manager,$request,$pathInfo,$rawPathInfo){
-        $page = Pages::model()->with(array('type'))->find(array(
+        $page = Pages::model()->find(array(
                                             'condition'=>'url=:url',
                                             'params'=>array(':url'=>$pathInfo),
                                             'select'=>'id'
                                            ));
         if($page){
             $_GET['page_id'] = $page->id;
-            //$_GET['view'] = $page->type->view;
-            return $page->type->module . '/' . $page->type->controller . '/' . $page->type->action;
+           // $page->type->module . '/' . $page->type->controller . '/' . $page->type->action
+            return 'Pages/FrontendNews/index';
         }
         return false;
     }

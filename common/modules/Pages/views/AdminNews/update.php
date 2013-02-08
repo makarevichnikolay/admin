@@ -30,7 +30,7 @@ $this->menu=array(
                     $this->widget('common.ext.EAjaxUpload.EAjaxUpload',
                         array('id' => 'ImagesUpload',
                             'config' => array(
-                                'action' => $this->createUrl('/Pages/adminPages/imageUpload',array('id'=>$params['model']->id)),
+                                'action' => $this->createUrl('/Pages/adminNews/imageUpload',array('id'=>$params['model']->id)),
                                 'allowedExtensions' => Yii::app()->params['Pages']['images']['ext'],
                                 'sizeLimit' => Yii::app()->params['Pages']['images']['maxSize'],
                                 'minSizeLimit' => 0,
@@ -68,9 +68,9 @@ $this->menu=array(
 <?php
 $cs = Yii::app()->getClientScript();
 $cs->registerScript('var', '
-var GetImagesJSON ="' . Yii::app()->createUrl("/Pages/AdminPages/GetImagesJSON",array("page_id"=>$params['model']->id)) .'";
-var updateImageUrl = "'.$this->createUrl("/Pages/AdminPages/imageUpdate").'";
-var deleteImageUrl = "'.$this->createUrl("/Pages/AdminPages/imageDelete").'";
+var GetImagesJSON ="' . Yii::app()->createUrl("/Pages/AdminNews/GetImagesJSON",array("page_id"=>$params['model']->id)) .'";
+var updateImageUrl = "'.$this->createUrl("/Pages/AdminNews/imageUpdate").'";
+var deleteImageUrl = "'.$this->createUrl("/Pages/AdminNews/imageDelete").'";
 
 ', CClientScript::POS_HEAD);
 $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/Pages/pages-form.js', CClientScript::POS_END);

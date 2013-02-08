@@ -1,0 +1,63 @@
+
+@inputHeight : 10px;
+
+@import "mixins.less";
+
+
+/****************************Variables*********************************/
+@mainColor = #2e798c;
+
+
+/**********************************************************************/
+body{
+    background-color: #f5f4ef;
+}
+.row-fluid div{
+    //border: 1px solid;
+}
+
+.main-container{
+    margin-top: -80px;
+
+}
+
+.header{
+    .navbar-inner{
+        height: 165px;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background-image:-moz-linear-gradient(top,#2e798c,#2e798c 70%,#368e9e  88%,#368e9e 92%,#2e798c 110%);
+       // #gradient > .vertical-four-colors(#2e798c,#2e798c,60%,#368e9e,96%,#2e798c);
+    }
+}
+
+.head{
+    background-color: orange;
+    height: 270px;
+    .head{
+        height: 180px;
+        background-color: #adff2f;
+    }
+    .menu{
+
+    }
+}
+
+.main-news{
+    height: 350px;
+    background-color: @mainColor;
+}
+
+
+.footer{
+    .navbar-inner{
+        background-color: #e2e7ea;
+        background-image: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        height: 200px;
+    }
+
+}

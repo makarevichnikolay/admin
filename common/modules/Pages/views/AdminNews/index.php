@@ -52,7 +52,7 @@ $dataFilter = $this->widget('zii.widgets.jui.CJuiDatePicker', array(
     'label'=>'Создать',
     'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
     'size'=>'large', // null, 'large', 'small' or 'mini'
-     'url'=>array('AdminPages/create')
+     'url'=>array('AdminNews/create')
 ));
 
 $this->widget(
@@ -73,7 +73,7 @@ $this->widget(
                     'dropDownAttribute' => 'categories',
                     'data' => CHtml::listData(Categories::model()->findAll(),'id','title'),
                     'options' => array(
-                        'selectedList' => 4,
+                        'selectedList' => 1,
                         'ajaxRefresh'=>true
                     ),
                     'dropDownHtmlOptions' => array(
@@ -87,7 +87,8 @@ $this->widget(
                     }
                     $str = mb_substr($str,0,(mb_strlen($str,'utf8')-2),'utf8');
                     return $str;
-                }
+                },
+                'htmlOptions' => array('style' => 'width:200px;'),
             ),
             array(
                 'name' => 'date',
@@ -126,24 +127,31 @@ $this->widget(
 
             array(
                 'class' => 'bootstrap.widgets.TbButtonColumn',
-                'template' => '{view}{update}{delete}',
+                'template' => '{view}{comments}{update}{delete}',
                 'buttons' => array(
                     'view' => array(
                         'url' => function($data)
                         {
-                            return Yii::app()->getModule("Pages")->createAbsoluteUrlF("Pages/FrontendPages/index", array("id" => $data['id']));
+                            return Yii::app()->getModule("Pages")->createAbsoluteUrlF("Pages/FrontendNews/index", array("id" => $data['id']));
                         },
+                    ),
+                    'comments' => array(
+                        'url' => function($data)
+                        {
+                            return Yii::app()->createUrl('Comments/AdminComments/index',array('page_id'=>$data->id));
+                        },
+                        'icon'=>'comment'
                     ),
                     'update' => array(
                         'url' => function($data)
                         {
-                            return Yii::app()->controller->createUrl("AdminPages/update", array("id" => $data['id']));
+                            return Yii::app()->controller->createUrl("AdminNews/update", array("id" => $data['id']));
                         },
                     ),
                     'delete' => array(
                         'url' => function($data)
                         {
-                            return Yii::app()->controller->createUrl("AdminPages/delete", array("id" => $data['id'], "command" => "delete"));
+                            return Yii::app()->controller->createUrl("AdminNews/delete", array("id" => $data['id'], "command" => "delete"));
                         },
                     ),
                 ),

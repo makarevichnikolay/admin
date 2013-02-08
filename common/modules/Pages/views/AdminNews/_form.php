@@ -58,12 +58,15 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                 $this->widget('common.ext.EchMultiselect.EchMultiselect', array(
                     'model' => $model,
                     'dropDownAttribute' => 'categories',
-                    'data' => $Categories,
+                    'DropDownGroup'=>AdminNewsController::getCategoriesSelect($model->categories,'Pages_categories','Pages[categories][]','input-xxlarge width-fix'),
+                    //'data' => $Categories,
                     'options' => array(
+                        'header'=>false,
                         'selectedList' => 4
                     ),
                     'dropDownHtmlOptions' => array(
                         'class' => 'input-xxlarge width-fix',
+                       // 'id'=>'page-categories'
                     ),
                 ));
                 ?>
@@ -102,7 +105,7 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                     }
                     $this->widget('common.ext.EAjaxUpload.EAjaxUpload',
                         array('id' => 'ImageUploadAuthor',
-                            'config' => array('action' => $this->createUrl('/Pages/adminPages/MainImageUpload',array('field'=>'author_image')),
+                            'config' => array('action' => $this->createUrl('/Pages/adminNews/MainImageUpload',array('field'=>'author_image')),
                                 'allowedExtensions' => Yii::app()->params['Pages']['author_image']['ext'],
                                 'sizeLimit' => Yii::app()->params['Pages']['author_image']['maxSize'],
                                 'minSizeLimit' => 0,
@@ -126,7 +129,7 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
 
                             )
                         ));
-                    echo CHtml::ajaxLink('Удалить', Yii::app()->createUrl('/Pages/adminPages/MainImageDelete'),
+                    echo CHtml::ajaxLink('Удалить', Yii::app()->createUrl('/Pages/adminNews/MainImageDelete'),
                         array(
                             'type' => 'POST',
                             'data' => array('id' => $model->id,'field'=>'author_image'),
@@ -185,7 +188,7 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
                     }
                     $this->widget('common.ext.EAjaxUpload.EAjaxUpload',
                         array('id' => 'ImageUpload',
-                            'config' => array('action' => $this->createUrl('/Pages/adminPages/MainImageUpload',array('field'=>'main_image')),
+                            'config' => array('action' => $this->createUrl('/Pages/adminNews/MainImageUpload',array('field'=>'main_image')),
                                 'allowedExtensions' => Yii::app()->params['Pages']['main_image']['ext'],
                                 'sizeLimit' => Yii::app()->params['Pages']['main_image']['maxSize'],
                                 'minSizeLimit' => 0,
@@ -209,7 +212,7 @@ $imageSrc = Yii::app()->params['dataUrl'].'pages/'.$model->id.'/images/';
 
                             )
                         ));
-                    echo CHtml::ajaxLink('Удалить', Yii::app()->createUrl('/Pages/adminPages/MainImageDelete'),
+                    echo CHtml::ajaxLink('Удалить', Yii::app()->createUrl('/Pages/adminNews/MainImageDelete'),
                         array(
                             'type' => 'POST',
                             'data' => array('id' => $model->id,'field'=>'main_image'),

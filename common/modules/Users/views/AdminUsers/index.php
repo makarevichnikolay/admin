@@ -99,8 +99,15 @@ $this->widget(
             ),
             array(
                 'class' => 'bootstrap.widgets.TbButtonColumn',
-                'template' => '{update}{delete}',
+                'template' => '{comments}{update}{delete}',
                 'buttons' => array(
+                    'comments' => array(
+                        'url' => function($data)
+                        {
+                            return Yii::app()->createUrl('Comments/AdminComments/index',array('user_id'=>$data->id));
+                        },
+                        'icon'=>'comment'
+                    ),
                     'update' => array(
                         'url' => function($data)
                         {

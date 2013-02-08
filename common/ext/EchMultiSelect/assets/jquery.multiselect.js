@@ -130,7 +130,8 @@
       var optgroups = [];
       var html = "";
       var id = el.attr('id') || multiselectID++; // unique ID for the label & option tags
-
+      var checkgroup = [];
+      var checkgroupdata=[];
       // build items
       el.find('option').each(function(i) {
         var $this = $(this);
@@ -144,16 +145,29 @@
         var labelClasses = [ 'ui-corner-all' ];
         var liClasses = (isDisabled ? 'ui-multiselect-disabled ' : ' ') + this.className;
         var optLabel;
-
+        var ingroup = false;
+          if($this.data('group')){
+              var sel = '';
+              if(isSelected) {
+                  sel += ' checked="checked"';
+                  sel += ' aria-selected="true"';
+              }
+              checkgroupdata[$this.data('group')] = ['<input id="' + inputID + '" '+ sel +' class="parent" name="multiselect_' + id + '"style="" type="' + (o.multiple ? "checkbox" : "radio") + '" value="' + value + '" title="' + title + '">',value];
+              html += '<li class="ui-multiselect-optgroup-label ' + parent.className + '">'+checkgroupdata[$this.data('group')][0]+'<a href="#">' + $this.data('group') + '</a></li>';
+          }else{
         // is this an optgroup?
         if(parent.tagName === 'OPTGROUP') {
           optLabel = parent.getAttribute('label');
-
           // has this optgroup been added already?
-          if($.inArray(optLabel, optgroups) === -1) {
-            html += '<li class="ui-multiselect-optgroup-label ' + parent.className + '"><a href="#">' + optLabel + '</a></li>';
+          /*if($.inArray(optLabel, optgroups) === -1) {
+              if($.inArray(optLabel, checkgroup) !== -1) {
+                 // html += '<li class="ui-multiselect-optgroup-label ' + parent.className + '">'+checkgroupdata[optLabel][0]+'<a href="#">' + optLabel + '</a></li>';
+              }else{
+                 // html += '<li class="ui-multiselect-optgroup-label ' + parent.className + '"><a href="#">' + optLabel + '</a></li>';
+              }
             optgroups.push(optLabel);
-          }
+          }*/
+            ingroup = checkgroupdata[optLabel][1]
         }
 
         if(isDisabled) {
@@ -171,6 +185,9 @@
         // create the label
         html += '<label for="' + inputID + '" title="' + description + '" class="' + labelClasses.join(' ') + '">';
         html += '<input id="' + inputID + '" name="multiselect_' + id + '" type="' + (o.multiple ? "checkbox" : "radio") + '" value="' + value + '" title="' + title + '"';
+        if(ingroup){
+            html += ' data-parent="'+ingroup+'" ';
+        }
 
         // pre-selected?
         if(isSelected) {
@@ -186,6 +203,7 @@
 
         // add the title and close everything off
         html += ' /><span>' + title + '</span></label></li>';
+      }
       });
 
       // insert into the DOM
@@ -193,7 +211,7 @@
 
       // cache some moar useful elements
       this.labels = menu.find('label');
-      this.inputs = this.labels.children('input');
+      this.inputs = menu.find('input');
 
       // set widths
       this._setButtonWidth();
@@ -315,7 +333,16 @@
         if(self._trigger('beforeoptgrouptoggle', e, { inputs:nodes, label:label }) === false) {
           return;
         }
-
+          var checkall = $inputs.filter(':checked').length !== $inputs.length;
+          var inp = $this.parent().children('input.parent')
+              inp.prop('checked',checkall);
+       self.element.find('option').each(function() {
+              if(this.value==inp.val()) {
+                  this.selected = checkall;
+              } else if(!self.options.multiple) {
+                  this.selected = false;
+              }
+          });
         // toggle inputs
         self._toggleChecked(
           $inputs.filter(':checked').length !== $inputs.length,
@@ -359,6 +386,36 @@
         var checked = this.checked;
         var tags = self.element.find('option');
 
+         if($this.hasClass('parent')){
+             if(!checked){
+                 var inp = [];
+                 $(self.menu[0]).find('input[data-parent="'+val+'"]').each(function(i){
+                     inp.push(this.value);
+                     $(this).prop('checked',false);
+                 });
+                 tags.each(function() {
+                     if($.inArray(this.value,inp) !== -1) {
+                         this.selected = false;
+                     } else if(!self.options.multiple) {
+                         this.selected = false;
+                     }
+                 });
+             }
+
+         }
+          if($this.data('parent')){
+             if(checked){
+                 var parentVal = $this.data('parent');
+                $(self.menu[0]).find('input[value="'+parentVal+'"]').prop('checked',true);
+                 tags.each(function() {
+                     if(this.value == parentVal) {
+                         this.selected = true;
+                     } else if(!self.options.multiple) {
+                         this.selected = false;
+                     }
+                 });
+             }
+         }
         // bail if this input is disabled or the event is cancelled
         if(this.disabled || self._trigger('click', e, { value: val, text: this.title, checked: checked }) === false) {
           e.preventDefault();

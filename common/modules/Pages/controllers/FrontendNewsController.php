@@ -1,8 +1,8 @@
 <?php
 
-class FrontendPagesController extends FrontendController
+class FrontendNewsController extends FrontendController
 {
-	public function actionIndex($page_id,$view)
+	public function actionIndex($page_id,$view='index')
 	{
 		$page = $this->loadModel($page_id);
 		$this->render($view,array('page'=>$page));

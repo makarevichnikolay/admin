@@ -44,6 +44,7 @@ return array(
       //  ),
 		'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=yii_admin',
+            'schemaCachingDuration'=>3600,
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

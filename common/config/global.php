@@ -81,5 +81,8 @@ return array(
            'Users'=>array(
                'class' => 'common.modules.Users.UsersModule',
            ),
+           'Comments'=>array(
+               'class' => 'common.modules.Comments.CommentsModule'
+           ),
 	),
 );

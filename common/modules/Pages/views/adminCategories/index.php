@@ -15,10 +15,11 @@ $this->widget('bootstrap.widgets.TbButton', array(
 ));
 
 $this->widget(
-    'bootstrap.widgets.TbGridView',
+    'common.ext.GroupGridView.BootGroupGridView',
     array(
         'type' => 'striped bordered condensed',
         'dataProvider' => $model->search(),
+        'mergeColumns' => array('parent_id'),
         'filter' => $model,
         'template' => "{items}",
         'columns' => array(
@@ -27,7 +28,14 @@ $this->widget(
                 'htmlOptions' => array('style' => 'width:20px;'),
             ),
             array(
-                'name' => 'title',
+                'name' => 'parent_id',
+                'header'=>'Родитель',
+                'value'=>function($data){
+                    if($data->parent){
+                        return $data->parent->title;
+                    }
+                },
+                'htmlOptions' => array('style' => 'width:200px;'),
             ),
             'title',
             array(

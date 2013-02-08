@@ -37,9 +37,10 @@ class Categories extends CActiveRecord
 		return array(
 			array('title', 'required'),
 			array('title', 'length', 'max'=>255),
+            array('parent_id','numerical','integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title', 'safe', 'on'=>'search'),
+			array('id, title,parent_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +52,7 @@ class Categories extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'parent'    => array(self::BELONGS_TO, 'Categories',    'parent_id'),
 		);
 	}
 
@@ -75,12 +77,18 @@ class Categories extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('title',$this->title,true);
+        $criteria->with=array('parent');
+		$criteria->compare('t.id',$this->id);
+		$criteria->compare('t.title',$this->title,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+            'sort'=>array(
+                'attributes'=>array(
+                    't.parent_id,t.title',
+                ),
+                'defaultOrder' => 't.parent_id',
+            ),
 		));
 	}
 }

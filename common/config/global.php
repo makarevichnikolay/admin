@@ -15,6 +15,9 @@ return array(
 	),
 
 	'components' => array(
+        'morphy'=>array(
+            'class'=>'common.ext.phpMorphy.RMorphy',
+        ),
         'less'=>array(
             'class'=>'common.ext.less.components.LessCompiler',
         ),
@@ -83,6 +86,9 @@ return array(
            ),
            'Comments'=>array(
                'class' => 'common.modules.Comments.CommentsModule'
+           ),
+           'Search'=>array(
+               'class' => 'common.modules.Search.SearchModule'
            ),
 	),
 );

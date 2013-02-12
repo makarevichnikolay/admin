@@ -38,7 +38,7 @@ body { background-color:#f5f4ef; }
   background-color:#adff2f;
 }
 .main-news {
-  height:350px;
+  min-height:350px;
   background-color:#2e798c;
 }
 .footer .navbar-inner {

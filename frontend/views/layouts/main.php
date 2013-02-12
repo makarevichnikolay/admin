@@ -45,7 +45,7 @@
             <div class="row-fluid">
                 <div class="span9">
                     <div class="row-fluid main-news">
-
+                        <?php echo $content; ?>
                     </div>
                 </div>
                 <aside class="span3">

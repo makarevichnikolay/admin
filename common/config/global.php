@@ -49,7 +49,7 @@ return array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>300, 'height'=>200),
+                    'thumb'	=> array('width'=>200, 'height'=>160),
                     'large'	=> array('width'=>600, 'height'=>800),
                 ),
             ),

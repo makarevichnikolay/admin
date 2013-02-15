@@ -51,9 +51,9 @@ class AdminPagesController extends AdminController
             $model->attributes=$_POST['Pages'];
                 if($model->save()){
                     if($_POST['redirect'] == 'update'){
-                        $this->redirect(Yii::app()->createUrl('Pages/update',array('id'=>$model->id)));
+                        $this->redirect(Yii::app()->createUrl('/Pages/Pages/update',array('id'=>$model->id)));
                     }else{
-                        $this->redirect(Yii::app()->createUrl('Pages/index'));
+                        $this->redirect(Yii::app()->createUrl('/Pages/Pages/index'));
                     }
                 }
         }

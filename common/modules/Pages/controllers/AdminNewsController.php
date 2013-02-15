@@ -87,7 +87,7 @@ class AdminNewsController extends AdminController
                 if($_POST['redirect'] == 'update'){
                     $this->redirect(Yii::app()->createUrl('News/update',array('id'=>$model->id)));
                 }else{
-                    $this->redirect(Yii::app()->createUrl('Pages/index'));
+                    $this->redirect(Yii::app()->createUrl('News/index'));
                 }
             }
         }

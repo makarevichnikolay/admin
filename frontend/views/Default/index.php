@@ -1,13 +1,26 @@
 <?php
-/* @var $this BackEndController */
 
-$this->breadcrumbs=array(
-	'Back End',
-);
 ?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
+<div class="row-fluid main-news">
+    <div class="span12 clearfix ">
+    <?php $this->widget('bootstrap.widgets.TbListView', array(
+    'dataProvider'=>$main_news,
+    'itemView'=>'_main_news',
+    'template'=>'{items}'
+    )); ?>
+    </div>
+</div>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo __FILE__; ?></tt>.
-</p>
+    <div class="row-fluid banner">
+    </div>
+ <div class="row-fluid main-tabs">
+     <?php $this->widget('bootstrap.widgets.TbTabs', array(
+     'type'=>'tabs',
+     'tabs'=>array(
+         array('label'=>'Свіжі новини', 'content'=>'еуіе', 'active'=>true),
+         array('label'=>'Найбільше читають', 'content'=>' іуеіу'),
+         array('label'=>'Найбільше коментують', 'content'=>'уіее '),
+     ),
+ )); ?>
+ </div>
+

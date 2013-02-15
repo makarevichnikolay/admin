@@ -110,10 +110,10 @@ class Pages extends CActiveRecord
             Yii::app()->file->set($tempPath.$this->$name)->move($originalPath.$this->$name);
             $config = Yii::app()->params['Pages'][$name];
             $image = new Image($originalPath.$this->$name);
-            $image->resize($config['dimensions']['large']['width'], $config['dimensions']['large']['height'] , 4)
+            $image->resize($config['dimensions']['large']['width'], $config['dimensions']['large']['height'] , 3)
                 ->crop($config['dimensions']['large']['width'],$config['dimensions']['large']['height'])->save($largePath.$this->$name);
             $image = new Image($originalPath.$this->$name);
-            $image->resize($config['dimensions']['thumb']['width'], $config['dimensions']['thumb']['height'] , 4)
+            $image->resize($config['dimensions']['thumb']['width'], $config['dimensions']['thumb']['height'] , 3)
                 ->crop($config['dimensions']['thumb']['width'],$config['dimensions']['thumb']['height'])->save($thumbPath.$this->$name);
         }
     }
@@ -153,6 +153,12 @@ class Pages extends CActiveRecord
             'page_id = :page_id',
             array(':page_id' => $this->id)
         );
+
+        $originalPath = Yii::app()->params['dataPath'].'pages/'.$this->id;
+
+        if(is_dir($originalPath)){
+            Yii::app()->file->set($originalPath)->delete(true);
+        }
 
         return parent::beforeDelete();
     }

@@ -12,6 +12,7 @@ return array(
      
      'import' => array(
 		'application.components.*',
+         'common.modules.Search.models.SearchWords'
 	),
 
 	'components' => array(
@@ -32,6 +33,7 @@ return array(
                     'class' => 'URLRule',
                 ),
                 ''=>'Default/index',
+                'Search'=>'Search/Search/Search',
 				'<module:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

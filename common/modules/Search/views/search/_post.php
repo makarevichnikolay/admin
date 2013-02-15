@@ -1,5 +1,5 @@
 <?php
-    $item_data = DefaultController::getItemData($data['item_id'],$data['words']);
+    $item_data = SearchController::getItemData($data['item_id'],$data['words']);
     ?>
     <div style="border:1px solid red;margin: 5px;">
         <ul>

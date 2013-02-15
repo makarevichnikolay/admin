@@ -5637,3 +5637,178 @@ Stack trace:
 REQUEST_URI=/admin/admin/Pages/AdminNews/getCategoriesSelect
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/14 15:33:16 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/jquery.json2html-3.1-min.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:16 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/Pages/pages-form.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:16 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/Pages/pages-form-update.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:16 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/jquery.nestable.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:16 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/admin.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/jquery.json2html-3.1-min.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/Pages/pages-form.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/Pages/pages-form-update.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/jquery.nestable.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/admin.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/jquery.json2html-3.1-min.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/Pages/pages-form.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/Pages/pages-form-update.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/jquery.nestable.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/14 15:33:17 [error] [ext.minScript.components.ExtMinScript] Can't access Z:/home/localhost/www/admin/admin/js/admin.js
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (130)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (216)
+in Z:\home\localhost\www\admin\common\ext\minScript\components\ExtMinScript.php (285)
+2013/02/15 14:31:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "News/AdminNews/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('News/AdminNews/...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/News/index
+HTTP_REFERER=http://localhost/admin/admin/Pages/AdminNews/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/15 14:35:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "News/AdminNews/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('News/AdminNews/...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/News/index
+HTTP_REFERER=http://localhost/admin/admin/Pages/AdminNews/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/15 14:37:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "News/AdminNews/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('News/AdminNews/...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/News/index
+HTTP_REFERER=http://localhost/admin/admin/Pages/AdminNews/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/15 14:38:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "News/AdminNews/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('News/AdminNews/...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/News/index
+HTTP_REFERER=http://localhost/admin/admin/Pages/AdminNews/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/15 17:25:18 [error] [php] rmdir(Z:\home\localhost\www\admin\data\pages\11\images\main_image) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty (Z:\home\localhost\www\admin\common\ext\CFile.php:1219)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php(123): Pages->tempToData()
+#1 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1072): Pages->afterSave()
+#2 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(795): Pages->update()
+#3 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(86): Pages->save()
+#4 unknown(0): AdminNewsController->actionUpdate()
+#5 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#9 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#12 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#14 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#17 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#18 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/update/11
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\ext\CFile.php (1219)
+in Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php (104)
+2013/02/15 17:35:54 [error] [php] rmdir(Z:\home\localhost\www\admin\data\pages\4\images\main_image) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty (Z:\home\localhost\www\admin\common\ext\CFile.php:1219)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php(123): Pages->tempToData()
+#1 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1072): Pages->afterSave()
+#2 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(795): Pages->update()
+#3 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(86): Pages->save()
+#4 unknown(0): AdminNewsController->actionUpdate()
+#5 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#9 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#12 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#14 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#17 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#18 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/update/4
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\ext\CFile.php (1219)
+in Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php (104)
+2013/02/15 17:39:52 [error] [php] rmdir(Z:\home\localhost\www\admin\data\pages\4\images\main_image) [<a href='function.rmdir'>function.rmdir</a>]: Directory not empty (Z:\home\localhost\www\admin\common\ext\CFile.php:1219)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php(123): Pages->tempToData()
+#1 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1072): Pages->afterSave()
+#2 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(795): Pages->update()
+#3 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(86): Pages->save()
+#4 unknown(0): AdminNewsController->actionUpdate()
+#5 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#9 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#12 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#14 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#17 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#18 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/update/4
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\ext\CFile.php (1219)
+in Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php (104)

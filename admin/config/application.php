@@ -41,7 +41,7 @@ return array(
                 '/'=>'Default/index',
                 'News'=>'Pages/AdminNews/index',
                 'News/update/<id>'=>'Pages/adminNews/update',
-                'News/<action:\w+>'=>'News/AdminNews/<action>',
+                'News/<action:\w+>'=>'Pages/AdminNews/<action>',
                 'Pages/Types/<action:\w+>'=>'Pages/AdminPageTypes/<action>',
                 'Pages/Types'=>'Pages/AdminPageTypes/index',
                 'Pages/Categories/<action:\w+>'=>'Pages/AdminCategories/<action>',

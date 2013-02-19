@@ -86,8 +86,8 @@
         </div>
     </div>
 </section>
-<footer class="navbar footer">
-    <div class="navbar-inner">
+<footer class="footer">
+    <div class="container-fluid main-container footer-container">
     </div>
 </footer>
 <div>

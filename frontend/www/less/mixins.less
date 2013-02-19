@@ -277,12 +277,12 @@
        -o-transform: rotate(@degrees);
           transform: rotate(@degrees);
 }
-.scale(@ratio) {
-  -webkit-transform: scale(@ratio);
-     -moz-transform: scale(@ratio);
-      -ms-transform: scale(@ratio);
-       -o-transform: scale(@ratio);
-          transform: scale(@ratio);
+.scale(@x,@y) {
+  -webkit-transform: scale(@x,@y);
+     -moz-transform: scale(@x,@y);
+      -ms-transform: scale(@x,@y);
+       -o-transform: scale(@x,@y);
+          transform: scale(@x,@y);
 }
 .translate(@x, @y) {
   -webkit-transform: translate(@x, @y);
@@ -419,6 +419,17 @@
     background-repeat: repeat-x;
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
   }
+    .horizontal-three(@startColor: #555,@startColorStart:0%,@midColor:#555,@midColorStop:50%, @endColor: #333,@endColorEnd:100%) {
+        background-color: @endColor;
+        background-image: -moz-linear-gradient(left, @startColor @startColorStart,@midColor @midColorStop, @endColor @endColorEnd); // FF 3.6+
+        background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor),color-stop(@midColorStop, @midColor), to(@endColor)); // Safari 4+, Chrome 2+
+        background-image: -webkit-linear-gradient(left, @startColor @startColorStart,@midColor @midColorStop, @endColor @endColorEnd); // Safari 5.1+, Chrome 10+
+        background-image: -o-linear-gradient(left, @startColor @startColorStart,@midColor @midColorStop, @endColor @endColorEnd); // Opera 11.10
+        background-image: linear-gradient(to right, @startColor @startColorStart,@midColor @midColorStop, @endColor @endColorEnd); // Standard, IE10
+        background-repeat: repeat-x;
+        filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+    }
+
   .vertical(@startColor: #555, @endColor: #333) {
     background-color: mix(@startColor, @endColor, 60%);
     background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+

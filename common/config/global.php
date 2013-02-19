@@ -49,8 +49,9 @@ return array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>200, 'height'=>160),
-                    'large'	=> array('width'=>600, 'height'=>800),
+                    'thumb'	=> array('width'=>200, 'height'=>160,'type'=>3),
+                    'thumb2'=> array('width'=>204, 'height'=>113,'type'=>4),
+                    'large'	=> array('width'=>600, 'height'=>800,'type'=>3),
                 ),
             ),
             'author_image'=>array(

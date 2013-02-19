@@ -1337,3 +1337,750 @@ Stack trace:
 REQUEST_URI=/admin/
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:14:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/img/tab-corner.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/tab-cor...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/img/tab-corner.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 13:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "tab-active-bottom.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('tab-active-bott...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/tab-active-bottom.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/18 16:26:55 [error] [php] Object of class TbListView could not be converted to string (Z:\home\localhost\www\framework\web\helpers\CHtml.php:157)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(173): TbTabs->run()
+#1 Z:\home\localhost\www\admin\frontend\views\Default\index.php(30): DefaultController->widget()
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#5 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#6 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(21): DefaultController->render()
+#7 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#8 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#10 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#11 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#13 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#14 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\helpers\CHtml.php (157)
+in Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\TbTabs.php (173)
+2013/02/18 17:19:06 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:20:58 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:24:19 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:24:28 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:24:35 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:24:38 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:26:53 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:27:01 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:27:08 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:27:17 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:27:57 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:28:38 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/18 17:29:10 [error] [php] require() [<a href='function.require'>function.require</a>]: Filename cannot be empty (Z:\home\localhost\www\framework\web\CBaseController.php:130)
+Stack trace:
+#0 Z:\home\localhost\www\framework\zii\widgets\CListView.php(281): DefaultController->renderFile()
+#1 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): TbListView->renderItems()
+#2 unknown(0): TbListView->renderSection()
+#3 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback()
+#4 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): TbListView->renderContent()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(167): TbListView->run()
+#6 Z:\home\localhost\www\admin\frontend\views\Default\index.php(25): DefaultController->widget()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#10 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#11 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(12): DefaultController->render()
+#12 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+in Z:\home\localhost\www\framework\web\CBaseController.php (130)
+2013/02/19 15:28:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/@base-url/footer-bg.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/@base-url/f...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/@base-url/footer-bg.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/19 15:28:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/@base-url/footer-bg.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/@base-url/f...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/@base-url/footer-bg.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/19 15:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/@base-url/footer-bg.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/@base-url/f...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/@base-url/footer-bg.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/19 15:29:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/{@base-url}/footer-bg.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/{@base-url}...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/%7B@base-url%7D/footer-bg.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/19 15:29:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/{@base-url}/footer-bg.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/{@base-url}...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/%7B@base-url%7D/footer-bg.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/19 15:29:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/{@base-url}/footer-bg.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/{@base-url}...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/%7B@base-url%7D/footer-bg.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

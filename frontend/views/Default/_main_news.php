@@ -6,7 +6,7 @@
  * Time: 12:25
  * To change this template use File | Settings | File Templates.
  */
-$this->breadcrumbs = "Головне";
+
 ?>
 <article>
     <figure>

@@ -92,12 +92,33 @@ class Pages extends CActiveRecord
 		);
 	}
 
+    public static  function  getFreshNews($limit = 5){
+        $criteria= new CDbCriteria();
+        $criteria->limit = $limit;
+        //$criteria->addCondition('main_image != ""');
+        return  new CActiveDataProvider('Pages', array(
+                'criteria'=>$criteria,
+                'pagination'=>false
+            )
+        );
+    }
+
+    public static function getMainNews(){
+        $criteria= new CDbCriteria();
+        $criteria->limit = 3;
+        $criteria->compare('visible_on_main',0);
+        $criteria->addCondition('main_image != ""');
+        return  new CActiveDataProvider('Pages', array(
+                'criteria'=>$criteria,
+                'pagination'=>false
+            )
+        );
+   }
+
     private function tempToData($name){
         $tempPath = Yii::app()->params['tempPath'];
         if( file_exists($tempPath.$this->$name)){
             $originalPath = Yii::app()->params['dataPath'].'pages/'.$this->id.'/images/'. $name .'/';
-            $largePath = $originalPath .'large/';
-            $thumbPath = $originalPath .'thumb/';
             if(!is_dir($originalPath)){
                 Yii::app()->file->createDir(0777,$originalPath);
             }else{
@@ -105,16 +126,15 @@ class Pages extends CActiveRecord
                 Yii::app()->file->createDir(0777,$originalPath);
             }
             Yii::import('common.ext.image.Image');
-            Yii::app()->file->createDir(0777,$largePath);
-            Yii::app()->file->createDir(0777,$thumbPath);
             Yii::app()->file->set($tempPath.$this->$name)->move($originalPath.$this->$name);
             $config = Yii::app()->params['Pages'][$name];
-            $image = new Image($originalPath.$this->$name);
-            $image->resize($config['dimensions']['large']['width'], $config['dimensions']['large']['height'] , 3)
-                ->crop($config['dimensions']['large']['width'],$config['dimensions']['large']['height'])->save($largePath.$this->$name);
-            $image = new Image($originalPath.$this->$name);
-            $image->resize($config['dimensions']['thumb']['width'], $config['dimensions']['thumb']['height'] , 3)
-                ->crop($config['dimensions']['thumb']['width'],$config['dimensions']['thumb']['height'])->save($thumbPath.$this->$name);
+            foreach($config['dimensions'] as $key=>$value){
+                $Path = $originalPath .$key.'/';
+                Yii::app()->file->createDir(0777,$Path);
+                $image = new Image($originalPath.$this->$name);
+                $image->resize($value['width'], $value['height'] , $value['type'])
+                    ->crop($value['width'],$value['height'])->save($Path.$this->$name);
+            }
         }
     }
 

@@ -13,3 +13,24 @@ jQuery.fn.extend({
         }
 
     }});
+
+$(document).ready(function(){
+    $(".menu .first > li").hover(function(){
+        $(this).next().addClass('after-hover');
+        $(this).removeClass('after-hover');
+    },function(){
+        $(this).next().removeClass('after-hover');
+        $(".menu .first li.active").next().addClass('after-hover');
+    });
+    $(".menu .first > li.active").next().addClass('after-hover');
+
+    $(".menu .second > li").hover(function(){
+        $(this).next().addClass('after-hover');
+        $(this).removeClass('after-hover');
+    },function(){
+        $(this).next().removeClass('after-hover');
+        $(".menu .second li.active").next().addClass('after-hover');
+    });
+    $(".menu .second > li.active").next().addClass('after-hover');
+
+});

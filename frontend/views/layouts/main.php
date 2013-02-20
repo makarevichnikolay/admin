@@ -13,7 +13,6 @@
     $cs->registerCoreScript('jquery');
     //Yii::app()->clientScript->registerCoreScript('jquery.ui');
     $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/frontend.js', CClientScript::POS_END);
-    $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/frontend.js', CClientScript::POS_END);
     $cs->registerCssFile(Yii::app()->baseUrl . '/css/styles.css');
     ?>
 
@@ -55,13 +54,32 @@
             </div>
 
 
-            <nav class="row-fluid menu">
+            <div class="row-fluid">
                 <div class="span12">
+                    <nav class="menu">
                     <ul class="first">
-                        <li>Test</li>
+                        <li class="main-wrap active"><a class="main-link" href="#">Головна</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Політика</a><ul class="menu-inner"><li><a href="#">Категория 1</a></li><li><a href="#">Категория 2</a></li></ul></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Економіка</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Суспільство</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Культура</a></li>
+                        <li class="main-wrap active"><a class="main-link" href="#">Спорт</a><ul class="menu-inner"><li><a href="#">Категория11111111</a></li><li><a href="#">Категория 2</a></li></ul></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Фоторепортаж</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Відео новина</a></li>
                     </ul>
+                    <ul class="second">
+                        <li class="main-wrap"><a class="main-link" href="#">Ти репортер</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Політика</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Економіка</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Суспільство</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Культура</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Спорт</a><ul class="menu-inner"><li><a href="#">Категория11111111</a></li><li><a href="#">Категория 2</a></li></ul></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Фоторепортаж</a></li>
+                        <li class="main-wrap"><a class="main-link" href="#">Відео новина</a></li>
+                    </ul>
+                    </nav>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 

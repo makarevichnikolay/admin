@@ -7,6 +7,7 @@
 return array(
     'sourceLanguage' => 'en',
     'language' => 'ru',
+    'charset'=>'utf-8',
      'preload'=>array('less'),
 	'import' => array(
         'common.models.*',

@@ -770,3 +770,43 @@ Stack trace:
 #11 {main}
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/21 14:08:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'url'. The SQL statement executed was: INSERT INTO `categories` (`title`) VALUES (:title). Bound with :title='Економіка'.
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1247)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (173)
+2013/02/21 14:08:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'url'. The SQL statement executed was: INSERT INTO `categories` (`title`) VALUES (:title). Bound with :title='Економіка'' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1247): CDbCommand->execute(Array)
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(173): CDbCommand->insert('categories', Array)
+#2 Z:\home\localhost\www\admin\common\migrations\m130123_074610_create_table_categories.php(20): CDbMigration->insert('categories', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130123_074610_create_table_categories->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130123_074610_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/21 14:08:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'url'. The SQL statement executed was: INSERT INTO `categories` (`title`) VALUES (:title). Bound with :title='Економіка'.
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1247)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (173)
+2013/02/21 14:08:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'url'. The SQL statement executed was: INSERT INTO `categories` (`title`) VALUES (:title). Bound with :title='Економіка'' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1247): CDbCommand->execute(Array)
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(173): CDbCommand->insert('categories', Array)
+#2 Z:\home\localhost\www\admin\common\migrations\m130123_074610_create_table_categories.php(20): CDbMigration->insert('categories', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130123_074610_create_table_categories->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130123_074610_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

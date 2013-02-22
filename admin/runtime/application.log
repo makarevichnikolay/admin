@@ -5860,3 +5860,27 @@ REQUEST_URI=/admin/admin/News/update/1
 in Z:\home\localhost\www\framework\base\CApplication.php (793)
 in Z:\home\localhost\www\admin\common\ext\CFile.php (1219)
 in Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php (125)
+2013/02/22 14:25:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/22 14:25:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

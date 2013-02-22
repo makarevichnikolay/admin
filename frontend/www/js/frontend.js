@@ -14,7 +14,33 @@ jQuery.fn.extend({
 
     }});
 
+function startTime()
+{
+    var name_month=new Array ("січня","лютого","березня", "квітня","травня", "червня","липня","серпня", "вересня","жовтня", "листопада","грудня");
+    var name_day=new Array ("Неділя","Понеділок","Вівторок", "Середа","Четвер", "П’ятниця","Субота");
+    var tm=new Date();
+    var h=tm.getHours();
+    var m=tm.getMinutes();
+    var s=tm.getSeconds();
+    m=checkTime(m);
+    s=checkTime(s);
+    document.getElementById('date').innerHTML=name_day[tm.getDay()]+", "+tm.getDate()+" "+name_month[tm.getMonth()]+" "+tm.getFullYear();
+    document.getElementById('time').innerHTML=h+":"+m+":"+s;
+    t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+    if (i<10)
+    {
+        i="0" + i;
+    }
+    return i;
+}
+
 $(document).ready(function(){
+    if(menuActive){
+        $('.menu  li[data-id="'+menuActive+'"]').addClass('active');
+    }
     $(".menu .first > li").hover(function(){
         $(this).next().addClass('after-hover');
         $(this).removeClass('after-hover');
@@ -32,5 +58,5 @@ $(document).ready(function(){
         $(".menu .second li.active").next().addClass('after-hover');
     });
     $(".menu .second > li.active").next().addClass('after-hover');
-
+    startTime();
 });

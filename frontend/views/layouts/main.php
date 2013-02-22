@@ -1,6 +1,6 @@
 <?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" xml:lang="en" lang="en">
 <head>
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,58 +34,81 @@
     <header class="row-fluid head">
         <div class="span12">
             <div class="row-fluid logo">
-                <div class="span12">
-                    Logo
-                    <div class="pull-right">
-                        <?php
-                        $modelSearch = new SearchWords('search');
-                        $modelSearch->word = isset($_POST['SearchWords']) ? $_POST['SearchWords']['word'] : null;
-                        $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-                            'id' => 'searchForm',
-                            'type' => 'search',
-                            'htmlOptions' => array('class' => 'well'),
-                            'action' => array('/Search/Search/Search'),
-                        )); ?>
-                        <?php echo $form->textFieldRow($modelSearch, 'word', array('class' => 'input-medium', 'prepend' => '<i class="icon-search"></i>')); ?>
-                        <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'label' => 'Go')); ?>
-                        <?php $this->endWidget(); ?>
+                <figure class="span3">
+                     <img src="img/logo.png" alt="logo">
+                </figure>
+                <div class="span9 head-row">
+                    <div class="row-fluid first-row">
+                       <div class="span3">
+                           <div class="row-fluid">
+                               <i class="icon-calendar"></i><span id="date"></span>
+                           </div>
+                           <div class="row-fluid">
+                               <i class="icon-time"></i><span id="time"></span>
+                           </div>
+                       </div>
+                        <div class="span4">
+                            <div class="row-fluid">
+                                <div class="span3 tel-icon">
+                                   <i class="icon-ok"></i>
+                                </div>
+                                <div class="span9">
+                                    <div class="row-fluid caption">
+                                        Гаряча лінія редакції
+                                    </div>
+                                    <div class="row-fluid tel">
+                                       (0522) <span>12-34-56</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4 offset1">
+                            <?php
+                            $modelSearch = new SearchWords('search');
+                            $modelSearch->word = isset($_POST['SearchWords']) ? $_POST['SearchWords']['word'] : null;
+                            $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+                                'id' => 'searchForm',
+                                'action' => array('/Search/Search/Search'),
+                            )); ?>
+                            <div class="input-append">
+                                <?php echo $form->textField($modelSearch, 'word', array('class'=>'span10','placeholder'=>'Пошук')); ?>
+                                <?php  $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submitLink', 'label' => '<i class="icon-search icon-white"></i>','encodeLabel'=>false))?>
+                            </div
+                            <?php $this->endWidget(); ?>
+                        </div>
+                    </div>
+                    <div class="row-fluid second-row">
+                          <div class="span7 slogon">
+                              <h3>ТВІЙ ІНФОРМАЦІЙНИЙ ПРОСТІР...</h3>
+                          </div>
+                          <div class="span4  offset1 auth">
+                              <div class="user">
+                                  <a href="#">Вхід</a> <a>|</a> <a href="#">Реєстрація</a>
+                              </div>
+                              <div class="social"></div>
+                          </div>
                     </div>
                 </div>
+
+
             </div>
-
-
             <div class="row-fluid">
                 <div class="span12">
                     <nav class="menu">
-                    <ul class="first">
-                        <li class="main-wrap active"><a class="main-link" href="#">Головна</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Політика</a><ul class="menu-inner"><li><a href="#">Категория 1</a></li><li><a href="#">Категория 2</a></li></ul></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Економіка</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Суспільство</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Культура</a></li>
-                        <li class="main-wrap active"><a class="main-link" href="#">Спорт</a><ul class="menu-inner"><li><a href="#">Категория11111111</a></li><li><a href="#">Категория 2</a></li></ul></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Фоторепортаж</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Відео новина</a></li>
-                    </ul>
-                    <ul class="second">
-                        <li class="main-wrap"><a class="main-link" href="#">Ти репортер</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Політика</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Економіка</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Суспільство</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Культура</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Спорт</a><ul class="menu-inner"><li><a href="#">Категория11111111</a></li><li><a href="#">Категория 2</a></li></ul></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Фоторепортаж</a></li>
-                        <li class="main-wrap"><a class="main-link" href="#">Відео новина</a></li>
-                    </ul>
+                        <?php echo Yii::app()->getModule('Menu')->getFrontendMenu(); ?>
+                        <?php echo Yii::app()->getModule('Menu')->getFrontendMenu('second',6,7); ?>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
 
-    <article class="row-fluid breadcrumbs">
+    <article class="row-fluid">
         <div class="span12">
-            <?php echo $this->breadcrumbs;?>
+            <?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+            'links'=>$this->breadcrumbs,
+            'homeLink'=>CHtml::link('Головна',array('/Default/index')),
+        )); ?>
         </div>
     </article>
 

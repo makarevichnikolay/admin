@@ -6,10 +6,7 @@ class DefaultController extends FrontendController
 
     public function actionIndex()
     {
-
-        $this->render('index', array(
-            )
-        );
+        $this->render('index', array());
     }
 
 

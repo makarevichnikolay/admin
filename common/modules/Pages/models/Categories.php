@@ -35,12 +35,13 @@ class Categories extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title', 'required'),
-			array('title', 'length', 'max'=>255),
+			array('title,url', 'required'),
+            array('url','unique','message'=>'{attribute}:{value} already exists!'),
+			array('title,url', 'length', 'max'=>255),
             array('parent_id','numerical','integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title,parent_id', 'safe', 'on'=>'search'),
+			array('id, title,parent_id,url', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,6 +54,7 @@ class Categories extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
             'parent'    => array(self::BELONGS_TO, 'Categories',    'parent_id'),
+            'children' => array(self::HAS_MANY, 'Categories', 'parent_id'),
 		);
 	}
 
@@ -64,6 +66,7 @@ class Categories extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'title' => 'Title',
+            'url' => 'Url',
 		);
 	}
 

@@ -14,6 +14,7 @@ class Pages extends CActiveRecord
 {
 
     public $categories;
+    public $category_id;
     public  $defaultPageTypeId = 1;
     public $date_from;
     public $date_to;
@@ -58,7 +59,7 @@ class Pages extends CActiveRecord
             array('date_create,date_update','default',
                 'value'=>new CDbExpression('NOW()'),
                 'setOnEmpty'=>false,'on'=>'insert'),
-			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments, date_from, date_to, categories', 'safe', 'on'=>'search'),
+			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments, date_from, date_to, categories,page_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -216,6 +217,12 @@ class Pages extends CActiveRecord
         if(is_array($this->categories) && !empty($this->categories)){
             $criteria->with = array('category_search');
             $criteria->addInCondition('category_search.category_id',$this->categories,"OR");
+            $criteria->together = true;
+            $criteria->group = 'category_search.page_id';
+        }
+        if($this->category_id && !empty($this->category_id)){
+            $criteria->with = array('category_search');
+            $criteria->compare('category_search.category_id',$this->category_id);
             $criteria->together = true;
             $criteria->group = 'category_search.page_id';
         }

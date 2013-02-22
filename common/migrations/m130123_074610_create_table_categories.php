@@ -2,37 +2,67 @@
 
 class m130123_074610_create_table_categories extends CDbMigration
 {
-	public function up()
+	public function safeUp()
 	{
         $this->createTable('categories', array(
             'id' => 'pk',
             'parent_id'=>'integer UNSIGNED NOT NULL',
             'title' => 'string NOT NULL',
+            'url' => 'string NOT NULL',
         ));
         $this->createIndex('parent_id', 'categories', 'parent_id');
+        $this->createIndex('url', 'categories', 'url', true);
         $this->insert('categories',array(
-            'title'=>'Рубрика 1'
+            'title'=>'Політика',
+            'url'=>'s1'
         ));
         $this->insert('categories',array(
-            'title'=>'Рубрика 2'
+            'title'=>'Економіка',
+            'url'=>'s2'
         ));
         $this->insert('categories',array(
-            'title'=>'Рубрика 3'
+            'title'=>'Суспільство',
+            'url'=>'s3'
         ));
         $this->insert('categories',array(
-            'title'=>'Рубрика 4'
+            'title'=>'Культура',
+            'url'=>'s4'
         ));
         $this->insert('categories',array(
-            'title'=>'ПодРубрика 11',
-            'parent_id'=>1
+            'title'=>'Спорт',
+            'url'=>'s5'
         ));
         $this->insert('categories',array(
-            'title'=>'ПодРубрика 12',
-            'parent_id'=>2
+            'title'=>'Фоторепортаж',
+            'url'=>'s6'
         ));
         $this->insert('categories',array(
-            'title'=>'ПодРубрика 11',
-            'parent_id'=>1
+            'title'=>'Відео новина',
+            'url'=>'s7'
+        ));
+        $this->insert('categories',array(
+            'title'=>'Ти репортер',
+            'url'=>'s8'
+        ));
+        $this->insert('categories',array(
+            'title'=>'Інтерв’ю',
+            'url'=>'s9'
+        ));
+        $this->insert('categories',array(
+            'title'=>'Досьє',
+            'url'=>'s10'
+        ));
+        $this->insert('categories',array(
+            'title'=>'Афіша',
+            'url'=>'s11'
+        ));
+        $this->insert('categories',array(
+            'title'=>'Про місто',
+            'url'=>'s12'
+        ));
+        $this->insert('categories',array(
+            'title'=>'Куди піти',
+            'url'=>'s13'
         ));
 	}
 

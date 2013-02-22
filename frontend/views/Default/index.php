@@ -1,5 +1,5 @@
 <?php
-$this->breadcrumbs = "Головне";
+$this->breadcrumbs = array();
 ?>
 <div class="row-fluid main-news">
     <div class="span12 clearfix ">
@@ -32,3 +32,6 @@ $this->breadcrumbs = "Головне";
 
 <div class="row-fluid banner">
 </div>
+<script type="text/javascript">
+    var menuActive = 'main';
+</script>

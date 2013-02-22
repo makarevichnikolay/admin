@@ -2,10 +2,17 @@
 
 class FrontendNewsController extends FrontendController
 {
-	public function actionIndex($page_id,$view='index')
+	public function actionIndex($category_id)
 	{
-		$page = $this->loadModel($page_id);
-		$this->render($view,array('page'=>$page));
+		$model = new Pages('search');
+        if($category_id !='all'){
+            $model->category_id =  $category_id;
+            $category_data = Categories::model()->findByPk($category_id);
+            $category = array('title'=>$category_data->title,'id'=>$category_data->id,'parent_id'=>$category_data->parent_id);
+        }else{
+            $category = array('title'=>'Всі');
+        }
+		$this->render('index',array('model'=>$model,'category'=>$category));
 	}
 
 

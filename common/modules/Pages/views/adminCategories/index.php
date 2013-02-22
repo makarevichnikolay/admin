@@ -21,7 +21,7 @@ $this->widget(
         'dataProvider' => $model->search(),
         'mergeColumns' => array('parent_id'),
         'filter' => $model,
-        'template' => "{items}",
+        'template' => "{items}{pager}",
         'columns' => array(
             array(
                 'name' => 'id',
@@ -38,6 +38,7 @@ $this->widget(
                 'htmlOptions' => array('style' => 'width:200px;'),
             ),
             'title',
+            'url',
             array(
                 'class' => 'bootstrap.widgets.TbButtonColumn',
                 'template' => '{update}{delete}',

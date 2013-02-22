@@ -38,6 +38,10 @@ class MenuModule extends CWebModule
         return false;
     }
 
+    public  function getFrontendMenu($class = 'first',$limit=7,$offset=0){
+        return renderMenu::getFrontendMenu($class ,$limit,$offset);
+    }
+
 	public function beforeControllerAction($controller, $action)
 	{
 		if(parent::beforeControllerAction($controller, $action))

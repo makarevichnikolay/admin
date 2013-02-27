@@ -26,6 +26,8 @@ class AdminUsersController extends AdminController
             }
 
         }
+        $this->pageTitle = 'Авторизация';
+        $this->layout='//layouts/clear';
         $this->render('_login',array('model'=>$model));
     }
 
@@ -33,7 +35,7 @@ class AdminUsersController extends AdminController
 
     public function actionLogout(){
         Yii::app()->user->logout();
-        $this->redirect(array('Users/AdminUsers/Login'));
+        $this->redirect(array('/Users/AdminUsers/Login'));
     }
 
 

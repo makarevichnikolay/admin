@@ -9,6 +9,18 @@ class AdminNewsController extends AdminController
             'toggle'=>array(
                 'class'=>'common.ext.JToggleColumn.ToggleAction',
             ),
+            'imageUploadRedacotr'=>array(
+                'class'=>'common.ext.redactorjs.actions.ImageUpload',
+                'uploadPath'=>Yii::app()->params['dataPath'].'NewsImages/',
+                'uploadUrl'=>Yii::app()->params['dataUrl'].'NewsImages/',
+                'uploadCreate'=>true,
+                'permissions'=>0777,
+            ),
+            'imageListRedactor'=>array(
+                'class'=>'common.ext.redactorjs.actions.ImageList',
+                'uploadPath'=>Yii::app()->params['dataPath'].'NewsImages/',
+                'uploadUrl'=>Yii::app()->params['dataUrl'].'NewsImages/',
+            ),
             // прочие действия
         );
     }
@@ -17,22 +29,6 @@ class AdminNewsController extends AdminController
 
     public function actionIndex()
     {
-        /*  for($i=1; $i<10000;$i++){
-            $model = new Pages;
-            $model->type_id = 1;
-            $length = 10;
-            $chars = array_merge(range(0,9), range('a','z'), range('A','Z'));
-            shuffle($chars);
-            $url= implode(array_slice($chars, 0, $length));
-            $model->url = $url;
-            $length = 100;
-            $chars = array_merge(range(0,9), range('a','z'), range('A','Z'));
-            shuffle($chars);
-            $content= implode(array_slice($chars, 0, $length));
-            $model->content = $content;
-            $model->save(true);
-        }*/
-
         $model = new Pages('search');
         if(isset($_GET['Pages'])){
             $model->attributes = $_GET['Pages'];
@@ -57,8 +53,6 @@ class AdminNewsController extends AdminController
                 }
             }
         }
-
-        //$Categories = CHtml::listData(Categories::model()->findAll(),'id','title');
         $pageCategories = PagesCategories::model()->findAll(array(
             'condition'=>'page_id = :page_id',
             'params'=>array(':page_id'=>$model->id),
@@ -66,7 +60,6 @@ class AdminNewsController extends AdminController
         $model->categories = $pageCategories;
         $params = array(
             'model'=>$model,
-            //'Categories'=>$Categories,
         );
         $this->render('create',array(
             'params'=>$params,
@@ -91,7 +84,6 @@ class AdminNewsController extends AdminController
                 }
             }
         }
-        //$Categories = CHtml::listData(Categories::model()->findAll(),'id','title');
         $pageCategories = PagesCategories::model()->findAll(array(
             'condition'=>'page_id = :page_id',
             'params'=>array(':page_id'=>$model->id),
@@ -100,7 +92,6 @@ class AdminNewsController extends AdminController
 
         $params = array(
             'model'=>$model,
-            //'Categories'=>$Categories,
         );
         $this->render('update',array(
             'params'=>$params,
@@ -113,8 +104,6 @@ class AdminNewsController extends AdminController
     public function actionDelete($id)
     {
         $this->loadModel($id)->delete();
-
-        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
         if(!isset($_GET['ajax']))
             $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
     }
@@ -157,9 +146,7 @@ class AdminNewsController extends AdminController
         $tempPath = Yii::app()->params['tempPath'];
         $uploader =
             new qqFileUploader(Yii::app()->params['Pages'][$field]['ext'], Yii::app()->params['Pages'][$field]['maxSize']);
-
         $result = $uploader->handleUpload($tempPath,true);
-
         if (isset($result['success'])) {
         }
         echo CJSON::encode($result);
@@ -183,20 +170,14 @@ class AdminNewsController extends AdminController
                     $pages_image->page_id = $id;
                     $pages_image->file_name = $result['filename'];
                     $pages_image->save();
-                    $largePath = $dataPath.'/'.$pages_image->id.'/large/';
-                    $thumbPath = $dataPath.'/'.$pages_image->id.'/thumb/';
-                    $originPath = $dataPath.'/'.$pages_image->id.'/origin/';
-                    Yii::app()->file->createDir(0777,$originPath);
-                    Yii::app()->file->createDir(0777,$largePath);
-                    Yii::app()->file->createDir(0777,$thumbPath);
-                    $image = new Image( $dataPath.$result['filename']);
-                    $image->save($originPath.$result['filename']);
-                    $image = new Image( $dataPath.$result['filename']);
-                    $image->resize($config['dimensions']['large']['width'], $config['dimensions']['large']['height'] , 4)
-                        ->crop($config['dimensions']['large']['width'],$config['dimensions']['large']['height'])->save($largePath.$result['filename']);
-                    $image = new Image( $dataPath.$result['filename']);
-                    $image->resize($config['dimensions']['thumb']['width'], $config['dimensions']['thumb']['height'] , 4)
-                        ->crop($config['dimensions']['thumb']['width'],$config['dimensions']['thumb']['height'])->save($thumbPath.$result['filename']);
+                    $originalPath = $dataPath.'/'.$pages_image->id.'/';
+                    foreach($config['dimensions'] as $key=>$value){
+                        $Path = $originalPath .$key.'/';
+                        Yii::app()->file->createDir(0777,$Path);
+                        $image = new Image($dataPath.$pages_image->file_name);
+                        $image->resize($value['width'], $value['height'] , $value['type'])
+                            ->crop($value['width'],$value['height'])->save($Path.$pages_image->file_name);
+                    }
                     Yii::app()->file->set($dataPath.$result['filename'])->delete();
                     $result['data'] = array('id'=>$pages_image->id,'src'=>PagesImages::getImageSrc($id,$pages_image->id,$result['filename']));
                     ++$count;

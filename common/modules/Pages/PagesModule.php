@@ -20,15 +20,14 @@ class PagesModule extends CWebModule implements IURLRule
         if($url[0] == 'all'){
             $_GET['category_id'] = 'all';
             return 'Pages/FrontendNews/index';
-        }else{
-            $categorie = Categories::model()->find(array(
+        }
+        $categorie = Categories::model()->find(array(
                 'condition'=>'url=:url',
                 'params'=>array(':url'=>isset($url[1])?$url[1]:$url[0])
-            ));
-        }
+        ));
         if($categorie){
-            $_GET['category_id'] = $categorie->id;
-            return 'Pages/FrontendNews/index';
+             $_GET['category_id'] = $categorie->id;
+             return 'Pages/FrontendNews/index';
         }
         $page = Pages::model()->find(array(
                                             'condition'=>'url=:url',
@@ -36,8 +35,7 @@ class PagesModule extends CWebModule implements IURLRule
                                             'select'=>'id'
                                            ));
         if($page){
-            $_GET['page_id'] = $page->id;
-           // $page->type->module . '/' . $page->type->controller . '/' . $page->type->action
+            $_GET['id'] = $page->id;
             return 'Pages/FrontendNews/view';
         }
         return false;
@@ -53,10 +51,14 @@ class PagesModule extends CWebModule implements IURLRule
                 return $categories->url;
             }
         }
-        if($route == 'Pages/FrontendPages/view'){
-            $page = Pages::model()->findByPk($params['id'],array('select'=>'url'));
-            if($page){
-                return $page->url;
+        if($route == 'Pages/FrontendNews/view'){
+            if(isset($params['url'])){
+                return $params['url'];
+            }else{
+                $page = Pages::model()->findByPk($params['id'],array('select'=>'url'));
+                if($page){
+                    return $page->url;
+                }
             }
         }
         return false;

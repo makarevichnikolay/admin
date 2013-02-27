@@ -69,9 +69,8 @@ array('label'=>'Меню - 1', 'url'=>array('/Menu/AdminMenu/index')),
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
+        <div class="pull-left">&copy; Акула</div>
+		<figure class="pull-right"><a href="http://www.onix.ua" target="_blank"><img src="/admin/www/img/onix.png"></a></figure>
 	</div><!-- footer -->
 
 </div><!-- page -->

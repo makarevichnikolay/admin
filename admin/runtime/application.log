@@ -5884,3 +5884,2163 @@ REQUEST_URI=/admin/admin/News/false
 HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 16:21:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\localhost\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/adminCate...')
+#5 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#7 {main}
+REQUEST_URI=/admin/admin/Pages/adminCategories/update?0%5Bid%5D=1
+HTTP_REFERER=http://localhost/admin/admin/Pages/Categories/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 16:24:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('view')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('view')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/adminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Pages/adminNews/view?id=1
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 16:25:43 [error] [php] Undefined variable: model (Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php:7)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): AdminNewsController->renderFile()
+#1 Z:\home\localhost\www\framework\web\CController.php(782): AdminNewsController->renderPartial()
+#2 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(107): AdminNewsController->render()
+#3 unknown(0): AdminNewsController->actionUpdate()
+#4 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#8 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#11 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#13 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#14 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#16 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#17 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/update?id=1
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php (7)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/25 16:25:56 [error] [php] Undefined variable: model (Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php:7)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): AdminNewsController->renderFile()
+#1 Z:\home\localhost\www\framework\web\CController.php(782): AdminNewsController->renderPartial()
+#2 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(107): AdminNewsController->render()
+#3 unknown(0): AdminNewsController->actionUpdate()
+#4 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#8 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#11 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#13 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#14 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#16 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#17 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/update?id=1
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php (7)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/25 16:26:30 [error] [php] Undefined variable: model (Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php:7)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): AdminNewsController->renderFile()
+#1 Z:\home\localhost\www\framework\web\CController.php(782): AdminNewsController->renderPartial()
+#2 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(107): AdminNewsController->render()
+#3 unknown(0): AdminNewsController->actionUpdate()
+#4 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#8 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#11 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#13 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#14 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#16 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#17 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/update?id=1
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php (7)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/25 16:59:01 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Redactor.imageUpload".' in Z:\home\localhost\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(161): CComponent->__set('imageUpload', '/admin/admin/Pa...')
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(175): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#13 [internal function]: AdminNewsController->actionUpdate('1')
+#14 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#15 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#16 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#23 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#25 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#26 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#28 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:04:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:05:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:05:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:06:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:07:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:10:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:16:23 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "ERedactorWidget.lang".' in Z:\home\localhost\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(161): CComponent->__set('lang', 'ru')
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(180): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#13 [internal function]: AdminNewsController->actionUpdate('1')
+#14 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#15 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#16 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#23 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#25 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#26 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#28 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:17:01 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "ERedactorWidget.editorOptions".' in Z:\home\localhost\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(161): CComponent->__set('editorOptions', Array)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(180): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#13 [internal function]: AdminNewsController->actionUpdate('1')
+#14 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#15 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#16 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#23 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#25 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#26 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#28 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:17:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/39438c77/js/lang/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/39438c77...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/39438c77/js/lang/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:17:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/39438c77/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/39438c77...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/39438c77/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:18:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/39438c77/js/lang/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/39438c77...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/39438c77/js/lang/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:19:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/langs/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/langs/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:19:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/langs/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/langs/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:20:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/4a4a076b/jui/css/base/images/ui-icons_454545_256x240.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/4a4a076b...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/4a4a076b/jui/css/base/images/ui-icons_454545_256x240.png
+HTTP_REFERER=http://localhost/admin/admin/assets/4a4a076b/jui/css/base/jquery-ui.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:20:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/4a4a076b/jui/css/base/images/ui-bg_glass_75_dadada_1x400.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/4a4a076b...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/4a4a076b/jui/css/base/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/admin/admin/assets/4a4a076b/jui/css/base/jquery-ui.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:20:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/langs/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/langs/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/langs/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/langs/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:20:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/langs/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/langs/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/378ff545/langs/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/378ff545...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/378ff545/langs/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:22:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d1fb9b97/css/redactor.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d1fb9b97...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d1fb9b97/css/redactor.css
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:22:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d1fb9b97/js/lang/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d1fb9b97...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d1fb9b97/js/lang/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:22:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d1fb9b97/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d1fb9b97...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d1fb9b97/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:22:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d1fb9b97/redactor.min.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d1fb9b97...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d1fb9b97/redactor.min.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d1fb9b97/js/lang/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d1fb9b97...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d1fb9b97/js/lang/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:23:03 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.ext.redactorjs.Redactor" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('common.ext.reda...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#13 [internal function]: AdminNewsController->actionUpdate('1')
+#14 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#15 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#16 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#23 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#25 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#26 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#28 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:23:50 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.ext.redactorjs.ERedactorWidget" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('common.ext.reda...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(172): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#13 [internal function]: AdminNewsController->actionUpdate('1')
+#14 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#15 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#16 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#23 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#25 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#26 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#28 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:24:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d37b36bc/js/lang/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d37b36bc...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d37b36bc/js/lang/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:24:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d37b36bc/css/redactor.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d37b36bc...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d37b36bc/css/redactor.css
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:24:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d37b36bc/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d37b36bc...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d37b36bc/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:24:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/d37b36bc/js/lang/ru.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/d37b36bc...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/d37b36bc/js/lang/ru.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:25:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/723b28a1/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/723b28a1...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/723b28a1/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:25:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/723b28a1/css/redactor.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/723b28a1...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/723b28a1/css/redactor.css
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:25:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/723b28a1/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/723b28a1...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/723b28a1/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/723b28a1/css/redactor.css".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/723b28a1...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/723b28a1/css/redactor.css
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "assets/723b28a1/js/redactor.js".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('assets/723b28a1...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/assets/723b28a1/js/redactor.js
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:30:54 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "allowedExtensions" cannot be empty.' in Z:\home\localhost\www\admin\common\ext\EAjaxUpload\EAjaxUpload.php:67
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(173): EAjaxUpload->run()
+#1 Z:\home\localhost\www\admin\common\ext\redactorjs\view\_upload_new_file.php(61): CBaseController->widget('common.modules....', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\admin\common\ext\redactorjs\view\upload_file_dialog.php(11): CController->renderPartial('common.ext.reda...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\admin\common\ext\redactorjs\Redactor.php(114): CController->renderPartial('common.ext.reda...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(173): Redactor->run()
+#11 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#17 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#19 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#20 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#21 [internal function]: AdminNewsController->actionUpdate('1')
+#22 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#23 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#24 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#25 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#26 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#27 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#28 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#29 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#30 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#31 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#33 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#34 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#35 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#36 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:31:26 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "allowedExtensions" cannot be empty.' in Z:\home\localhost\www\admin\common\ext\EAjaxUpload\EAjaxUpload.php:67
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(173): EAjaxUpload->run()
+#1 Z:\home\localhost\www\admin\common\ext\redactorjs\view\_upload_new_file.php(61): CBaseController->widget('common.modules....', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\admin\common\ext\redactorjs\view\upload_file_dialog.php(11): CController->renderPartial('common.ext.reda...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\admin\common\ext\redactorjs\Redactor.php(114): CController->renderPartial('common.ext.reda...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(173): Redactor->run()
+#11 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#17 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#19 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#20 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#21 [internal function]: AdminNewsController->actionUpdate('1')
+#22 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#23 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#24 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#25 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#26 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#27 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#28 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#29 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#30 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#31 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#33 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#34 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#35 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#36 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:31:50 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "allowedExtensions" cannot be empty.' in Z:\home\localhost\www\admin\common\ext\EAjaxUpload\EAjaxUpload.php:67
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(173): EAjaxUpload->run()
+#1 Z:\home\localhost\www\admin\common\ext\redactorjs\view\_upload_new_file.php(61): CBaseController->widget('common.modules....', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\admin\common\ext\redactorjs\view\upload_file_dialog.php(11): CController->renderPartial('common.ext.reda...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\admin\common\ext\redactorjs\Redactor.php(114): CController->renderPartial('common.ext.reda...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(173): Redactor->run()
+#11 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#17 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#19 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#20 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#21 [internal function]: AdminNewsController->actionUpdate('1')
+#22 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#23 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#24 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#25 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#26 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#27 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#28 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#29 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#30 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#31 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#33 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#34 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#35 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#36 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:32:19 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "allowedExtensions" cannot be empty.' in Z:\home\localhost\www\admin\common\ext\EAjaxUpload\EAjaxUpload.php:67
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(173): EAjaxUpload->run()
+#1 Z:\home\localhost\www\admin\common\ext\redactorjs\view\_upload_new_file.php(61): CBaseController->widget('common.modules....', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\admin\common\ext\redactorjs\view\upload_file_dialog.php(11): CController->renderPartial('common.ext.reda...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\admin\common\ext\redactorjs\Redactor.php(114): CController->renderPartial('common.ext.reda...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(173): Redactor->run()
+#11 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#17 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#19 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#20 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#21 [internal function]: AdminNewsController->actionUpdate('1')
+#22 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#23 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#24 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#25 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#26 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#27 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#28 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#29 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#30 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#31 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#33 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#34 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#35 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#36 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:32:38 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "allowedExtensions" cannot be empty.' in Z:\home\localhost\www\admin\common\ext\EAjaxUpload\EAjaxUpload.php:67
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(173): EAjaxUpload->run()
+#1 Z:\home\localhost\www\admin\common\ext\redactorjs\view\_upload_new_file.php(61): CBaseController->widget('common.modules....', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\admin\common\ext\redactorjs\view\upload_file_dialog.php(11): CController->renderPartial('common.ext.reda...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\admin\common\ext\redactorjs\Redactor.php(114): CController->renderPartial('common.ext.reda...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(173): Redactor->run()
+#11 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#17 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#19 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#20 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#21 [internal function]: AdminNewsController->actionUpdate('1')
+#22 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#23 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#24 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#25 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#26 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#27 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#28 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#29 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#30 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#31 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#33 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#34 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#35 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#36 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:32:46 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "allowedExtensions" cannot be empty.' in Z:\home\localhost\www\admin\common\ext\EAjaxUpload\EAjaxUpload.php:67
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(173): EAjaxUpload->run()
+#1 Z:\home\localhost\www\admin\common\ext\redactorjs\view\_upload_new_file.php(61): CBaseController->widget('common.modules....', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\admin\common\ext\redactorjs\view\upload_file_dialog.php(11): CController->renderPartial('common.ext.reda...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\admin\common\ext\redactorjs\Redactor.php(114): CController->renderPartial('common.ext.reda...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(173): Redactor->run()
+#11 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#17 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#19 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#20 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(110): CController->render('update', Array)
+#21 [internal function]: AdminNewsController->actionUpdate('1')
+#22 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#23 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#24 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#25 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#26 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#27 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#28 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#29 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#30 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#31 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#33 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#34 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#35 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#36 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:42:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:44:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:45:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:47:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:48:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:56:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:57:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:58:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:59:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 17:59:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "false".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('false')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('false')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/News/false
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 18:00:12 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\localhost\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ImageUpload))
+#1 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(ImageUpload))
+#2 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ImageUpload), Array)
+#8 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('imageUploadReda...')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/adminNews...')
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/admin/Pages/adminNews/imageUploadRedacotr
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 18:00:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\localhost\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ImageUpload))
+#1 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(ImageUpload))
+#2 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ImageUpload), Array)
+#8 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('imageUploadReda...')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/adminNews...')
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/admin/Pages/adminNews/imageUploadRedacotr
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 18:01:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\localhost\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(309): CController->invalidActionParams(Object(ImageUpload))
+#1 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(ImageUpload))
+#2 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(ImageUpload), Array)
+#8 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('imageUploadReda...')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/adminNews...')
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/admin/Pages/adminNews/imageUploadRedacotr
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/25 18:51:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php:284
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(88): AdminNewsController->loadModel('false')
+#1 [internal function]: AdminNewsController->actionUpdate('false')
+#2 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#3 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#4 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/adminNews...')
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/admin/News/update/false
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 12:24:07 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.ext.redactorjs.Redactor" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('common.ext.reda...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\update.php(59): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(114): CController->render('update', Array)
+#13 [internal function]: AdminNewsController->actionUpdate('1')
+#14 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#15 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#16 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#23 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#25 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#26 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#28 {main}
+REQUEST_URI=/admin/admin/News/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 12:25:06 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.ext.redactorjs.Redactor" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('common.ext.reda...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\create.php(13): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(80): CController->render('create', Array)
+#13 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminNewsController->actionCreate()
+#14 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('create')
+#23 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#24 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/admin/admin/News/create
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 12:25:40 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.ext.redactorjs.Redactor" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('common.ext.reda...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\create.php(13): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(80): CController->render('create', Array)
+#13 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminNewsController->actionCreate()
+#14 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('create')
+#23 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#24 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/admin/admin/News/create
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 12:25:44 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.ext.redactorjs.Redactor" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('common.ext.reda...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(168): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\create.php(13): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(80): CController->render('create', Array)
+#13 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminNewsController->actionCreate()
+#14 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('create')
+#23 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#24 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/admin/admin/News/create
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 12:37:51 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Pages.keywords".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('keywords')
+#1 Z:\home\localhost\www\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('keywords')
+#2 Z:\home\localhost\www\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Pages), 'keywords')
+#3 Z:\home\localhost\www\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Pages), 'keywords', Array)
+#4 Z:\home\localhost\www\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Pages), 'keywords', Array)
+#5 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\input\TbInputHorizontal.php(181): CActiveForm->textField(Object(Pages), 'keywords', Array)
+#6 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\input\TbInput.php(230): TbInputHorizontal->textField()
+#7 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\input\TbInputHorizontal.php(24): TbInput->run()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(173): TbInputHorizontal->run()
+#9 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#10 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(Pages), 'keywords', NULL, Array)
+#11 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(51): TbActiveForm->textFieldRow(Object(Pages), 'keywords', Array)
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\create.php(13): CController->renderPartial('_form', Array)
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#17 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#19 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#20 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(80): CController->render('create', Array)
+#21 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminNewsController->actionCreate()
+#22 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#29 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('create')
+#31 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#32 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#33 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#34 {main}
+REQUEST_URI=/admin/admin/News/create
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 12:40:41 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Pages.keywords".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('keywords')
+#1 Z:\home\localhost\www\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('keywords')
+#2 Z:\home\localhost\www\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Pages), 'keywords')
+#3 Z:\home\localhost\www\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Pages), 'keywords', Array)
+#4 Z:\home\localhost\www\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Pages), 'keywords', Array)
+#5 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\input\TbInputHorizontal.php(181): CActiveForm->textField(Object(Pages), 'keywords', Array)
+#6 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\input\TbInput.php(230): TbInputHorizontal->textField()
+#7 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\input\TbInputHorizontal.php(24): TbInput->run()
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(173): TbInputHorizontal->run()
+#9 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#10 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\TbActiveForm.php(186): TbActiveForm->inputRow('text', Object(Pages), 'keywords', NULL, Array)
+#11 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(51): TbActiveForm->textFieldRow(Object(Pages), 'keywords', Array)
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\create.php(13): CController->renderPartial('_form', Array)
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#17 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#19 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#20 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(80): CController->render('create', Array)
+#21 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminNewsController->actionCreate()
+#22 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#29 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('create')
+#31 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#32 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#33 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#34 {main}
+REQUEST_URI=/admin/admin/News/create
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:02:24 [error] [exception.CException] exception 'CException' with message 'Псевдоним "common.ext.redactorjs.Redactor" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('common.ext.reda...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(169): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\create.php(13): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(80): CController->render('create', Array)
+#13 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminNewsController->actionCreate()
+#14 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('create')
+#23 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#24 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/admin/admin/News/create
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:03:57 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (Z:\home\localhost\www\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 Z:\home\localhost\www\framework\web\helpers\CHtml.php(1418): tag()
+#2 Z:\home\localhost\www\admin\common\ext\redactorjs\ERedactorWidget.php(65): activeTextArea()
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(173): ERedactorWidget->run()
+#4 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(173): AdminNewsController->widget()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(95): AdminNewsController->renderInternal()
+#7 Z:\home\localhost\www\framework\web\CController.php(869): AdminNewsController->renderFile()
+#8 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\create.php(13): AdminNewsController->renderPartial()
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(95): AdminNewsController->renderInternal()
+#11 Z:\home\localhost\www\framework\web\CController.php(869): AdminNewsController->renderFile()
+#12 Z:\home\localhost\www\framework\web\CController.php(782): AdminNewsController->renderPartial()
+#13 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(80): AdminNewsController->render()
+#14 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminNewsController->actionCreate()
+#15 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#17 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#20 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#22 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#23 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#24 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#25 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#26 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/create
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\helpers\CHtml.php (98)
+in Z:\home\localhost\www\framework\web\helpers\CHtml.php (2336)
+2013/02/26 13:04:51 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "ERedactorWidget.editorOptions".' in Z:\home\localhost\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(161): CComponent->__set('editorOptions', Array)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminNewsController), 'common.ext.reda...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('common.ext.reda...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\_form.php(174): CBaseController->widget('common.ext.reda...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\common\modules\Pages\views\AdminNews\create.php(13): CController->renderPartial('_form', Array)
+#8 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#10 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#11 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(80): CController->render('create', Array)
+#13 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminNewsController->actionCreate()
+#14 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('create')
+#23 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/AdminNews...')
+#24 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/admin/admin/News/create
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:17:04 [error] [php] opendir(Z:\home\localhost\www\admin/data/NewsImages/\adminnews\content,Z:\home\localhost\www\admin/data/NewsImages/\adminnews\content) [<a href='function.opendir'>function.opendir</a>]: ������� �� ������� ����� ��������� ����. (code: 3) (Z:\home\localhost\www\framework\utils\CFileHelper.php:161)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\ext\redactorjs\actions\ImageList.php(33): findFiles()
+#1 unknown(0): ImageList->run()
+#2 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 Z:\home\localhost\www\framework\web\actions\CAction.php(74): ImageList->runWithParamsInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(308): ImageList->runWithParams()
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#6 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/Pages/adminNews/imageListRedactor?attr=content
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (161)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (91)
+2013/02/26 13:18:14 [error] [php] opendir(Z:\home\localhost\www\admin/data/NewsImages/\adminnews\author_description,Z:\home\localhost\www\admin/data/NewsImages/\adminnews\author_description) [<a href='function.opendir'>function.opendir</a>]: �� ������� ����� ��������� ����. (code: 2) (Z:\home\localhost\www\framework\utils\CFileHelper.php:161)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\ext\redactorjs\actions\ImageList.php(33): findFiles()
+#1 unknown(0): ImageList->run()
+#2 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 Z:\home\localhost\www\framework\web\actions\CAction.php(74): ImageList->runWithParamsInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(308): ImageList->runWithParams()
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#6 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/Pages/adminNews/imageListRedactor?attr=author_description
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (161)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (91)
+2013/02/26 13:19:08 [error] [php] opendir(Z:\home\localhost\www\admin/data/NewsImages/\adminnews\author_description,Z:\home\localhost\www\admin/data/NewsImages/\adminnews\author_description) [<a href='function.opendir'>function.opendir</a>]: �� ������� ����� ��������� ����. (code: 2) (Z:\home\localhost\www\framework\utils\CFileHelper.php:161)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\ext\redactorjs\actions\ImageList.php(33): findFiles()
+#1 unknown(0): ImageList->run()
+#2 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 Z:\home\localhost\www\framework\web\actions\CAction.php(74): ImageList->runWithParamsInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(308): ImageList->runWithParams()
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#6 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/Pages/adminNews/imageListRedactor?attr=author_description
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (161)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (91)
+2013/02/26 13:21:59 [error] [php] opendir(Z:\home\localhost\www\admin/data/NewsImages/\adminnews\author_description,content,Z:\home\localhost\www\admin/data/NewsImages/\adminnews\author_description,content) [<a href='function.opendir'>function.opendir</a>]: �� ������� ����� ��������� ����. (code: 2) (Z:\home\localhost\www\framework\utils\CFileHelper.php:161)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\ext\redactorjs\actions\ImageList.php(33): findFiles()
+#1 unknown(0): ImageList->run()
+#2 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 Z:\home\localhost\www\framework\web\actions\CAction.php(74): ImageList->runWithParamsInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(308): ImageList->runWithParams()
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#6 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/Pages/adminNews/imageListRedactor?attr=author_description%2Ccontent
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (161)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (91)
+2013/02/26 13:25:29 [error] [php] opendir(Z:\home\localhost\www\admin/data/NewsImages/\adminnews\author_description,content,Z:\home\localhost\www\admin/data/NewsImages/\adminnews\author_description,content) [<a href='function.opendir'>function.opendir</a>]: �� ������� ����� ��������� ����. (code: 2) (Z:\home\localhost\www\framework\utils\CFileHelper.php:161)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\ext\redactorjs\actions\ImageList.php(33): findFiles()
+#1 unknown(0): ImageList->run()
+#2 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 Z:\home\localhost\www\framework\web\actions\CAction.php(74): ImageList->runWithParamsInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(308): ImageList->runWithParams()
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#6 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/Pages/adminNews/imageListRedactor?attr=author_description%2Ccontent
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (161)
+in Z:\home\localhost\www\framework\utils\CFileHelper.php (91)
+2013/02/26 13:45:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners/AdminBanners/index
+HTTP_REFERER=http://localhost/admin/admin/Menu/AdminMenu/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:46:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners/AdminBanners/index
+HTTP_REFERER=http://localhost/admin/admin/Menu/AdminMenu/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:46:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Banners/AdminBanners/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:47:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Menu/AdminMenu/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:48:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Menu/AdminMenu/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:48:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Menu/AdminMenu/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:48:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:49:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Users/AdminUsers/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:49:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminBanners/index".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Users/AdminUsers/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:49:57 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii_admin.banners' doesn't exist. Выполнявшийся SQL-запрос: SHOW FULL COLUMNS FROM `banners`.
+in Z:\home\localhost\www\framework\db\CDbCommand.php (536)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (395)
+in Z:\home\localhost\www\framework\db\schema\mysql\CMysqlSchema.php (159)
+2013/02/26 13:49:57 [error] [exception.CDbException] exception 'CDbException' with message 'Таблица "banners", упомянутая в записи active record класса "Banners", не найдена в базе данных.' in Z:\home\localhost\www\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Banners))
+#1 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Banners')
+#2 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(71): CActiveRecord->__construct('search')
+#4 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminBannersController->actionIndex()
+#5 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#14 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#15 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#17 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Users/AdminUsers/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:51:15 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Banners.date_from".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('date_from')
+#1 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\index.php(15): CActiveRecord->__get('date_from')
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(75): CController->render('index', Array)
+#7 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminBannersController->actionIndex()
+#8 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#20 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Users/AdminUsers/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:52:09 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Banners.date_from".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('date_from')
+#1 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\index.php(15): CActiveRecord->__get('date_from')
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(75): CController->render('index', Array)
+#7 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminBannersController->actionIndex()
+#8 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#20 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Users/AdminUsers/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:53:48 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Banners.pk".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('pk')
+#1 Z:\home\localhost\www\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('pk')
+#2 Z:\home\localhost\www\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Banners), 'pk')
+#3 Z:\home\localhost\www\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Banners), 'pk', Array)
+#4 Z:\home\localhost\www\framework\zii\widgets\grid\CDataColumn.php(97): CHtml::activeTextField(Object(Banners), 'pk', Array)
+#5 Z:\home\localhost\www\admin\common\ext\bootstrap\widgets\TbDataColumn.php(53): CDataColumn->renderFilterCellContent()
+#6 Z:\home\localhost\www\framework\zii\widgets\grid\CGridView.php(505): TbDataColumn->renderFilterCell()
+#7 Z:\home\localhost\www\framework\zii\widgets\grid\CGridView.php(483): CGridView->renderFilter()
+#8 Z:\home\localhost\www\framework\zii\widgets\grid\CGridView.php(453): CGridView->renderTableHeader()
+#9 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(160): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{items}{pager}')
+#12 Z:\home\localhost\www\framework\zii\widgets\CBaseListView.php(128): CBaseListView->renderContent()
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(173): CBaseListView->run()
+#14 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\index.php(43): CBaseController->widget('bootstrap.widge...', Array)
+#15 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#16 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#17 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#18 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#19 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(75): CController->render('index', Array)
+#20 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminBannersController->actionIndex()
+#21 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#28 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#30 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#31 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#32 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#33 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Users/AdminUsers/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:54:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Banners/AdminUsers/create".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminUs...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin/Banners/AdminUsers/create
+HTTP_REFERER=http://localhost/admin/admin/Banners
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:54:53 [error] [php] Undefined variable: form (Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\_form.php:10)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): AdminBannersController->renderFile()
+#1 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\create.php(14): AdminBannersController->renderPartial()
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): AdminBannersController->renderInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(869): AdminBannersController->renderFile()
+#5 Z:\home\localhost\www\framework\web\CController.php(782): AdminBannersController->renderPartial()
+#6 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(39): AdminBannersController->render()
+#7 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminBannersController->actionCreate()
+#8 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminBannersController->runAction()
+#10 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminBannersController->filterAccessControl()
+#13 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#15 Z:\home\localhost\www\framework\web\CController.php(265): AdminBannersController->runActionWithFilters()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminBannersController->run()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#18 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#19 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/Banners/create
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\_form.php (10)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/26 13:58:51 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "TbGridView.0".' in Z:\home\localhost\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminBannersController), 'bootstrap.widge...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\index.php(62): CBaseController->widget('bootstrap.widge...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(75): CController->render('index', Array)
+#9 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminBannersController->actionIndex()
+#10 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#19 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#20 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Banners/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:59:12 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "TbGridView.0".' in Z:\home\localhost\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminBannersController), 'bootstrap.widge...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\index.php(62): CBaseController->widget('bootstrap.widge...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(75): CController->render('index', Array)
+#9 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminBannersController->actionIndex()
+#10 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#19 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#20 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Banners/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 13:59:38 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "TbGridView.0".' in Z:\home\localhost\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(161): CComponent->__set('0', Array)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminBannersController), 'bootstrap.widge...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\index.php(62): CBaseController->widget('bootstrap.widge...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(75): CController->render('index', Array)
+#9 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): AdminBannersController->actionIndex()
+#10 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#19 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#20 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/admin/admin/Banners
+HTTP_REFERER=http://localhost/admin/admin/Banners/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 14:00:35 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Banners.nickname".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('nickname')
+#1 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\update.php(7): CActiveRecord->__get('nickname')
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#6 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(56): CController->render('update', Array)
+#7 [internal function]: AdminBannersController->actionUpdate('1')
+#8 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminBannersController), Array)
+#9 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminBannersController), Object(ReflectionMethod), Array)
+#10 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#19 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#20 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#22 {main}
+REQUEST_URI=/admin/admin/Banners/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/Banners
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 14:08:49 [error] [exception.CException] exception 'CException' with message 'В классе TbActiveForm и его поведениях не найден метод или замыкание с именем "textAreaFieldRow".' in Z:\home\localhost\www\framework\base\CComponent.php:265
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\_form.php(29): CComponent->__call('textAreaFieldRo...', Array)
+#1 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\_form.php(29): TbActiveForm->textAreaFieldRow(Object(Banners), 'content')
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\admin\common\modules\Banners\views\AdminBanners\update.php(14): CController->renderPartial('_form', Array)
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 Z:\home\localhost\www\admin\common\modules\Banners\controllers\AdminBannersController.php(56): CController->render('update', Array)
+#11 [internal function]: AdminBannersController->actionUpdate('1')
+#12 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminBannersController), Array)
+#13 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminBannersController), Object(ReflectionMethod), Array)
+#14 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#23 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Banners/AdminBa...')
+#24 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#26 {main}
+REQUEST_URI=/admin/admin/Banners/update?id=1
+HTTP_REFERER=http://localhost/admin/admin/Banners/adminBanners/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 17:07:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php:289
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(93): AdminNewsController->loadModel('2')
+#1 [internal function]: AdminNewsController->actionUpdate('2')
+#2 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#3 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#4 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/adminNews...')
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/admin/News/update/2
+HTTP_REFERER=http://localhost/admin/admin/News/update/2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 17:10:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php:289
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(93): AdminNewsController->loadModel('2')
+#1 [internal function]: AdminNewsController->actionUpdate('2')
+#2 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(AdminNewsController), Array)
+#3 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(AdminNewsController), Object(ReflectionMethod), Array)
+#4 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\localhost\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('update')
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/adminNews...')
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/admin/News/update/2
+HTTP_REFERER=http://localhost/admin/admin/News/update/2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 13:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "wwimg".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('wwimg')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('wwimg')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/wwimg/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 13:46:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "wwwimg".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('wwwimg')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('wwwimg')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/wwwimg/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 13:46:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "www".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('www')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('www')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 13:46:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "www".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('www')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('www')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/www/img/onix.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 13:46:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 13:46:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/img/onix.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:08:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admin".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('admin')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:08:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admin".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('admin')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/admin/www/img/onix.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:08:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "ad".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('ad')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('ad')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/ad/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:08:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admi".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('admi')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('admi')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/admi/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:08:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admin".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('admin')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/admin/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:08:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admin".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('admin')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Comments/AdminC...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\admin\www\index.php(16): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/admin/Comments/AdminComments/admin/admin/www/img/onix.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:44:58 [error] [php] Undefined index: type (Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php:142)
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(795): Pages->update()
+#1 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(79): Pages->save()
+#2 unknown(0): AdminNewsController->actionUpdate()
+#3 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#4 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#7 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#10 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#14 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#15 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#16 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/update/1
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php (142)
+in Z:\home\localhost\www\admin\common\modules\Pages\models\Pages.php (154)
+2013/02/27 17:00:17 [error] [php] Undefined index: author_image (Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php:148)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#3 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#6 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#8 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#11 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#12 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/Pages/adminNews/MainImageUpload?field=author_image&PHPSESSID=jhh7enkkk17en6tst04coj4c33&YII_CSRF_TOKEN=62eb326b65178c01b9e8853b5761f0ae845fd3f3&qqfile=Penguins.jpg
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php (148)
+in Z:\home\localhost\www\framework\web\actions\CAction.php (108)
+2013/02/27 17:00:23 [error] [php] Undefined index: author_image (Z:\home\localhost\www\admin\common\modules\Pages\views\adminNews\_form.php:216)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): AdminNewsController->renderFile()
+#1 Z:\home\localhost\www\admin\common\modules\Pages\views\adminNews\update.php(59): AdminNewsController->renderPartial()
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): AdminNewsController->renderInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(869): AdminNewsController->renderFile()
+#5 Z:\home\localhost\www\framework\web\CController.php(782): AdminNewsController->renderPartial()
+#6 Z:\home\localhost\www\admin\common\modules\Pages\controllers\AdminNewsController.php(98): AdminNewsController->render()
+#7 unknown(0): AdminNewsController->actionUpdate()
+#8 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(133): AdminNewsController->runAction()
+#12 Z:\home\localhost\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 Z:\home\localhost\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 Z:\home\localhost\www\framework\web\filters\CInlineFilter.php(58): AdminNewsController->filterAccessControl()
+#15 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#17 Z:\home\localhost\www\framework\web\CController.php(265): AdminNewsController->runActionWithFilters()
+#18 Z:\home\localhost\www\framework\web\CWebApplication.php(282): AdminNewsController->run()
+#19 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#20 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#21 Z:\home\localhost\www\admin\admin\www\index.php(16): FWebApplication->run()
+REQUEST_URI=/admin/admin/News/update/1
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\adminNews\_form.php (216)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)

@@ -35,6 +35,9 @@ return array(
             'class' => 'common.components.PhpAuthManager',
             'defaultRoles' => array('guest'),
         ),
+        'cache'=>array(
+            'class'=>'system.caching.CFileCache',
+        ),
 		
 	),
 
@@ -46,7 +49,7 @@ return array(
 		'dataUserPath' => 'data/users/',
         'defaultModule'=>'Pages',
         'Pages'=>array(
-            'main_image'=>array(
+            'redactor_image'=>array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
                 'dimensions' => array(
@@ -55,12 +58,22 @@ return array(
                     'large'	=> array('width'=>600, 'height'=>800,'type'=>3),
                 ),
             ),
+            'main_image'=>array(
+                'ext' => array('jpg', 'jpeg', 'png'),
+                'maxSize'=>20 * 1024 * 1024,
+                'dimensions' => array(
+                    'thumb'	=> array('width'=>200, 'height'=>160,'type'=>3),
+                    'thumb2'=> array('width'=>204, 'height'=>113,'type'=>4),
+                    'new-view'	=> array('width'=>360, 'height'=>204,'type'=>4),
+                    //'large'	=> array('width'=>600, 'height'=>800,'type'=>3),
+                ),
+            ),
             'author_image'=>array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>300, 'height'=>200),
-                    'large'	=> array('width'=>600, 'height'=>800),
+                    'thumb'	=> array('width'=>50, 'height'=>50,'type'=>3),
+                    //'large'	=> array('width'=>600, 'height'=>800),
                 ),
             ),
             'images'=>array(
@@ -68,8 +81,8 @@ return array(
                 'maxSize'=>20 * 1024 * 1024,
                 'maxCount'=>16,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>300, 'height'=>200),
-                    'large'	=> array('width'=>600, 'height'=>800),
+                    'thumb'	=> array('width'=>150, 'height'=>86,'type'=>4),
+                    'large'	=> array('width'=>800, 'height'=>600,'type'=>4),
                 ),
             )
         ),
@@ -92,5 +105,8 @@ return array(
            'Search'=>array(
                'class' => 'common.modules.Search.SearchModule'
            ),
+           'Banners'=>array(
+              'class' => 'common.modules.Banners.BannersModule'
+          ),
 	),
 );

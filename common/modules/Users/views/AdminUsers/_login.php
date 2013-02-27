@@ -1,5 +1,5 @@
-<div class="row-fluid">
-<div class="well span4 offset4">
+<div class="login-form">
+<div class="well">
 <?php
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id' => 'users-form',

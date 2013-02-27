@@ -46,11 +46,10 @@ class Pages extends CActiveRecord
 		return array(
 			array('url,title', 'required'),
             array('url','unique','message'=>'{attribute}:{value} already exists!'),
-            array('title, keywords, description, url, author_name, author_image, author_description, content, main_image', 'type', 'type'=>'string'),
-            array('title, keywords, description, url, author_name, author_image, main_image, date_update, date_create', 'length', 'max'=>'255','encoding'=>'utf8'),
-            array('visible, visible_on_main, allow_comments', 'boolean'),
+            array('title, keywords_meta, video,description_meta,title_meta, url, author_name, author_image, author_description, content, main_image', 'type', 'type'=>'string'),
+            array('title, keywords_meta, video,description_meta,title_meta, url, author_name, author_image, main_image, date_update, date_create', 'length', 'max'=>'255','encoding'=>'utf8'),
+            array('visible, visible_on_main, allow_comments,hidden_in_main_list,video_new,photo_new', 'boolean'),
             array('type_id, user_id','numerical' ,'integerOnly'=>true),
-			array('url, title, keywords, description, main_image, author_image', 'length', 'max'=>255),
 			array('categories', 'safe'),
             array('date, date_create, date_update', 'date','format'=>'yyyy-mm-dd hh:mm:ss'),
             array('date_update','default',
@@ -59,7 +58,7 @@ class Pages extends CActiveRecord
             array('date_create,date_update','default',
                 'value'=>new CDbExpression('NOW()'),
                 'setOnEmpty'=>false,'on'=>'insert'),
-			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments, date_from, date_to, categories,page_id', 'safe', 'on'=>'search'),
+			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments, date_from, date_to, categories,page_id,hidden_in_main_list,video_new,photo_new', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,8 +73,10 @@ class Pages extends CActiveRecord
             'id' => 'ID',
             'type_id'=>'Тип страницы',
             'title' => 'Заголовок',
-            'keywords' => 'Ключевые слова',
-            'description' => 'Description',
+            'keywords_meta' => 'Ключевые слова(Meta)',
+            'description_meta' => 'Описание(Meta)',
+            'title_meta' => 'Заголовок(Meta)',
+            'video'=>'Видео',
             'url' => 'Url',
             'date'=> 'Дата',
             'categories'=> 'Категории',
@@ -84,8 +85,11 @@ class Pages extends CActiveRecord
             'author_description'=> 'Описание автора',
             'content' => 'Контент',
             'main_image' => 'Изображение новости',
+            'video_new'=> 'Видеоновость',
+            'photo_new'=> 'Фотоновость',
             'visible'=> 'Отображать',
-            'visible_on_main'=>'Не публиковать в общей ленте',
+            'visible_on_main'=>'Отображать на главной',
+            'hidden_in_main_list'=>'Не публиковать в общей ленте',
             'allow_comments'=> 'Разрешить коментарии',
             'user_id'=>'Пользователь',
             'date_create'=>'date_create',
@@ -96,7 +100,8 @@ class Pages extends CActiveRecord
     public static  function  getFreshNews($limit = 5){
         $criteria= new CDbCriteria();
         $criteria->limit = $limit;
-        //$criteria->addCondition('main_image != ""');
+        $criteria->compare('hidden_in_main_list',0);
+        $criteria->order = 'date_create,date_update';
         return  new CActiveDataProvider('Pages', array(
                 'criteria'=>$criteria,
                 'pagination'=>false
@@ -107,8 +112,9 @@ class Pages extends CActiveRecord
     public static function getMainNews(){
         $criteria= new CDbCriteria();
         $criteria->limit = 3;
-        $criteria->compare('visible_on_main',0);
+        $criteria->compare('visible_on_main',1);
         $criteria->addCondition('main_image != ""');
+        $criteria->order = 'date_create,date_update';
         return  new CActiveDataProvider('Pages', array(
                 'criteria'=>$criteria,
                 'pagination'=>false
@@ -202,8 +208,8 @@ class Pages extends CActiveRecord
         // class name for the relations automatically generated below.
         return array(
             'type'    => array(self::BELONGS_TO, 'pageTypes',    'type_id'),
-            'category'    => array(self::HAS_MANY, 'pagesCategories','page_id','with'=>array('category_name')),
-            'category_search'    => array(self::HAS_MANY, 'pagesCategories','page_id'),
+            'category'    => array(self::HAS_MANY, 'PagesCategories','page_id','with'=>array('category_name')),
+            'category_search'    => array(self::HAS_MANY, 'PagesCategories','page_id'),
         );
     }
 
@@ -234,6 +240,9 @@ class Pages extends CActiveRecord
         $criteria->compare('author_name',$this->author_name,TRUE);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('visible',$this->visible);
+        $criteria->compare('hidden_in_main_list',$this->hidden_in_main_list);
+        $criteria->compare('video_new',$this->video_new);
+        $criteria->compare('photo_new',$this->photo_new);
         $criteria->compare('visible_on_main',$this->visible_on_main);
         $criteria->compare('allow_comments',$this->allow_comments);
 

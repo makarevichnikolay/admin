@@ -3,16 +3,12 @@
 /* @var $model Users */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	'Create',
+    'Пользователи'=>array('index'),
+    'Новая запись',
 );
 
-$this->menu=array(
-	array('label'=>'List Users', 'url'=>array('index')),
-	array('label'=>'Manage Users', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Create Users</h1>
+<h2>Добавить пользователя</h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,19 +3,12 @@
 /* @var $model Users */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+    'Пользователи'=>array('index'),
+    $model->nickname=>Yii::app()->controller->createUrl("AdminUsers/update", array("id" => $model->id)),
+    'Редактирование'
 );
 
-$this->menu=array(
-	array('label'=>'List Users', 'url'=>array('index')),
-	array('label'=>'Create Users', 'url'=>array('create')),
-	array('label'=>'View Users', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Users', 'url'=>array('admin')),
-);
 ?>
-
-<h1>Update Users <?php echo $model->id; ?></h1>
+<h2>Редактировать пользователя <?php echo $model->nickname ?></h2>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

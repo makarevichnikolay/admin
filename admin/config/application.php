@@ -3,7 +3,7 @@
 define('BASE_URL_REGEXP', '|/[^/]+?$|');
 
 return array(
-    'name'=>'Admin',
+    'name'=>'Админ-панель',
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'preload' => array(
 		'bootstrap',
@@ -51,6 +51,8 @@ return array(
                 'Pages'=>'Pages/AdminPages/index',
                 'Users'=>'Users/AdminUsers/index',
                 'Users/<action:\w+>'=>'Users/AdminUsers/<action>',
+                'Banners'=>'Banners/AdminBanners/index',
+                'Banners/<action:\w+>'=>'Banners/AdminBanners/<action>',
                 '<module:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

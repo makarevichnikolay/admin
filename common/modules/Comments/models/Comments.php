@@ -70,10 +70,10 @@ class Comments extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'user_id' => 'User',
-			'page_id' => 'Page',
-			'content' => 'Content',
-			'date_create' => 'Date Create',
+			'user_id' => 'Пользователь',
+			'page_id' => 'Новость',
+			'content' => 'Комментарии',
+			'date_create' => 'Дата',
 		);
 	}
 
@@ -90,10 +90,10 @@ class Comments extends CActiveRecord
         $criteria->with = array('user','page');
         $criteria->together = false;
 		$criteria->compare('t.id',$this->id);
-		$criteria->compare('t.user_id',$this->user_id,true);
-		$criteria->compare('t.page_id',$this->page_id,true);
+		$criteria->compare('t.user_id',$this->user_id);
+		$criteria->compare('t.page_id',$this->page_id);
 		$criteria->compare('t.content',$this->content,true);
-		$criteria->compare('t.date_create',$this->date_create,true);
+		$criteria->compare('t.date_create',$this->date_create);
         if((isset($this->date_from) && trim($this->date_from) != "") && (isset($this->date_to) && trim($this->date_to) != ""))
             $criteria->addBetweenCondition('t.date_create', ''.$this->date_from.'', ''.$this->date_to.'');
 

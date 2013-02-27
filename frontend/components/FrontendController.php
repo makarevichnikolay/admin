@@ -3,8 +3,8 @@
 class FrontendController extends Controller
 {
 
-   public $layout='//layouts/Column1';
-
+   public $layout='//layouts/main';
+   public $title = 'Головне';
 
 
 	// Uncomment the following methods and override them if needed

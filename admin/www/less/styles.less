@@ -1,3 +1,9 @@
+@inputHeight: 10px;
+
+@import "mixins.less";
+figure{
+    margin: 0;
+}
 .main{
   min-height: 800px;;
 }
@@ -150,9 +156,29 @@ margin-right: 3px;
 *login
 */
 
-
+.login-form{
+    .center-block();
+    margin-top:10%;
+    width: 280px;
+}
 
 /*
 *login
 ********/
 
+.admin-title-btn{
+    .border-radius(3px);
+    border:1px solid #d3d3d3;
+    margin-bottom:10px;
+    h2{
+        margin: 2px 0;
+        padding-left: 10px;
+    }
+    div{
+        padding:7px 10px 0 0;
+        a{
+            float: right;
+        }
+    }
+
+}

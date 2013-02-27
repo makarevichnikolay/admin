@@ -11,8 +11,12 @@ $this->breadcrumbs = array();
     </div>
 </div>
 
-    <div class="row-fluid banner">
-    </div>
+<div class="row-fluid">
+    <?php
+    Yii::app()->getModule('Banners');
+    echo Banners::getBanner(2);
+    ?>
+</div>
  <div class="row-fluid main-tabs">
      <?php $this->widget('bootstrap.widgets.TbTabs', array(
      'type'=>'tabs',
@@ -20,7 +24,7 @@ $this->breadcrumbs = array();
          array('label'=>'Свіжі новини',
              'content'=>$this->widget('bootstrap.widgets.TbListView', array(
                  'dataProvider'=>Pages::getFreshNews(),
-                 'itemView'=>'common.modules.Pages.views.FrontendNews._new',
+                 'itemView'=>'common.modules.Pages.views.frontendNews._new',
                  'template'=>'{items}'
              ),true),
              'active'=>true),
@@ -30,8 +34,6 @@ $this->breadcrumbs = array();
  )); ?>
  </div>
 
-<div class="row-fluid banner">
-</div>
 <script type="text/javascript">
     var menuActive = 'main';
 </script>

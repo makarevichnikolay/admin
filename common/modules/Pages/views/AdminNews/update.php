@@ -3,20 +3,13 @@
 /* @var $model Page */
 
 $this->breadcrumbs=array(
-	'Pages'=>array('index'),
-	$params['model']->title=>array('view','id'=>$params['model']->id),
-	'Update',
-);
-
-$this->menu=array(
-	array('label'=>'List Page', 'url'=>array('index')),
-	array('label'=>'Create Page', 'url'=>array('create')),
-	array('label'=>'View Page', 'url'=>array('view', 'id'=>$params['model']->id)),
-	array('label'=>'Manage Page', 'url'=>array('admin')),
+	'Новости'=>array('index'),
+    $params['model']->title=>Yii::app()->controller->createUrl("AdminNews/update", array("id" =>$params['model']->id)),
+    'Редактирование'
 );
 ?>
 
-<h1>Update Page <?php echo $params['model']->id; ?></h1>
+<h2>Редактировать новость: <?php echo $params['model']->title ?></h2>
 
 <div class="admin-modal pages-modal hide fade out">
     <button type="button" class="close admin-close" data-dismiss="modal" aria-hidden="true">&times;</button>

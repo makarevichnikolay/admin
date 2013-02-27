@@ -15,7 +15,7 @@ $disabled = (!$model->isNewRecord && $model->parent_id == 0)?'disabled':'';
 
     <fieldset>
 
-        <legend>Legend</legend>
+        <legend></legend>
         <?php echo $form->textFieldRow($model, 'title', array('class'=>'input-xxlarge')); ?>
         <div class="control-group">
             <?php echo $form->labelEx($model, 'url', array('class' => 'control-label')); ?>
@@ -39,7 +39,7 @@ $disabled = (!$model->isNewRecord && $model->parent_id == 0)?'disabled':'';
      </fieldset>
 
 <div class="form-actions">
-    <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Submit')); ?>
+    <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary','icon' => 'ok white','label' => 'Сохранить',)); ?>
 </div>
 
 <?php $this->endWidget(); ?>

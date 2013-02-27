@@ -36,10 +36,14 @@ function checkTime(i)
     }
     return i;
 }
+var menuActive,menuParentActive;
 
 $(document).ready(function(){
     if(menuActive){
         $('.menu  li[data-id="'+menuActive+'"]').addClass('active');
+    }
+    if(menuParentActive){
+        $('.menu  li[data-id="'+menuParentActive+'"]').addClass('active');
     }
     $(".menu .first > li").hover(function(){
         $(this).next().addClass('after-hover');

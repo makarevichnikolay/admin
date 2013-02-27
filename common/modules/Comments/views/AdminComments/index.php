@@ -3,14 +3,15 @@ $this->breadcrumbs=array(
 'Users',
 );
 ?>
-
-<h1>Users</h1>
+<div class='admin-title-btn row-fluid'>
+<h1>Комментарии</h1>
+ </div>
 <?php
 $this->widget('bootstrap.widgets.TbButton', array(
     'label' => 'Все пользователи',
     'type' => 'info', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
     'size' => 'large', // null, 'large', 'small' or 'mini'
-    'url' => array('AdminComments/',array('user_id'=>null,'page_id'=>$model->page_id))
+    'url' => Yii::app()->createUrl('Comments/AdminComments/index',array('user_id'=>null,'page_id'=>$model->page_id))
 ));
 ?>
 &nbsp
@@ -19,7 +20,7 @@ $this->widget('bootstrap.widgets.TbButton', array(
     'label' => 'Все новости',
     'type' => 'info', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
     'size' => 'large', // null, 'large', 'small' or 'mini'
-    'url' => array('AdminComments/',array('user_id'=>$model->user_id,'page_id'=>null))
+    'url' => Yii::app()->createUrl('Comments/AdminComments/index',array('user_id'=>$model->user_id,'page_id'=>null))
 ));
 ?>
 <?php
@@ -82,7 +83,7 @@ $this->widget(
                 'filter'=>false,
                 'value'=>function($data){
                              if(isset($data->user) && isset($data->user->id))
-                                return CHtml::link($data->user->nickname,Yii::app()->createUrl('Comments/AdminComments/index',array('user_id'=>$data->user_id)));
+                                return CHtml::link($data->user->nickname,Yii::app()->createUrl('Comments/AdminComments/index',array('user_id'=>$data->user_id,'page_id'=>$data->page_id)));
                              else
                                 return 'Такого пользователя нет';
                          }
@@ -105,7 +106,7 @@ $this->widget(
                 'filter'=>false,
                 'value'=>function($data){
                     if(isset($data->page) && isset($data->page->id))
-                        return CHtml::link($data->page->title,Yii::app()->createUrl('Comments/AdminComments/index',array('page_id'=>$data->page_id)));
+                        return CHtml::link($data->page->title,Yii::app()->createUrl('Comments/AdminComments/index',array('page_id'=>$data->page_id,'user_id'=>$data->user_id)));
                     else
                         return 'Такой записи нет';
                 }

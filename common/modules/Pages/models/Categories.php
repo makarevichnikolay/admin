@@ -65,8 +65,9 @@ class Categories extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'title' => 'Title',
+			'title' => 'Заголовок',
             'url' => 'Url',
+            'parent_id'=>'Родитель'
 		);
 	}
 
@@ -91,6 +92,9 @@ class Categories extends CActiveRecord
                     't.parent_id,t.title',
                 ),
                 'defaultOrder' => 't.parent_id',
+            ),
+            'pagination'=>array(
+                'pageSize'=>13,
             ),
 		));
 	}

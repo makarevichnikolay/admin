@@ -26,6 +26,10 @@
 
 <header class="navbar header">
     <div class="navbar-inner">
+            <?php
+            Yii::app()->getModule('Banners');
+            echo Banners::getBanner(1);
+            ?>
     </div>
 </header>
 
@@ -102,28 +106,63 @@
             </div>
         </div>
     </header>
-
+    <?php if(!empty($this->breadcrumbs)): ?>
     <article class="row-fluid">
         <div class="span12">
             <?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
             'links'=>$this->breadcrumbs,
+            'separator'=>'>',
             'homeLink'=>CHtml::link('Головна',array('/Default/index')),
         )); ?>
         </div>
     </article>
-
+    <?php endif; ?>
+    <?php //if(!empty($this->title)): ?>
+    <article class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title"><?php echo $this->title ?></h3>
+        </div>
+    </article>
+    <?php //endif ?>
     <div class="row-fluid">
         <div class="span12">
             <div class="row-fluid">
                 <section class="span9 content">
                     <?php echo $content; ?>
-                </section>
-                <aside class="span3">
-                    <div class="row-fluid main-news">
-
+                    <div class="row-fluid">
+                        <?php
+                        echo Banners::getBanner(3);
+                        ?>
                     </div>
+                </section>
+                <aside class="span3 right-column">
+                        <div class="row-fluid">
+                            <?php
+                            echo Banners::getBanner(4);
+                            ?>
+                        </div>
+                        <div class="row-fluid">
+                            <?php
+                            if($this->beginCache('photo_new', array('duration'=>5))) {
+                                $this->widget('application.components.Widgets.photoNewWidget');
+                                $this->endCache(); }else{
+                            }
+                             $this->widget('application.components.Widgets.photoNewWidget');
+                            ?>
+                        </div>
+                        <div class="row-fluid">
+                            <?php
+                            echo Banners::getBanner(5);
+                            ?>
+                        </div>
+                        <div class="row-fluid">
+                            <?php
+                            echo Banners::getBanner(6);
+                            ?>
+                        </div>
                 </aside>
             </div>
+
         </div>
     </div>
 </section>

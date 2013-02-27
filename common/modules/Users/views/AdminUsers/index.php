@@ -3,17 +3,11 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Users',
+	'Пользователи',
 );
 
-$this->menu=array(
-	array('label'=>'Create Users', 'url'=>array('create')),
-	array('label'=>'Manage Users', 'url'=>array('admin')),
-);
+
 ?>
-
-<h1>Users</h1>
-
 <?php
 $dataFilter = $this->widget('common.ext.CJuiDateTimePicker.CJuiDateTimePicker', array(
     // 'model' => $model,
@@ -54,15 +48,22 @@ $dataFilter = $this->widget('common.ext.CJuiDateTimePicker.CJuiDateTimePicker', 
 ),true).'</div>'
 
 ?>
+<div class='admin-title-btn row-fluid'>
+    <h2 class="span2">Пользователи</h2>
 
+    <div class="span2 offset8">
+        <?php
+        $this->widget('bootstrap.widgets.TbButton', array(
+            'label' => 'Добавить',
+            'icon' => 'icon-plus icon-white',
+            'type' => 'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+            'size' => null, // null, 'large', 'small' or 'mini'
+            'url' => array('AdminUsers/create')
+        ));
+        ?>
+    </div>
+</div>
 <?php
-$this->widget('bootstrap.widgets.TbButton', array(
-    'label'=>'Создать',
-    'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-    'size'=>'large', // null, 'large', 'small' or 'mini'
-    'url'=>array('AdminUsers/create')
-));
-
 $this->widget(
     'bootstrap.widgets.TbGridView',
     array(

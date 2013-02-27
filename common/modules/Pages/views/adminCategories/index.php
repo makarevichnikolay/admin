@@ -3,17 +3,25 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs = array(
-    'Categories',
+    'Рубрики',
 );
+?>
+<div class='admin-title-btn row-fluid'>
+    <h2 class="span2">Рубрики</h2>
 
-
-$this->widget('bootstrap.widgets.TbButton', array(
-    'label' => 'Создать',
-    'type' => 'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-    'size' => 'large', // null, 'large', 'small' or 'mini'
-    'url' => array('AdminCategories/create')
-));
-
+    <div class="span2 offset8">
+        <?php
+        $this->widget('bootstrap.widgets.TbButton', array(
+            'label' => 'Добавить',
+            'icon' => 'icon-plus icon-white',
+            'type' => 'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+            'size' => null, // null, 'large', 'small' or 'mini'
+            'url' => array('AdminCategories/create')
+        ));
+        ?>
+    </div>
+</div>
+<?php
 $this->widget(
     'common.ext.GroupGridView.BootGroupGridView',
     array(
@@ -29,9 +37,10 @@ $this->widget(
             ),
             array(
                 'name' => 'parent_id',
-                'header'=>'Родитель',
-                'value'=>function($data){
-                    if($data->parent){
+                'header' => 'Родитель',
+                'value' => function($data)
+                {
+                    if ($data->parent) {
                         return $data->parent->title;
                     }
                 },

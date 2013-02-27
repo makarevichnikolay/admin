@@ -2438,3 +2438,948 @@ REQUEST_URI=/admin/
 HTTP_REFERER=http://localhost/admin/s1
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 14:25:09 [error] [php] include(Banners.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\admin\frontend\views\layouts\main.php(32): spl_autoload_call()
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#3 Z:\home\localhost\www\framework\web\widgets\CContentDecorator.php(76): DefaultController->renderFile()
+#4 Z:\home\localhost\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#5 Z:\home\localhost\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#6 Z:\home\localhost\www\framework\web\CBaseController.php(206): CContentDecorator->run()
+#7 Z:\home\localhost\www\framework\web\CBaseController.php(300): DefaultController->endWidget()
+#8 Z:\home\localhost\www\admin\frontend\views\layouts\column1.php(6): DefaultController->endContent()
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#11 Z:\home\localhost\www\framework\web\CController.php(784): DefaultController->renderFile()
+#12 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(9): DefaultController->render()
+#13 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#14 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#16 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#17 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#18 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#19 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#20 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/02/26 14:43:04 [error] [php] include(Banners.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\admin\frontend\views\Default\index.php(16): spl_autoload_call()
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#3 Z:\home\localhost\www\framework\web\CController.php(869): DefaultController->renderFile()
+#4 Z:\home\localhost\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#5 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(9): DefaultController->render()
+#6 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#7 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#9 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#11 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#12 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#13 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/02/26 16:20:34 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "TbBreadcrumbs.divider".' in Z:\home\localhost\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(161): CComponent->__set('divider', '>')
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(FrontendNewsController), 'bootstrap.widge...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 Z:\home\localhost\www\admin\frontend\views\layouts\main.php(116): CBaseController->widget('bootstrap.widge...', Array)
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 Z:\home\localhost\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 Z:\home\localhost\www\admin\frontend\views\layouts\column1.php(6): CBaseController->endContent()
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(15): CController->render('index', Array)
+#16 [internal function]: FrontendNewsController->actionIndex('1')
+#17 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(FrontendNewsController), Array)
+#18 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(FrontendNewsController), Object(ReflectionMethod), Array)
+#19 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#21 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#23 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#24 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#26 {main}
+REQUEST_URI=/admin/s1
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 16:26:26 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:15)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#3 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#7 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/s1
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (15)
+in Z:\home\localhost\www\framework\web\actions\CAction.php (108)
+2013/02/26 16:26:57 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:15)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#3 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#7 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/s1
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (15)
+in Z:\home\localhost\www\framework\web\actions\CAction.php (108)
+2013/02/26 16:31:05 [error] [php] Undefined index: id (Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php:48)
+Stack trace:
+#0 Z:\home\localhost\www\framework\base\CApplication.php(531): CUrlManager->createUrl()
+#1 Z:\home\localhost\www\admin\common\modules\Pages\views\FrontendNews\index.php(5): FWebApplication->createUrl()
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): FrontendNewsController->renderInternal()
+#4 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#5 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#6 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(20): FrontendNewsController->render()
+#7 unknown(0): FrontendNewsController->actionIndex()
+#8 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#12 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#14 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#15 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#16 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/kategorija1
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php (48)
+in Z:\home\localhost\www\admin\frontend\components\URLRule.php (15)
+2013/02/26 16:31:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/img/logo.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/index?category_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 16:32:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('img')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('img')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/img/logo.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/index?category_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/26 18:16:44 [error] [exception.CException] exception 'CException' with message 'Псевдоним "application.components.widgets.photoNewWidget" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('application.com...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(DefaultController), 'application.com...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('application.com...', Array)
+#3 Z:\home\localhost\www\admin\frontend\views\layouts\main.php(144): CBaseController->widget('application.com...')
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 Z:\home\localhost\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 Z:\home\localhost\www\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 Z:\home\localhost\www\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 Z:\home\localhost\www\admin\frontend\views\layouts\column1.php(6): CBaseController->endContent()
+#12 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#13 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#14 Z:\home\localhost\www\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#15 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(9): CController->render('index', Array)
+#16 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#17 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#21 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Default/index')
+#22 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#24 {main}
+REQUEST_URI=/admin/
+HTTP_REFERER=http://localhost/admin/s1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:08:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?user_id=&page_id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:08:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:26:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Pages/FrontendNew/view".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/Pages/FrontendNew/view
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:26:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Pages/FrontendNew/img/logo.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/Pages/FrontendNew/img/logo.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNew/view
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:27:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Pages/FrontendNew/view".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/Pages/FrontendNew/view?id=1
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:27:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Pages/FrontendNew/img/logo.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/Pages/FrontendNew/img/logo.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNew/view?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:31:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "view".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('view')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('view')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/test
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:48:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:48:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:48:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:50:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:51:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 14:51:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:12:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\localhost\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('view')
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#5 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#7 {main}
+REQUEST_URI=/admin/test
+HTTP_REFERER=http://localhost/admin/s1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:23:29 [error] [php] include(Chtml.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php(18): spl_autoload_call()
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(95): FrontendNewsController->renderInternal()
+#3 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#4 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#5 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(25): FrontendNewsController->render()
+#6 unknown(0): FrontendNewsController->actionView()
+#7 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#8 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#11 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/test
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/02/27 16:23:45 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (Z:\home\localhost\www\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\helpers\CHtml.php(153): renderAttributes()
+#1 Z:\home\localhost\www\framework\web\helpers\CHtml.php(426): tag()
+#2 Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php(18): image()
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(95): FrontendNewsController->renderInternal()
+#5 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#6 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#7 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(25): FrontendNewsController->render()
+#8 unknown(0): FrontendNewsController->actionView()
+#9 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#10 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#13 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#14 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#16 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#17 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/test
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\web\helpers\CHtml.php (98)
+in Z:\home\localhost\www\framework\web\helpers\CHtml.php (2336)
+2013/02/27 16:27:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:27:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:27:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:27:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:28:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:29:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:34:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:34:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "test".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('test')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/test
+HTTP_REFERER=http://localhost/admin/s1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:45:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:45:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:46:03 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Pages.author".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('author')
+#1 Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php(18): CActiveRecord->__get('author')
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(25): CController->render('view', Array)
+#7 [internal function]: FrontendNewsController->actionView('1')
+#8 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(FrontendNewsController), Array)
+#9 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(FrontendNewsController), Object(ReflectionMethod), Array)
+#10 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('view')
+#14 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#15 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#17 {main}
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+HTTP_REFERER=http://localhost/admin/s1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 16:53:18 [error] [php] A non well formed numeric value encountered (Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php:18)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(95): FrontendNewsController->renderInternal()
+#1 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#2 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#3 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(25): FrontendNewsController->render()
+#4 unknown(0): FrontendNewsController->actionView()
+#5 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#9 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#11 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#12 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#13 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php (18)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/27 16:53:36 [error] [php] date() expects parameter 2 to be long, string given (Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php:18)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(95): FrontendNewsController->renderInternal()
+#1 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#2 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#3 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(25): FrontendNewsController->render()
+#4 unknown(0): FrontendNewsController->actionView()
+#5 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#9 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#11 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#12 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#13 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php (18)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/27 16:54:05 [error] [php] Undefined variable: data (Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php:18)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#1 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#2 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(25): FrontendNewsController->render()
+#3 unknown(0): FrontendNewsController->actionView()
+#4 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#8 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#11 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#12 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php (18)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/27 17:00:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 17:00:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 17:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 17:16:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 17:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 17:36:41 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:25)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#3 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#7 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (25)
+in Z:\home\localhost\www\framework\web\actions\CAction.php (108)
+2013/02/27 17:47:21 [error] [php] Object of class PagesCategories could not be converted to string (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:28)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#3 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#7 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (28)
+in Z:\home\localhost\www\framework\web\actions\CAction.php (108)
+2013/02/27 17:47:50 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "PagesCategories.title".' in Z:\home\localhost\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(143): CComponent->__get('title')
+#1 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(28): CActiveRecord->__get('title')
+#2 [internal function]: FrontendNewsController->actionView('1')
+#3 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(FrontendNewsController), Array)
+#4 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(FrontendNewsController), Object(ReflectionMethod), Array)
+#5 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('view')
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+HTTP_REFERER=http://localhost/admin/s1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 17:48:54 [error] [php] Undefined index: id (Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php:51)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#1 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#2 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(39): FrontendNewsController->render()
+#3 unknown(0): FrontendNewsController->actionView()
+#4 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#8 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#11 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#12 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php (51)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/27 17:53:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 18:13:15 [error] [php] Use of undefined constant php - assumed 'php' (Z:\home\localhost\www\admin\frontend\views\layouts\main.php:120)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(784): FrontendNewsController->renderFile()
+#1 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(38): FrontendNewsController->render()
+#2 unknown(0): FrontendNewsController->actionView()
+#3 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#4 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#7 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#8 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\frontend\views\layouts\main.php (120)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/27 19:00:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:03:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:06:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:10:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/bx_loader.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bx_l...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/bx_loader.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:10:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/controls.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/cont...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/controls.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:22:42 [error] [exception.CException] exception 'CException' with message 'Псевдоним "application.components.Widget.newCarusel" неверен. Убедитесь, что он указывает на существующий PHP файл.' in Z:\home\localhost\www\framework\YiiBase.php:316
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(146): YiiBase::import('application.com...', true)
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(FrontendNewsController), 'application.com...', Array)
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): CBaseController->createWidget('application.com...', Array)
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php(56): CBaseController->widget('application.com...')
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#8 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(38): CController->render('view', Array)
+#9 [internal function]: FrontendNewsController->actionView('1')
+#10 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(FrontendNewsController), Array)
+#11 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(FrontendNewsController), Object(ReflectionMethod), Array)
+#12 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('view')
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#17 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#19 {main}
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+HTTP_REFERER=http://localhost/admin/s1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:23:11 [error] [php] include(newCarusel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWidgetFactory.php(147): spl_autoload_call()
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(172): FrontendNewsController->createWidget()
+#3 Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php(56): FrontendNewsController->widget()
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): FrontendNewsController->renderInternal()
+#6 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#7 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#8 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(38): FrontendNewsController->render()
+#9 unknown(0): FrontendNewsController->actionView()
+#10 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#11 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#14 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#15 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#16 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#17 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#18 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/02/27 19:36:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/bx_loader.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bx_l...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/bx_loader.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:36:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/controls.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/cont...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/controls.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/bx_loader.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bx_l...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/bx_loader.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:38:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/controls.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/cont...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/controls.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:38:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/controls.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/cont...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/controls.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:38:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/bx_loader.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bx_l...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/bx_loader.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/controls.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/cont...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/controls.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/bx_loader.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bx_l...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/bx_loader.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:40:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/controls.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/cont...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/controls.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:40:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/bx_loader.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bx_l...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/bx_loader.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:43:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/controls.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/cont...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/controls.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:43:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/bx_loader.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bx_l...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/bx_loader.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:43:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/bx_loader.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/bx_l...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/bx_loader.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/27 19:43:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/controls.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/images/cont...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/images/controls.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

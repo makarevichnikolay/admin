@@ -3,16 +3,10 @@
 /* @var $model Categories */
 
 $this->breadcrumbs=array(
-	'Categories'=>array('index'),
-	'Create',
+	'Рубрики'=>array('index'),
+	'Новая запись',
 );
 
-$this->menu=array(
-	array('label'=>'List Categories', 'url'=>array('index')),
-	array('label'=>'Manage Categories', 'url'=>array('admin')),
-);
 ?>
-
-<h1>Create Categories</h1>
-
+<h2>Добавить рубрику</h2>
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -25,7 +25,7 @@
     )); ?>
 
     <fieldset>
-        <legend>Добавление пользователя</legend>
+        <legend></legend>
         <?php echo $form->textFieldRow($model, 'login'); ?>
         <?php echo $form->textFieldRow($model, 'nickname'); ?>
         <?php echo $form->passwordFieldRow($model, 'password'); ?>

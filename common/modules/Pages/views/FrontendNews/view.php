@@ -13,6 +13,9 @@ $this->title = '';
         //$category['children']
     );
 
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.fancybox.js', CClientScript::POS_HEAD);
+
 ?>
 <div class="row-fluid new-view">
 <div class="span12">
@@ -46,15 +49,46 @@ $this->title = '';
         <?php } ?>
     </div>
     <div class="row-fluid description">
-        <div class="text">
-        <?php echo CHtml::image(Pages::getImageSrc('main_image','new-view',$model->id,$model->main_image),$model->title,array('class'=>'main-image'))?>
-        <?php echo $model->content;?>
+        <div class="span12">
+            <div class="row-fluid text">
+                <?php
+                echo CHtml::link(
+                    CHtml::image(Pages::getImageSrc('main_image','new-view',$model->id,$model->main_image),$model->title,array('class'=>'main-image')),
+                    Pages::getImageSrc('main_image','large',$model->id,$model->main_image),
+                    array(
+                        'class'=>'fancybox',
+                        'title'=>$model->title,
+                    )
+                );
+                ?>
+                <?php echo $model->content;?>
+            </div>
+            <div class="row-fluid">
+                <?php
+                    $this->widget('application.components.Widgets.newCarouselWidget',array('new_id'=>$model->id));
+                ?>
+            </div>
+            <div class="row-fluid">
+                <div class="info-bar">
+                    <?php $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$model->url));?>
+                    <a href="<?php echo $url ?>"><i class="css-icon css-icon-comment">1000</i></a>
+                    <i class="icon-eye-open"></i>
+                    <span>10000</span>&nbsp
+                    <i class="icon-pen"></i><a href="<?php echo $url ?>" class="comment">Коментувати</a>
+                </div>
+            </div>
         </div>
-        <?php $this->widget('application.components.Widgets.newCarouselWidget',array('new_id'=>$model->id));?>
     </div>
-
-
-
 </div>
 </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect	: 'none',
+                closeEffect	: 'none',
+                prevEffect	: 'none',
+                nextEffect	: 'none'
+            });
+        });
+    </script>
 

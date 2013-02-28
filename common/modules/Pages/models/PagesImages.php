@@ -83,17 +83,7 @@ class PagesImages extends CActiveRecord
 
     public static function getImageSrc($page_id,$id,$filename,$size='thumb'){
         $path = Yii::app()->params['dataUrl'].'pages/'.$page_id.'/'.'images/'.$id.'/';
-        switch($size){
-            case 'thumb':
-                $path .= $size .'/'.$filename;
-                 break;
-            case 'origin':
-                $path .= $size .'/'.$filename;
-                break;
-            case 'large':
-                $path .= $size .'/'.$filename;
-                break;
-        }
+        $path .= $size .'/'.$filename;
         return $path;
     }
 

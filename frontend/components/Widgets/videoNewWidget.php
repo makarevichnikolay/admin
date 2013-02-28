@@ -7,23 +7,22 @@
  * To change this template use File | Settings | File Templates.
  */
 
-class photoNewWidget extends CWidget{
+class videoNewWidget extends CWidget{
 
-    public $header = 'Фото новина';
-    public $class = 'head-photo';
+    public $header = 'Відео новина';
 
     public function run() {
         $criteria= new CDbCriteria();
         $criteria->limit = 1;
-        $criteria->compare('photo_new',1);
-        $criteria->addCondition('main_image != ""');
+        $criteria->compare('video_new',1);
+        $criteria->addCondition('video != ""');
         $criteria->order = 'date_create,date_update';
         $page = Pages::model()->find($criteria);
         if($page){
             $data = '';
             $data .= CHtml::openTag('div',array('class'=>'photo-new'));
                 $data .= CHtml::openTag('div',array('class'=>'head'));
-                    $data .= CHtml::openTag('i',array('class'=>'photo'));
+                    $data .= CHtml::openTag('i',array('class'=>'video'));
                     $data .= CHtml::closeTag('i');
                     $data .=CHtml::link(
                         $this->header,
@@ -31,10 +30,9 @@ class photoNewWidget extends CWidget{
                     );
                 $data .= CHtml::closeTag('div');
                 $data .= CHtml::openTag('figure');
-                    $data .= CHtml::link(
-                         CHtml::image(Pages::getImageSrc('main_image','photo-new',$page->id,$page->main_image),$page->title),
-                         Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$page->url))
-                    );
+                    $data .= CHtml::openTag('div');
+                        $data .= $page->video;
+                    $data .= CHtml::closeTag('div');
                     $data .= CHtml::openTag('figcaption');
                          $data.=CHtml::link(
                              $page->title,

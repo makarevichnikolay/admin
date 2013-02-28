@@ -3383,3 +3383,897 @@ REQUEST_URI=/admin/css/images/controls.png
 HTTP_REFERER=http://localhost/admin/css/styles.css
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:17:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:34:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_overlay.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_ov...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_overlay.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:35:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:35:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_overlay.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_ov...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_overlay.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:38:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:39:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:39:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:41:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:41:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:41:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:41:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:42:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:42:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:42:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:42:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:45:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:46:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:50:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:50:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/blank.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/blank.gif')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/blank.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 12:58:47 [error] [php] Undefined variable: data (Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php:71)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#1 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#2 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(38): FrontendNewsController->render()
+#3 unknown(0): FrontendNewsController->actionView()
+#4 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#8 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#11 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#12 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php (71)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/28 12:59:14 [error] [php] Undefined variable: url (Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php:71)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(869): FrontendNewsController->renderFile()
+#1 Z:\home\localhost\www\framework\web\CController.php(782): FrontendNewsController->renderPartial()
+#2 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(38): FrontendNewsController->render()
+#3 unknown(0): FrontendNewsController->actionView()
+#4 Z:\home\localhost\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#8 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#11 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#12 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\views\frontendNews\view.php (71)
+in Z:\home\localhost\www\framework\web\CBaseController.php (126)
+2013/02/28 13:01:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:01:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/blank.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/blank.gif')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/blank.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:01:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:10:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:10:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:10:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/blank.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/blank.gif')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/blank.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:46:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Pages/adminNews/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:46:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:47:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Pages/adminNews/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:48:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:56:25 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii_admin.categories' doesn't exist. Выполнявшийся SQL-запрос: SELECT * FROM `categories` `t` WHERE url=:url LIMIT 1. Bound with :url='fancybox_sprite.png'.
+in Z:\home\localhost\www\framework\db\CDbCommand.php (536)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (414)
+in Z:\home\localhost\www\framework\db\ar\CActiveRecord.php (1297)
+2013/02/28 13:56:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii_admin.categories' doesn't exist. The SQL statement executed was: SELECT * FROM `categories` `t` WHERE url=:url LIMIT 1. Bound with :url='fancybox_sprite.png'' in Z:\home\localhost\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(27): CActiveRecord->find(Array)
+#4 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), 'css/fancybox_sp...', 'css/fancybox_sp...')
+#5 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), 'css/fancybox_sp...', 'css/fancybox_sp...')
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#7 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#9 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:56:25 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii_admin.categories' doesn't exist. Выполнявшийся SQL-запрос: SELECT * FROM `categories` `t` WHERE url=:url LIMIT 1. Bound with :url='fancybox_loading.gif'.
+in Z:\home\localhost\www\framework\db\CDbCommand.php (536)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (414)
+in Z:\home\localhost\www\framework\db\ar\CActiveRecord.php (1297)
+2013/02/28 13:56:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii_admin.categories' doesn't exist. The SQL statement executed was: SELECT * FROM `categories` `t` WHERE url=:url LIMIT 1. Bound with :url='fancybox_loading.gif'' in Z:\home\localhost\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(27): CActiveRecord->find(Array)
+#4 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), 'css/fancybox_lo...', 'css/fancybox_lo...')
+#5 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), 'css/fancybox_lo...', 'css/fancybox_lo...')
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#7 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#9 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 13:56:25 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii_admin.categories' doesn't exist. Выполнявшийся SQL-запрос: SELECT * FROM `categories` `t` WHERE url=:url LIMIT 1. Bound with :url='blank.gif'.
+in Z:\home\localhost\www\framework\db\CDbCommand.php (536)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (414)
+in Z:\home\localhost\www\framework\db\ar\CActiveRecord.php (1297)
+2013/02/28 13:56:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii_admin.categories' doesn't exist. The SQL statement executed was: SELECT * FROM `categories` `t` WHERE url=:url LIMIT 1. Bound with :url='blank.gif'' in Z:\home\localhost\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryRow()
+#2 Z:\home\localhost\www\framework\db\ar\CActiveRecord.php(1402): CActiveRecord->query(Object(CDbCriteria))
+#3 Z:\home\localhost\www\admin\common\modules\Pages\PagesModule.php(27): CActiveRecord->find(Array)
+#4 Z:\home\localhost\www\admin\frontend\components\URLRule.php(27): PagesModule->parseUrlF(Object(CUrlManager), Object(CHttpRequest), 'css/blank.gif', 'css/blank.gif')
+#5 Z:\home\localhost\www\framework\web\CUrlManager.php(367): URLRule->parseUrl(Object(CUrlManager), Object(CHttpRequest), 'css/blank.gif', 'css/blank.gif')
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(140): CUrlManager->parseUrl(Object(CHttpRequest))
+#7 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#9 {main}
+REQUEST_URI=/admin/css/blank.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 14:01:22 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:27)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#3 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#4 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#6 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#7 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (27)
+in Z:\home\localhost\www\framework\web\actions\CAction.php (108)
+2013/02/28 14:49:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 14:49:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Pages/Categories/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 14:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Pages/Categories/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 14:49:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Pages/adminCategories/index?id=14
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 14:51:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Pages/Categories/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 14:51:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Pages/adminCategories/index?id=15
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:12:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:12:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:12:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:15:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:15:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:16:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:17:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:17:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:20:55 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lastModified' in 'field list'. Выполнявшийся SQL-запрос: SELECT MAX(lastModified) FROM Pages.
+in Z:\home\localhost\www\framework\db\CDbCommand.php (536)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (414)
+in Z:\home\localhost\www\framework\caching\dependencies\CDbCacheDependency.php (87)
+2013/02/28 15:20:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lastModified' in 'field list'. The SQL statement executed was: SELECT MAX(lastModified) FROM Pages' in Z:\home\localhost\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 Z:\home\localhost\www\framework\caching\dependencies\CDbCacheDependency.php(87): CDbCommand->queryRow()
+#2 Z:\home\localhost\www\framework\caching\dependencies\CCacheDependency.php(61): CDbCacheDependency->generateDependentData()
+#3 Z:\home\localhost\www\framework\caching\CCache.php(178): CCacheDependency->evaluateDependency()
+#4 Z:\home\localhost\www\framework\web\widgets\COutputCache.php(195): CCache->set('Yii.COutputCach...', Array, 60, Object(CDbCacheDependency))
+#5 Z:\home\localhost\www\framework\web\widgets\COutputCache.php(152): COutputCache->run()
+#6 Z:\home\localhost\www\framework\web\filters\CFilterChain.php(130): COutputCache->filter(Object(CFilterChain))
+#7 Z:\home\localhost\www\framework\web\CController.php(291): CFilterChain->run()
+#8 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#10 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#11 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#13 {main}
+REQUEST_URI=/admin/s1
+HTTP_REFERER=http://localhost/admin/s2
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:23:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:23:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 15:42:01 [error] [php] Trying to get property of non-object (Z:\home\localhost\www\admin\frontend\components\Widgets\photoNewWidget.php:24)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#2 Z:\home\localhost\www\framework\web\CController.php(784): DefaultController->renderFile()
+#3 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(9): DefaultController->render()
+#4 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#7 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\frontend\components\Widgets\photoNewWidget.php (24)
+in Z:\home\localhost\www\framework\web\CBaseController.php (173)
+2013/02/28 15:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 16:32:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Pages/FrontendNew/view".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/Pages/FrontendNew/view?url=povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 16:32:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "Pages/FrontendNew/img/logo.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/Pages/FrontendNew/img/logo.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNew/view?url=povidomlennja-pro-bombu-na-vokzali-ne-vplinulo-na-grafik-poizdiv
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 16:47:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 16:49:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 16:49:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 17:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 17:04:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 17:58:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update/1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:26:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/blank.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/blank.gif')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/blank.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:27:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:27:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:27:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:28:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:30:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_sprite.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_sp...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_sprite.png
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:30:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/fancybox_loading.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/fancybox_lo...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/fancybox_loading.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/02/28 18:30:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/blank.gif".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('css/blank.gif')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/css/blank.gif
+HTTP_REFERER=http://localhost/admin/css/styles.css
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

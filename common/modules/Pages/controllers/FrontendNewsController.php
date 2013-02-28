@@ -2,6 +2,18 @@
 
 class FrontendNewsController extends FrontendController
 {
+
+    public function filters()
+    {
+        return array(
+            array(
+                'COutputCache + view,index',
+                'duration'=>60,
+                'varyByParam'=>array('id','category_id'),
+            ),
+        );
+    }
+
 	public function actionIndex($category_id)
 	{
 		$model = new Pages('search');

@@ -54,7 +54,7 @@
                         <div class="span4">
                             <div class="row-fluid">
                                 <div class="span3 tel-icon">
-                                   <i class="icon-ok"></i>
+                                   <i class="icon-tel"></i>
                                 </div>
                                 <div class="span9">
                                     <div class="row-fluid caption">
@@ -99,8 +99,12 @@
             <div class="row-fluid">
                 <div class="span12">
                     <nav class="menu">
-                        <?php echo Yii::app()->getModule('Menu')->getFrontendMenu(); ?>
-                        <?php echo Yii::app()->getModule('Menu')->getFrontendMenu('second',6,7); ?>
+                        <?php
+                        if($this->beginCache('menu', array('duration'=>60))) {
+                            echo Yii::app()->getModule('Menu')->getFrontendMenu();
+                            echo Yii::app()->getModule('Menu')->getFrontendMenu('second',6,7);
+                            $this->endCache(); }
+                        ?>
                     </nav>
                 </div>
             </div>
@@ -120,7 +124,7 @@
     <?php //if(!empty($this->title)): ?>
     <article class="row-fluid">
         <div class="span12">
-            <h3 class="page-title"><?php echo $this->title ?></h3>
+            <h3 class="page-title"><i class="icon-paper"></i> <?php echo $this->title ?></h3>
         </div>
     </article>
     <?php //endif ?>
@@ -143,11 +147,16 @@
                         </div>
                         <div class="row-fluid">
                             <?php
-                            if($this->beginCache('photo_new', array('duration'=>5))) {
+                            if($this->beginCache('photo_new', array('duration'=>60))) {
                                 $this->widget('application.components.Widgets.photoNewWidget');
-                                $this->endCache(); }else{
-                            }
-                             $this->widget('application.components.Widgets.photoNewWidget');
+                                $this->endCache(); }
+                            ?>
+                        </div>
+                        <div class="row-fluid">
+                            <?php
+                            if($this->beginCache('video_new', array('duration'=>60))) {
+                                $this->widget('application.components.Widgets.videoNewWidget');
+                                $this->endCache(); }
                             ?>
                         </div>
                         <div class="row-fluid">

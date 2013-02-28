@@ -65,7 +65,8 @@ return array(
                     'thumb'	=> array('width'=>200, 'height'=>160,'type'=>3),
                     'thumb2'=> array('width'=>204, 'height'=>113,'type'=>4),
                     'new-view'	=> array('width'=>360, 'height'=>204,'type'=>4),
-                    //'large'	=> array('width'=>600, 'height'=>800,'type'=>3),
+                    'photo-new'	=> array('width'=>230, 'height'=>190,'type'=>3),
+                    'large'	=> array('width'=>800, 'height'=>600,'type'=>3),
                 ),
             ),
             'author_image'=>array(

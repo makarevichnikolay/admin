@@ -39,6 +39,12 @@ class Categories extends CActiveRecord
             array('url','unique','message'=>'{attribute}:{value} already exists!'),
 			array('title,url', 'length', 'max'=>255),
             array('parent_id','numerical','integerOnly'=>true),
+            array('lastModified','default',
+                'value'=>new CDbExpression('NOW()'),
+                'setOnEmpty'=>false,'on'=>'update'),
+            array('lastModified','default',
+                'value'=>new CDbExpression('NOW()'),
+                'setOnEmpty'=>false,'on'=>'insert'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, title,parent_id,url', 'safe', 'on'=>'search'),

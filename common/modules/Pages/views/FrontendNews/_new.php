@@ -20,10 +20,9 @@ $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$data->url))
         <div class="info-bar">
             <time><?php echo date('d.m.Y',strtotime($data->date))?></time>
             <a href="<?php echo $url ?>"><i class="css-icon css-icon-comment">1000</i></a>
-            <i class="icon icon-eye-open"></i>
-            <span>10000</span>
-            <i class="icon icon-eye-open"></i>
-            <a href="<?php echo $url ?>" class="comment">Коментувати</a>
+            <i class="icon-eye-open"></i>
+            <span>10000</span>&nbsp
+            <i class="icon-pen"></i><a href="<?php echo $url ?>" class="comment">Коментувати</a>
         </div>
     </div>
 </article>

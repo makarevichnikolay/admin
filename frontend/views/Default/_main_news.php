@@ -18,10 +18,9 @@
     </figure>
     <div>
         <a href="#"><i class="css-icon css-icon-comment">1000</i></a>
-        <i class="icon icon-eye-open"></i>
-        <span>10000</span>
-        <i class="icon icon-eye-open"></i>
-        <a href="#" class="comment">Коментувати</a>
+        <i class="icon-eye-open"></i>
+        <span>10000</span>&nbsp
+        <i class="icon-pen"></i><a href="#" class="comment">Коментувати</a>
     </div>
 </article>
 

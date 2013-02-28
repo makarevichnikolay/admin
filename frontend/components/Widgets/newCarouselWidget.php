@@ -21,13 +21,21 @@ class newCarouselWidget extends CWidget
             $data .= CHtml::openTag('ul');
             foreach($images as $val){
                 $data .= CHtml::openTag('li');
-                $data .= CHtml::image(PagesImages::getImageSrc($this->new_id,$val->id,$val->file_name),$val->title);
+                $data .= CHtml::link(
+                    CHtml::image(PagesImages::getImageSrc($this->new_id,$val->id,$val->file_name),$val->title),
+                    PagesImages::getImageSrc($this->new_id,$val->id,$val->file_name,'large'),
+                    array(
+                        'class'=>'fancybox',
+                        'title'=>$val->title,
+                        'rel'=>'fancybox-button'
+                    )
+                );
                 $data .= CHtml::closeTag('li');
             }
             $data .= CHtml::closeTag('ul');
             $data .= CHtml::closeTag('div');
-            $data .= CHtml::link('<','#',array('class'=>"jcarousel-prev"));
-            $data .= CHtml::link('>','#',array('class'=>"jcarousel-next"));
+            $data .= CHtml::link('','#',array('class'=>"jcarousel-prev"));
+            $data .= CHtml::link('','#',array('class'=>"jcarousel-next"));
             $data .= CHtml::closeTag('div');
             echo $data;
             $cs = Yii::app()->getClientScript();

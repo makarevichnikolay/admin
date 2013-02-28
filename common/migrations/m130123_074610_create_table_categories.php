@@ -9,6 +9,7 @@ class m130123_074610_create_table_categories extends CDbMigration
             'parent_id'=>'integer UNSIGNED NOT NULL',
             'title' => 'string NOT NULL',
             'url' => 'string NOT NULL',
+            'lastModified'=>'datetime NOT NULL'
         ));
         $this->createIndex('parent_id', 'categories', 'parent_id');
         $this->createIndex('url', 'categories', 'url', true);

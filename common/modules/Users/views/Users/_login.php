@@ -1,58 +1,25 @@
-<div class="row-fluid">
-<div class="well span4 offset4">
-<?php
+        <?php
+       // Yii::app()->clientScript->scriptMap['jquery.js'] = false;
+        if (Yii::app()->user->isGuest) {
+            echo  CHtml::link('Вхід', '#', array(
+                'data-content' => $this->renderPartial('common.modules.Users.views.Users._loginForm',null,true,false),
+                'data-placement' => 'bottom',
+                'data-html' => true,
+                'rel' => 'popover'
+            ));
+            ?>
+            <a>|</a>
+            <a href="#">Реєстрація</a>
+            <?php
+        } else {
+            echo Yii::app()->user->name;
+            echo CHtml::link('Выход', $this->createUrl('Users/Users/Logout'));
+        }
+        ?>
 
-    if(Yii::app()->user->isGuest){
-        $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-            'id' => 'users-form',
-            'type' => 'vertical',
-            'action'=>$this->createUrl('/Users/Users/Login'),
-            'enableClientValidation' => true,
-            'enableAjaxValidation'=>true,
-            'clientOptions'=>array(
-                'validateOnSubmit'=>true,
-                'afterValidate'=>'js:function(form, data, hasError){
-                             if(hasError){
-                              $(".control-group.error:first").scrollToMe();
-                              return false;
-                             }else{
-                               window.location = "'.$this->createUrl('/').'";
-                               return false;
-                             }
-                            }'
-            ),
-        )); ?>
-
-        <fieldset>
-
-            <legend>Авторизация</legend>
-            <?php //echo $form->errorSummary($model); ?>
-            <?php echo $form->hiddenField($model,'password_repeat') ?>
-            <?php echo $form->error($model,'password_repeat') ?>
-            <?php echo $form->textFieldRow($model, 'login', array('class' => '')); ?>
-            <?php echo $form->textFieldRow($model, 'password', array('class' => '')); ?>
-        </fieldset>
-
-<div class="form-actions">
-
-    <?php
-        $this->widget('bootstrap.widgets.TbButton', array(
-            'buttonType' => 'submitLink',
-            'size' => 'normal',
-            'icon' => 'ok white',
-            'type' => 'success',
-            'label' => 'Вход',
-        ));
-    ?>
-    </div>
-
-    <?php $this->endWidget(); ?>
-    <?php
-    }else{
-        echo Yii::app()->user->name;
-        echo CHtml::link('Выход',$this->createUrl('Users/Users/Logout'));
-    }
-    ?>
-
-</div>
-</div>
+        <script type="text/javascript">
+            $('#login').live('click',function(){
+                userLogin('userLogin','<?php echo Yii::app()->createUrl('/');?>','userLogin-error');
+                return false;
+            })
+        </script>

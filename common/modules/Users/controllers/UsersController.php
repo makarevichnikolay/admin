@@ -3,21 +3,22 @@
 class UsersController extends FrontendController
 {
 
-    public function actionLogin(){
+    public function actionLogin()
+    {
         $model = new Users();
-        $model->scenario='login';
-        if(isset($_POST['Users'])){
+        $model->scenario = 'login';
+        $result['success'] = false;
+        if (isset($_POST['Users'])) {
             $model->attributes = $_POST['Users'];
-            if($model->validate() && $model->authenticate()){
-
-            }else{
-                $model->addError('password_repeat','Неверный логин или пароль');
-                $result = array();
-                foreach($model->getErrors() as $attribute=>$errors)
-                    $result[CHtml::activeId($model,$attribute)]=$errors;
-                echo CJSON::encode($result);
+            if ($model->authenticate()) {
+                $result['success'] = true;
+            } else {
+                $result['error']= 'Неправильний логін або пароль';
             }
         }
+        $result['error']= 'Неправельний логін або пароль';
+        header('Content-type: application/json');
+        echo CJSON::encode($result);
         Yii::app()->end();
     }
 

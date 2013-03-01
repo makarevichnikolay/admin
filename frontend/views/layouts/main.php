@@ -87,7 +87,7 @@
                           </div>
                           <div class="span4  offset1 auth">
                               <div class="user">
-                                  <a href="#">Вхід</a> <a>|</a> <a href="#">Реєстрація</a>
+                                <?php  $this->renderPartial('common.modules.Users.views.Users._login',null,false,false)?>
                               </div>
                               <div class="social"></div>
                           </div>
@@ -121,13 +121,13 @@
         </div>
     </article>
     <?php endif; ?>
-    <?php //if(!empty($this->title)): ?>
+    <?php if(!empty($this->title)): ?>
     <article class="row-fluid">
         <div class="span12">
             <h3 class="page-title"><i class="icon-paper"></i> <?php echo $this->title ?></h3>
         </div>
     </article>
-    <?php //endif ?>
+    <?php endif ?>
     <div class="row-fluid">
         <div class="span12">
             <div class="row-fluid">

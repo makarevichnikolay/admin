@@ -101,7 +101,7 @@ class Pages extends CActiveRecord
         $criteria= new CDbCriteria();
         $criteria->limit = $limit;
         $criteria->compare('hidden_in_main_list',0);
-        $criteria->order = 'date_create,date_update';
+        $criteria->order = 'date_create DESC,date_update DESC';
         return  new CActiveDataProvider('Pages', array(
                 'criteria'=>$criteria,
                 'pagination'=>false
@@ -139,8 +139,10 @@ class Pages extends CActiveRecord
                 $Path = $originalPath .$key.'/';
                 Yii::app()->file->createDir(0777,$Path);
                 $image = new Image($originalPath.$this->$name);
-                $image->resize($value['width'], $value['height'] , $value['type'])
-                    ->crop($value['width'],$value['height'])->save($Path.$this->$name);
+                if($value['crop'])
+                   $image->resize($value['width'], $value['height'] , $value['type'])->crop($value['width'],$value['height'])->save($Path.$this->$name);
+                else
+                   $image->resize($value['width'], $value['height'] , $value['type'])->save($Path.$this->$name);
             }
         }
     }
@@ -254,7 +256,7 @@ class Pages extends CActiveRecord
         return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
             'pagination'=>array(
-                'pageSize'=>3
+                'pageSize'=>10
             )
 		));
 	}

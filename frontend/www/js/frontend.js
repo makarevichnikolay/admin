@@ -36,6 +36,22 @@ function checkTime(i)
     }
     return i;
 }
+
+function userLogin(id,url,error_id){
+    var form = $('#'+id);
+        $.ajax({
+            type: "POST",
+            url: form.attr('action'),
+            data:form.serialize()
+        }).done(function( data ) {
+                if(data.success){
+                    window.location.href = url
+                }else{
+                    $('#'+error_id).html(data.error);
+                }
+            });
+}
+
 var menuActive,menuParentActive;
 
 $(document).ready(function(){

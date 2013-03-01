@@ -160,7 +160,7 @@ class AdminNewsController extends AdminController
             $config = Yii::app()->params['Pages']['images'];
             if($count <  $config['maxCount']){
                 Yii::import("common.ext.EAjaxUpload.qqFileUploader");
-                $dataPath = Yii::app()->params['dataPath'].'pages/'.$id.'/images/';
+                $dataPath = Yii::app()->params['dataPath'].'pages/'.$id.'/images/gallery/';
                 Yii::app()->file->createDir(0777,$dataPath );
                 $uploader = new qqFileUploader($config['ext'], $config['maxSize']);
                 $result = $uploader->handleUpload($dataPath);
@@ -175,8 +175,10 @@ class AdminNewsController extends AdminController
                         $Path = $originalPath .$key.'/';
                         Yii::app()->file->createDir(0777,$Path);
                         $image = new Image($dataPath.$pages_image->file_name);
-                        $image->resize($value['width'], $value['height'] , $value['type'])
-                            ->crop($value['width'],$value['height'])->save($Path.$pages_image->file_name);
+                        if($value['crop'])
+                            $image->resize($value['width'], $value['height'] , $value['type'])->crop($value['width'],$value['height'])->save($Path.$pages_image->file_name);
+                        else
+                            $image->resize($value['width'], $value['height'] , $value['type'])->save($Path.$pages_image->file_name);
                     }
                     Yii::app()->file->set($dataPath.$result['filename'])->delete();
                     $result['data'] = array('id'=>$pages_image->id,'src'=>PagesImages::getImageSrc($id,$pages_image->id,$result['filename']));

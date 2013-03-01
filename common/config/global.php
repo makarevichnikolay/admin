@@ -62,18 +62,18 @@ return array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>200, 'height'=>160,'type'=>3),
-                    'thumb2'=> array('width'=>204, 'height'=>113,'type'=>4),
-                    'new-view'	=> array('width'=>360, 'height'=>204,'type'=>4),
-                    'photo-new'	=> array('width'=>230, 'height'=>190,'type'=>3),
-                    'large'	=> array('width'=>800, 'height'=>600,'type'=>3),
+                    'thumb'	=> array('width'=>200, 'height'=>160,'type'=>3,'crop'=>true),
+                    'thumb2'=> array('width'=>204, 'height'=>113,'type'=>4,'crop'=>true),
+                    'new-view'	=> array('width'=>360, 'height'=>204,'type'=>4,'crop'=>false),
+                    'photo-new'	=> array('width'=>230, 'height'=>190,'type'=>3,'crop'=>true),
+                    'large'	=> array('width'=>800, 'height'=>600,'type'=>3,'crop'=>false),
                 ),
             ),
             'author_image'=>array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>50, 'height'=>50,'type'=>3),
+                    'thumb'	=> array('width'=>50, 'height'=>50,'type'=>3,'crop'=>true),
                     //'large'	=> array('width'=>600, 'height'=>800),
                 ),
             ),
@@ -82,8 +82,8 @@ return array(
                 'maxSize'=>20 * 1024 * 1024,
                 'maxCount'=>16,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>150, 'height'=>86,'type'=>4),
-                    'large'	=> array('width'=>800, 'height'=>600,'type'=>4),
+                    'thumb'	=> array('width'=>150, 'height'=>86,'type'=>3,'crop'=>false),
+                    'large'	=> array('width'=>800, 'height'=>600,'type'=>4,'crop'=>false),
                 ),
             )
         ),

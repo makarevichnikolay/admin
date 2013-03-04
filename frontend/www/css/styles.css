@@ -100,10 +100,12 @@ a:hover {
   margin-right: auto;
 }
 .main-container {
-  max-width: 979px;
+  max-width: 1004px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .header {
   margin: 0;
@@ -225,6 +227,8 @@ a:hover {
   padding-top: 20px;
 }
 .head .logo .head-row .second-row .auth .user {
+  width: 100%;
+  position: relative;
   float: left;
 }
 .head .logo .head-row .second-row .auth .user a {
@@ -232,6 +236,88 @@ a:hover {
 }
 .head .logo .head-row .second-row .auth .user a:hover {
   color: #1e93a0;
+}
+.head .logo .head-row .second-row .auth .user .user-name {
+  display: inline-block;
+  margin-right: 5px;
+}
+.head .logo .head-row .second-row .auth .user .login-form {
+  display: none;
+  top: 35px;
+  width: 220px;
+  height: 105px;
+  padding: 20px 10px;
+  background-color: #e2e7ea;
+  position: absolute;
+  z-index: 1000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 6px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 6px 1px rgba(0,0,0,0.5);
+  box-shadow: 0 0 6px 1px rgba(0,0,0,0.5);
+}
+.head .logo .head-row .second-row .auth .user .login-form .error {
+  min-height: 0px;
+}
+.head .logo .head-row .second-row .auth .user .login-form .error .span12 {
+  min-height: 0;
+}
+.head .logo .head-row .second-row .auth .user .login-form .login {
+  background-color: #dddcd5;
+  background-image: -moz-linear-gradient(top,#e3e2dc,#d5d3ca);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#e3e2dc),to(#d5d3ca));
+  background-image: -webkit-linear-gradient(top,#e3e2dc,#d5d3ca);
+  background-image: -o-linear-gradient(top,#e3e2dc,#d5d3ca);
+  background-image: linear-gradient(to bottom,#e3e2dc,#d5d3ca);
+  background-repeat: repeat-x;
+  border: 0;
+  border-top: 1px solid #d5d3ca;
+  color: #507573;
+  text-align: center;
+  padding: 4px 12px;
+  line-height: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5);
+}
+.head .logo .head-row .second-row .auth .user .login-form .login:hover {
+  color: #1e93a0;
+}
+.head .logo .head-row .second-row .auth .user .login-form .error {
+  color: red;
+}
+.head .logo .head-row .second-row .auth .user .login-form .remind {
+  font-size: 12px;
+}
+.head .logo .head-row .second-row .auth .user .login-form .remind input {
+  margin: 0 5px 0 0;
+}
+.head .logo .head-row .second-row .auth .user .login-form .remind span {
+  vertical-align: middle;
+  color: #94a8a7;
+}
+.head .logo .head-row .second-row .auth .user .login-form .remind a {
+  float: right;
+  text-decoration: underline;
+}
+.head .logo .head-row .second-row .auth .user .login-form:before {
+  content: "▲";
+  -webkit-transform: scale(2,1);
+  -moz-transform: scale(2,1);
+  -ms-transform: scale(2,1);
+  -o-transform: scale(2,1);
+  transform: scale(2,1);
+  font-size: 10px;
+  color: #e2e7ea;
+  display: block;
+  left: 5%;
+  top: -14px;
+  text-shadow: 0px -2px 1px #b0b3ac;
+  position: absolute;
 }
 .head .logo .head-row .second-row .auth .social {
   float: left;
@@ -672,6 +758,41 @@ a:hover {
 .breadcrumb .active {
   font-size: 14px;
 }
+.pagination {
+  text-align: center;
+}
+.pagination .yiiPager {
+  box-shadow: none;
+}
+.pagination .yiiPager li a {
+  font-size: 11px;
+  padding: 1px 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  border: 0;
+  color: #31738a;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.3), 0px 1px 1px 0px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.3), 0px 1px 1px 0px rgba(0,0,0,0.6);
+  box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.3), 0px 1px 1px 0px rgba(0,0,0,0.6);
+  background-color: #dbe2e6;
+  background-image: -moz-linear-gradient(top,#e1e7ea,#d1dbdf);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#e1e7ea),to(#d1dbdf));
+  background-image: -webkit-linear-gradient(top,#e1e7ea,#d1dbdf);
+  background-image: -o-linear-gradient(top,#e1e7ea,#d1dbdf);
+  background-image: linear-gradient(to bottom,#e1e7ea,#d1dbdf);
+  background-repeat: repeat-x;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.pagination .yiiPager li a:hover {
+  color: #1e93a0;
+}
+.pagination .yiiPager li.active a,
+.pagination .yiiPager li.disabled a {
+  color: #838383;
+}
 .page-title {
   margin: 0;
   color: #183f4a;
@@ -696,7 +817,10 @@ a:hover {
 .main-news article {
   margin: 8px 0 8px 8px;
   background-color: #ffffff;
-  width: 232px;
+  width: 31.3%;
+  margin-left: 1.5%;
+  margin-top: 8px;
+  margin-bottom: 8px;
   height: 274px;
   display: block;
   float: left;
@@ -932,7 +1056,6 @@ a:hover {
 .main-tabs .nav-tabs li a:hover {
   border: 0;
   background-color: #ffffff;
-  color: #1e93a0;
 }
 .main-tabs .nav-tabs li a {
   padding-left: 30px;
@@ -1068,6 +1191,10 @@ a:hover {
   -webkit-box-shadow: inset 25px 0px 30px -15px rgba(12,54,64,0.28);
   -moz-box-shadow: inset 25px 0px 30px -15px rgba(12,54,64,0.28);
   box-shadow: inset 25px 0px 30px -15px rgba(12,54,64,0.28);
+}
+.row-fluid [class*="span"] + .right-column {
+  margin-left: 1.6%;
+  width: 24.04%;
 }
 .right-column .row-fluid {
   margin: 20px 0;

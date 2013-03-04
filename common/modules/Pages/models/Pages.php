@@ -101,7 +101,8 @@ class Pages extends CActiveRecord
         $criteria= new CDbCriteria();
         $criteria->limit = $limit;
         $criteria->compare('hidden_in_main_list',0);
-        $criteria->order = 'date_create DESC,date_update DESC';
+        $criteria->compare('visible',1);
+        $criteria->order = 'date_update DESC';
         return  new CActiveDataProvider('Pages', array(
                 'criteria'=>$criteria,
                 'pagination'=>false
@@ -113,8 +114,9 @@ class Pages extends CActiveRecord
         $criteria= new CDbCriteria();
         $criteria->limit = 3;
         $criteria->compare('visible_on_main',1);
+        $criteria->compare('visible',1);
         $criteria->addCondition('main_image != ""');
-        $criteria->order = 'date_create,date_update';
+        $criteria->order = 'date_update';
         return  new CActiveDataProvider('Pages', array(
                 'criteria'=>$criteria,
                 'pagination'=>false
@@ -257,7 +259,11 @@ class Pages extends CActiveRecord
 			'criteria'=>$criteria,
             'pagination'=>array(
                 'pageSize'=>10
-            )
-		));
+            ),
+            'sort'=>array(
+                'defaultOrder'=>'date_update DESC',
+            ),
+
+        ));
 	}
 }

@@ -15,7 +15,7 @@ $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$data->url))
     <div class="right-block">
         <div class="content">
             <div class="title"><?php echo CHtml::link($data->title,$url)?></div>
-            <div class="description"><?php echo Helper::cutStr($data->content,280)?></div>
+            <div class="description"><?php echo Helper::cutStr(strip_tags($data->content),280)?></div>
         </div>
         <div class="info-bar">
             <time><?php echo date('d.m.Y',strtotime($data->date))?></time>

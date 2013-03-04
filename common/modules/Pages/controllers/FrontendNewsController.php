@@ -8,7 +8,7 @@ class FrontendNewsController extends FrontendController
         return array(
             array(
                 'COutputCache + view,index',
-                'duration'=>60,
+                'duration'=>Yii::app()->params['Pages']['cacheTime'],
                 'varyByParam'=>array('id','category_id'),
             ),
         );
@@ -17,6 +17,7 @@ class FrontendNewsController extends FrontendController
 	public function actionIndex($category_id)
 	{
 		$model = new Pages('search');
+        $model->visible=1;
         if($category_id !='all'){
             $model->category_id =  $category_id;
             $category_data = Categories::model()->with(array('parent'=>array('together'=>true)))->findByPk($category_id);
@@ -29,12 +30,17 @@ class FrontendNewsController extends FrontendController
         }else{
             $category = array('title'=>'Всі');
         }
+        if(isset($_GET['ajax']))
+            $this->renderPartial('index',array('model'=>$model,'category'=>$category));
+        else
 		$this->render('index',array('model'=>$model,'category'=>$category));
 	}
 
     public function actionView($id){
         $model= Pages::model()->with(array('category'))->findByPk($id);
-         $category_children = $category_parent ='';
+        if(!$model->visible)
+            throw new CHttpException(404,'The requested page does not exist.');
+        $category_children = $category_parent ='';
         foreach($model->category as $val){
              if($val->category_name->parent_id == 0){
                  $category_parent .=  $val->category_name->title.' ';

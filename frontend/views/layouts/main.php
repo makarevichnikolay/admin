@@ -1,4 +1,6 @@
-<?php /* @var $this Controller */ ?>
+<?php
+ $cacheTime = Yii::app()->params['Pages']['cacheTime'];
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" xml:lang="en" lang="en">
 <head>
@@ -77,13 +79,13 @@
                             <div class="input-append">
                                 <?php echo $form->textField($modelSearch, 'word', array('class'=>'span10','placeholder'=>'Пошук')); ?>
                                 <?php  $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submitLink', 'label' => '<i class="icon-search icon-white"></i>','encodeLabel'=>false))?>
-                            </div
+                            </div>
                             <?php $this->endWidget(); ?>
                         </div>
                     </div>
                     <div class="row-fluid second-row">
                           <div class="span7 slogon">
-                              <h3>ТВІЙ ІНФОРМАЦІЙНИЙ ПРОСТІР...</h3>
+                              <h3>ТВІЙ ІНФОРМАЦІЙНИЙ ПРОСТІР</h3>
                           </div>
                           <div class="span4  offset1 auth">
                               <div class="user">
@@ -100,7 +102,7 @@
                 <div class="span12">
                     <nav class="menu">
                         <?php
-                        if($this->beginCache('menu', array('duration'=>60))) {
+                        if($this->beginCache('menu', array('duration'=>$cacheTime))) {
                             echo Yii::app()->getModule('Menu')->getFrontendMenu();
                             echo Yii::app()->getModule('Menu')->getFrontendMenu('second',6,7);
                             $this->endCache(); }
@@ -147,14 +149,14 @@
                         </div>
                         <div class="row-fluid">
                             <?php
-                            if($this->beginCache('photo_new', array('duration'=>60))) {
+                            if($this->beginCache('photo_new', array('duration'=>$cacheTime))) {
                                 $this->widget('application.components.Widgets.photoNewWidget');
                                 $this->endCache(); }
                             ?>
                         </div>
                         <div class="row-fluid">
                             <?php
-                            if($this->beginCache('video_new', array('duration'=>60))) {
+                            if($this->beginCache('video_new', array('duration'=>$cacheTime))) {
                                 $this->widget('application.components.Widgets.videoNewWidget');
                                 $this->endCache(); }
                             ?>

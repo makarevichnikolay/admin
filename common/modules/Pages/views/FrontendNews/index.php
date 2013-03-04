@@ -18,7 +18,13 @@ $this->title = $category['title'];
 $this->widget('bootstrap.widgets.TbListView', array(
     'dataProvider'=>$model->search(),
     'itemView'=>'common.modules.Pages.views.frontendNews._new',
-    'template'=>'{items}'
+    'template'=>'{items}{pager}',
+    'pager' => array(
+    'class' => 'bootstrap.widgets.TbPager',
+        'maxButtonCount'=>5,
+        'nextPageLabel'=>'Наступна >',
+        'prevPageLabel'=>'< Попередня'
+     )
 ));
 ?>
 </div>

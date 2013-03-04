@@ -15,7 +15,7 @@ $this->title = '';
 
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.fancybox.js', CClientScript::POS_HEAD);
-
+$cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.json2html-3.1-min.js', CClientScript::POS_HEAD);
 ?>
 <div class="row-fluid new-view">
 <div class="span12">
@@ -81,6 +81,12 @@ $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.fancybox.js',
     </div>
 </div>
 </div>
+
+<div class="row-fluid" >
+    <div class="span12" id="comments">
+
+    </div>
+</div>
     <script type="text/javascript">
         $(document).ready(function() {
             $(".fancybox").fancybox({
@@ -90,5 +96,40 @@ $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.fancybox.js',
                 nextEffect	: 'none'
             });
         });
+
+
+
+        var transforms = {
+            comment: [
+                {tag:'article',class:'row-fluid comment',children:[
+                    {tag:'div',class:'span12',children:[
+                        {tag:'div',class:'row-fluid header',children:[
+                            {tag:'div',class:'span12',children:[
+                                {tag:'span',html:'${nickname}'},
+                                {tag:'time',html:'${date}'}
+                            ]}
+                        ]},
+                        {tag:'div',class:'span12 content',html:'${content}'}
+                    ]}
+                ]}
+            ]
+        };
+        (function(){
+           setInterval(function(){
+               getComments();
+           },1000)
+        })();
+        var lastComment = 0;
+        function getComments(){
+            $.ajax({
+                type: "POST",
+                url: '<?php echo $this->createUrl('/Comments/FrontendComments/GetCommentJSON') ?>'
+            }).done(function( data ) {
+                    $('#comments')
+                        .json2html(data,transforms.comment);
+                });
+        }
+
+
     </script>
 

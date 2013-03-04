@@ -192,7 +192,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <?php echo $form->textFieldRow($model, 'video', array('class' => 'input-xxlarge')); ?>
 <?php echo $form->checkBoxRow($model, 'video_new'); ?>
 <?php echo $form->checkBoxRow($model, 'photo_new'); ?>
-<?php echo $form->checkBoxRow($model, 'visible', array('checked' => 'checked')); ?>
+<?php echo $form->checkBoxRow($model, 'visible', array('checked' => $model->isNewRecord?'checked':'')); ?>
 <?php echo $form->checkBoxRow($model, 'visible_on_main'); ?>
 <?php echo $form->checkBoxRow($model, 'hidden_in_main_list'); ?>
 <?php echo $form->checkBoxRow($model, 'allow_comments', array('checked' => 'checked')); ?>

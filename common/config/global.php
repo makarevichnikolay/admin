@@ -49,6 +49,7 @@ return array(
 		'dataUserPath' => 'data/users/',
         'defaultModule'=>'Pages',
         'Pages'=>array(
+            'cacheTime'=>0,
             'redactor_image'=>array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
@@ -65,7 +66,7 @@ return array(
                     'thumb'	=> array('width'=>200, 'height'=>160,'type'=>3,'crop'=>true),
                     'thumb2'=> array('width'=>204, 'height'=>113,'type'=>4,'crop'=>true),
                     'new-view'	=> array('width'=>360, 'height'=>204,'type'=>4,'crop'=>false),
-                    'photo-new'	=> array('width'=>230, 'height'=>190,'type'=>3,'crop'=>true),
+                    'photo-new'	=> array('width'=>240, 'height'=>200,'type'=>3,'crop'=>true),
                     'large'	=> array('width'=>800, 'height'=>600,'type'=>3,'crop'=>false),
                 ),
             ),

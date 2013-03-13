@@ -17,7 +17,7 @@ class photoNewWidget extends CWidget{
         $criteria->limit = 1;
         $criteria->compare('photo_new',1);
         $criteria->addCondition('main_image != ""');
-        $criteria->order = 'date_create,date_update';
+        $criteria->order = 'date DESC';
         $page = Pages::model()->find($criteria);
         if($page){
             $data = '';

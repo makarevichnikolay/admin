@@ -8,6 +8,7 @@ class m130226_093655_create_table_banners extends CDbMigration
             'id' => 'pk',
             'title' => 'string NOT NULL',
             'content' => 'text NOT NULL',
+            'content2' => 'text NOT NULL',
         ));
 
 	}

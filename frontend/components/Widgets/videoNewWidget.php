@@ -16,10 +16,34 @@ class videoNewWidget extends CWidget{
         $criteria->limit = 1;
         $criteria->compare('video_new',1);
         $criteria->addCondition('video != ""');
-        $criteria->order = 'date_create,date_update';
+        $criteria->order = 'date DESC';
         $page = Pages::model()->find($criteria);
         if($page){
             $data = '';
+            $data .= CHtml::openTag('div',array('class'=>'photo-new'));
+            $data .= CHtml::openTag('div',array('class'=>'head'));
+            $data .= CHtml::openTag('i',array('class'=>'photo'));
+            $data .= CHtml::closeTag('i');
+            $data .=CHtml::link(
+                $this->header,
+                Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$page->url))
+            );
+            $data .= CHtml::closeTag('div');
+            $data .= CHtml::openTag('figure');
+            $data .= CHtml::link(
+                CHtml::image(Pages::getImageSrc('main_image','photo-new',$page->id,$page->main_image),$page->title),
+                Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$page->url))
+            );
+            $data .= CHtml::openTag('figcaption');
+            $data.=CHtml::link(
+                $page->title,
+                Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$page->url))
+            );
+            $data .= CHtml::closeTag('figcaption');
+            $data .= CHtml::closeTag('figure');
+            $data .= CHtml::closeTag('div');
+            echo $data;
+            /*$data = '';
             $data .= CHtml::openTag('div',array('class'=>'photo-new'));
                 $data .= CHtml::openTag('div',array('class'=>'head'));
                     $data .= CHtml::openTag('i',array('class'=>'video'));
@@ -41,7 +65,7 @@ class videoNewWidget extends CWidget{
                     $data .= CHtml::closeTag('figcaption');
                 $data .= CHtml::closeTag('figure');
             $data .= CHtml::closeTag('div');
-            echo $data;
+            echo $data;*/
         }
     }
 }

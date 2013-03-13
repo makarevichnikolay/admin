@@ -85,7 +85,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                 "timeFormat" => 'hh:mm:ss',
                 'showAnim' => 'fold',
             ),
-            'htmlOptions' => array('class' => 'input-xxlarge', 'value' => date('Y-m-d H:i:s'), 'style' => 'position: relative; z-index: 3000;')
+            'htmlOptions' => array('class' => 'input-xxlarge', 'value' => ($model->isNewRecord)?date('Y-m-d H:i:s'):date('Y-m-d H:i:s',strtotime($model->date)), 'style' => 'position: relative; z-index: 3000;')
         ));
         ?>
         <?php echo $form->error($model, 'date'); ?>
@@ -167,7 +167,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'options' => array(
             'lang' => 'ru',
             'minHeight' => 350,
-            'imageUpload' => Yii::app()->createAbsoluteUrl('Pages/adminNews/imageUploadRedacotr', array('attr' => 'content')),
+            'imageUpload' => Yii::app()->createAbsoluteUrl('Pages/adminNews/imageUploadRedactor', array('attr' => 'content')),
             'imageGetJson' => Yii::app()->createUrl('Pages/adminNews/imageListRedactor', array('attr' => 'content')),
 
         )));?>
@@ -192,7 +192,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <?php echo $form->textFieldRow($model, 'video', array('class' => 'input-xxlarge')); ?>
 <?php echo $form->checkBoxRow($model, 'video_new'); ?>
 <?php echo $form->checkBoxRow($model, 'photo_new'); ?>
-<?php echo $form->checkBoxRow($model, 'visible', array('checked' => $model->isNewRecord?'checked':'')); ?>
+<?php echo $form->checkBoxRow($model, 'visible', array('checked' => ($model->isNewRecord || $model->visible)?'checked':'')); ?>
 <?php echo $form->checkBoxRow($model, 'visible_on_main'); ?>
 <?php echo $form->checkBoxRow($model, 'hidden_in_main_list'); ?>
 <?php echo $form->checkBoxRow($model, 'allow_comments', array('checked' => 'checked')); ?>
@@ -276,7 +276,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'options' => array(
             'lang' => 'ru',
             'minHeight' => 150,
-            'imageUpload' => Yii::app()->createAbsoluteUrl('Pages/adminNews/imageUploadRedacotr', array('attr' => 'author_description')),
+            'imageUpload' => Yii::app()->createAbsoluteUrl('Pages/adminNews/imageUploadRedactor', array('attr' => 'author_description')),
             'imageGetJson' => Yii::app()->createUrl('Pages/adminNews/imageListRedactor', array('attr' => 'author_description')),
         ))); ?>
         <?php echo $form->error($model, 'author_description'); ?>

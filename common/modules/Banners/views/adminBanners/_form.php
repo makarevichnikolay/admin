@@ -27,6 +27,20 @@
         <legend></legend>
         <?php echo $form->textFieldRow($model, 'title'); ?>
         <?php echo $form->textAreaRow($model, 'content'); ?>
+        <div class="control-group">
+            <?php echo $form->labelEx($model, 'content2', array('class' => 'control-label')); ?>
+            <div class="controls">
+                <?php  $this->widget('common.ext.redactorjs.ERedactorWidget', array('model' => $model, 'attribute' => 'content2',
+                'options' => array(
+                    'lang' => 'ru',
+                    'minHeight' => 350,
+                    'imageUpload' => Yii::app()->createAbsoluteUrl('Banners/adminBanners/imageUploadRedacotr', array('attr' => 'content2')),
+                    'imageGetJson' => Yii::app()->createUrl('Pages/adminBanners/imageListRedactor', array('attr' => 'content2')),
+
+                )));?>
+                <?php echo $form->error($model, 'content'); ?>
+            </div>
+        </div>
     </fieldset>
 
     <div class="form-actions">

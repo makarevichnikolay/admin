@@ -36,11 +36,11 @@ class Banners extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, content', 'required'),
+			array('title, content,content2', 'safe'),
 			array('title', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, content', 'safe', 'on'=>'search'),
+			array('id, title, content,content2', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,12 +64,22 @@ class Banners extends CActiveRecord
 			'id' => 'ID',
 			'title' => 'Title',
 			'content' => 'Content',
+            'content2' => 'Content2',
 		);
 	}
 
     public static function getBanner($id){
         $res = Banners::model()->findByPk($id);
-        return $res->content;
+        if($res){
+            $res->content = trim($res->content);
+            $res->content2 = trim($res->content2);
+            if(!empty($res->content)){
+                return $res->content;
+            }elseif(!empty($res->content2)){
+                return $res->content2;
+            }
+        }
+        return '';
     }
 
 	/**

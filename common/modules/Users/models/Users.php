@@ -14,7 +14,7 @@
  * @property string $ip
  * @property string $role_id
  * @property string $last_visited
- * @property integer $baned
+ * @property integer $banned
  */
 class Users extends CActiveRecord
 {
@@ -45,18 +45,18 @@ class Users extends CActiveRecord
 		// will receive user inputs.
 		return array(
 
-			array('login', 'required'),
-            array('login','email'),
-			array('baned,role_id', 'numerical', 'integerOnly'=>true),
+			array('login', 'required','message'=>'Обов\'язкове для заповнення!'),
+            array('login','email','message'=>'Введіть E-mail!'),
+            array('login','unique','on'=>'register','message'=>'Такий користувач вже існує!'),
+			array('banned,role_id', 'numerical', 'integerOnly'=>true),
             array('first_name, last_name, phone, ip', 'type', 'type'=>'string'),
 			array('login, password, nickname, first_name, last_name, phone, ip', 'length', 'max'=>255),
 			array('role_id', 'length', 'max'=>10),
-			array('id, login, password, nickname, first_name, last_name, phone, ip, role_id, last_visited, baned, date_from, date_to', 'safe', 'on'=>'search'),
-            array('password_repeat,	nickname', 'required', 'on'=>'register'),
-            array('password_repeat', 'compare', 'compareAttribute'=>'password', 'on'=>'register'),
-            array('password_repeat,password', 'required', 'on'=>'register'),
+			array('id, login, password, nickname, first_name, last_name, phone, ip, role_id, last_visited, banned, date_from, date_to', 'safe', 'on'=>'search'),
+            array('password_repeat', 'compare', 'compareAttribute'=>'password', 'on'=>'register','message'=>'Неправельний пароль!'),
+            array('password_repeat,password,	nickname', 'required', 'on'=>'register','message'=>'Обов\'язкове для заповнення!'),
             array('password', 'required', 'on'=>'login'),
-            array('nickname, baned,role_id,first_name, last_name, phone, ip, last_visited, password_repeat', 'safe','on'=>'login'),
+            array('nickname, banned,role_id,first_name, last_name, phone, ip, last_visited, password_repeat', 'safe','on'=>'login'),
 
 		);
 	}
@@ -79,16 +79,17 @@ class Users extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'login' => 'Email',
+			'login' => 'E-mail',
 			'password' => 'Пароль',
-			'nickname' => 'Никнейм',
+            'password_repeat' => 'Ще раз',
+			'nickname' => 'Нік',
 			'first_name' => 'Имя',
 			'last_name' => 'Фамилия',
 			'phone' => 'Телефон',
 			'ip' => 'Ip',
 			'role_id' => 'Тип пользователя',
 			'last_visited' => 'Дата посещения',
-			'baned' => 'Забанен',
+			'banned' => 'Забанен',
 		);
 	}
 
@@ -140,7 +141,7 @@ class Users extends CActiveRecord
 		$criteria->compare('ip',$this->ip,true);
 		$criteria->compare('role_id',$this->role_id,true);
 		$criteria->compare('last_visited',$this->last_visited,true);
-		$criteria->compare('baned',$this->baned);
+		$criteria->compare('banned',$this->banned);
         if((isset($this->date_from) && trim($this->date_from) != "") && (isset($this->date_to) && trim($this->date_to) != ""))
             $criteria->addBetweenCondition('last_visited', ''.$this->date_from.'', ''.$this->date_to.'');
 

@@ -40,12 +40,11 @@ class Comments extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, page_id, content, date_create', 'required'),
+			array('user_id, page_id, content', 'required'),
 			array('user_id, page_id, parent_id', 'length', 'max'=>10),
             array('date_create','default',
                 'value'=>new CDbExpression('NOW()'),
                 'setOnEmpty'=>false,'on'=>'insert'),
-            array('date_create', 'date','format'=>'yyyy-mm-dd hh:mm:ss'),
 			array('id, user_id, page_id, content, date_create,parent_id, date_from, date_to', 'safe', 'on'=>'search'),
 		);
 	}

@@ -1,5 +1,7 @@
 <?php
 
+Yii::import('common.ext.CArray');
+
 /**
  * GD Image Driver.
  *

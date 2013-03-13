@@ -15,7 +15,7 @@ class m130201_131109_create_table_users extends CDbMigration
             'ip'=>'string NOT NULL',
             'role_id'=>'int UNSIGNED NOT NULL ',
             'last_visited'=>'datetime NOT NULL',
-            'baned'=>'boolean NOT NULL',
+            'banned'=>'boolean NOT NULL',
         ));
 	}
 

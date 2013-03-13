@@ -7,6 +7,12 @@
  * To change this template use File | Settings | File Templates.
  */
 $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$data->url));
+if(isset($data->pageInfo)){
+    $count_comments =$data->pageInfo->count_comments;
+    $count_visited =$data->pageInfo->count_visited;
+}else{
+    $count_comments = $count_visited = 0;
+}
 ?>
 <article>
     <figure>
@@ -17,9 +23,9 @@ $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$data->url))
         </figcaption>
     </figure>
     <div>
-        <a href="<?php echo $url ?>"><i class="css-icon css-icon-comment">1000</i></a>
+        <a href="<?php echo $url ?>"><i class="css-icon css-icon-comment"><?php echo $count_comments  ?></i></a>
         <i class="icon-eye-open"></i>
-        <span>10000</span>&nbsp
+        <span><?php echo $count_visited  ?></span>&nbsp
         <i class="icon-pen"></i><a href="<?php echo $url ?>" class="comment">Коментувати</a>
     </div>
 </article>

@@ -1,15 +1,14 @@
         <?php
        // Yii::app()->clientScript->scriptMap['jquery.js'] = false;
         if (Yii::app()->user->isGuest) {
-            echo  CHtml::link('Вхід', '#', array('class'=>'open-login-form'
-            ));
+            echo  CHtml::link('Вхід', '#', array('class'=>'open-login-form'));
             ?>
             <a>|</a>
-            <a href="#">Реєстрація</a>
             <?php
+            echo  CHtml::link('Реєстрація', Yii::app()->createUrl('/Users/Users/register'), array());
         } else {
             echo '<div class="user-name">'.Yii::app()->user->name.'</div>';
-            echo CHtml::link('Выход', $this->createUrl('Users/Users/Logout'));
+            echo CHtml::link('Выход', $this->createUrl('/Users/Users/Logout'));
         }
         ?>
         <div class="login-form">
@@ -25,11 +24,16 @@
                             <input class="span12" name="Users[login]" type="text">
                         </div>
                         <div class="row-fluid">
-                            <input class="span7" name="Users[password]" type="password">
-                            <a id="login" href="#" class="span5 pull-right login">Вхід</a>
+                            <div class="span7">
+                                <input class="password" name="Users[password]" type="password">
+                            </div>
+                            <div class="span5">
+                                <a id="login" href="#" class="pull-right main-btn enter">Вхід</a>
+                            </div>
+
                         </div>
                         <div class="row-fluid remind">
-                            <input class="" name="Users[password]" type="checkbox"><span>Запам’ятати</span>
+                            <input class="" name="Users[save]" type="checkbox"><span>Запам’ятати</span>
                             <a  href="#" class="">Нагадати пароль</a>
                         </div>
                     </div>

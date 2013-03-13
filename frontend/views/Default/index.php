@@ -28,8 +28,16 @@ $this->breadcrumbs = array();
                  'template'=>'{items}'
              ),true),
              'active'=>true),
-         array('label'=>'Найбільше читають', 'content'=>' іуеіу'),
-         array('label'=>'Найбільше коментують', 'content'=>'уіее '),
+         array('label'=>'Найбільше читають', 'content'=>$this->widget('bootstrap.widgets.TbListView', array(
+             'dataProvider'=>Pages::getMoreRead(),
+             'itemView'=>'common.modules.Pages.views.frontendNews._new',
+             'template'=>'{items}'
+         ),true)),
+         array('label'=>'Найбільше коментують', 'content'=>$this->widget('bootstrap.widgets.TbListView', array(
+             'dataProvider'=>Pages::getMoreComment(),
+             'itemView'=>'common.modules.Pages.views.frontendNews._new',
+             'template'=>'{items}'
+         ),true)),
      ),
  )); ?>
  </div>

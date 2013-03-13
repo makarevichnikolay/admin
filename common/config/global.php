@@ -41,7 +41,8 @@ return array(
 		
 	),
 
-	'params' => array(       
+	'params' => array(
+        'adminEmail'=>"zhelamskaya.n@ukr.net",
 		'sitePath' 	=> dirname(dirname(dirname(__FILE__))) . '/',
         'site'=> dirname(dirname(__DIR__)),
         'dataRelPath' => 'data/',
@@ -63,18 +64,19 @@ return array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>200, 'height'=>160,'type'=>3,'crop'=>true),
-                    'thumb2'=> array('width'=>204, 'height'=>113,'type'=>4,'crop'=>true),
-                    'new-view'	=> array('width'=>360, 'height'=>204,'type'=>4,'crop'=>false),
-                    'photo-new'	=> array('width'=>240, 'height'=>200,'type'=>3,'crop'=>true),
-                    'large'	=> array('width'=>800, 'height'=>600,'type'=>3,'crop'=>false),
+                    'thumb'	=> array('width'=>200, 'height'=>160,'type'=>4,'crop'=>true,'watermark'=>false),
+                    'thumb2'=> array('width'=>204, 'height'=>113,'type'=>4,'crop'=>true,'watermark'=>false),
+                    'new-view'	=> array('width'=>360, 'height'=>204,'type'=>4,'crop'=>false,'watermark'=>true),
+                    'photo-new'	=> array('width'=>240, 'height'=>200,'type'=>3,'crop'=>true,'watermark'=>false),
+                    'large'	=> array('width'=>800, 'height'=>600,'type'=>3,'crop'=>false,'watermark'=>true),
+                    'afisha'	=> array('width'=>350, 'height'=>450,'type'=>3,'crop'=>true,'watermark'=>true),
                 ),
             ),
             'author_image'=>array(
                 'ext' => array('jpg', 'jpeg', 'png'),
                 'maxSize'=>20 * 1024 * 1024,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>50, 'height'=>50,'type'=>3,'crop'=>true),
+                    'thumb'	=> array('width'=>50, 'height'=>50,'type'=>3,'crop'=>true,'watermark'=>false),
                     //'large'	=> array('width'=>600, 'height'=>800),
                 ),
             ),
@@ -83,11 +85,22 @@ return array(
                 'maxSize'=>20 * 1024 * 1024,
                 'maxCount'=>16,
                 'dimensions' => array(
-                    'thumb'	=> array('width'=>150, 'height'=>86,'type'=>3,'crop'=>false),
-                    'large'	=> array('width'=>800, 'height'=>600,'type'=>4,'crop'=>false),
+                    'thumb'	=> array('width'=>150, 'height'=>86,'type'=>3,'crop'=>false,'watermark'=>false),
+                    'large'	=> array('width'=>800, 'height'=>600,'type'=>4,'crop'=>false,'watermark'=>true),
                 ),
             )
         ),
+        'VotingQuestions'=>array(
+            'image'=>array(
+                'ext' => array('jpg', 'jpeg', 'png'),
+                'maxSize'=>20 * 1024 * 1024,
+                'maxCount'=>16,
+                'dimensions' => array(
+                    'thumb'	=> array('width'=>222, 'height'=>125,'type'=>4,'crop'=>false,'watermark'=>false),
+                    'large'	=> array('width'=>800, 'height'=>600,'type'=>4,'crop'=>false,'watermark'=>true),
+                ),
+            )
+        )
        
 	),
 
@@ -110,5 +123,11 @@ return array(
            'Banners'=>array(
               'class' => 'common.modules.Banners.BannersModule'
           ),
+          'StaticPages'=>array(
+              'class' => 'common.modules.StaticPages.StaticPagesModule'
+          ),
+         'Voting'=>array(
+             'class' => 'common.modules.Voting.VotingModule'
+         )
 	),
 );

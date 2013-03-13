@@ -810,3 +810,107 @@ Stack trace:
 #11 {main}
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/11 18:00:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1061 Duplicate key name 'voting_id'. The SQL statement executed was: CREATE INDEX `voting_id` ON `voting_questions` (`voting_id`).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1459)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (372)
+2013/03/11 18:00:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1061 Duplicate key name 'voting_id'. The SQL statement executed was: CREATE INDEX `voting_id` ON `voting_questions` (`voting_id`)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1459): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(372): CDbCommand->createIndex('voting_id', 'voting_question...', 'voting_id', false)
+#2 Z:\home\localhost\www\admin\common\migrations\m130311_135122_create_table_voting_answers.php(15): CDbMigration->createIndex('voting_id', 'voting_question...', 'voting_id')
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130311_135122_create_table_voting_answers->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130311_135122_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/11 18:00:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1061 Duplicate key name 'voting_id'. The SQL statement executed was: CREATE INDEX `voting_id` ON `voting_questions` (`voting_id`).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1459)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (372)
+2013/03/11 18:00:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1061 Duplicate key name 'voting_id'. The SQL statement executed was: CREATE INDEX `voting_id` ON `voting_questions` (`voting_id`)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1459): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(372): CDbCommand->createIndex('voting_id', 'voting_question...', 'voting_id', false)
+#2 Z:\home\localhost\www\admin\common\migrations\m130311_135122_create_table_voting_answers.php(15): CDbMigration->createIndex('voting_id', 'voting_question...', 'voting_id')
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130311_135122_create_table_voting_answers->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130311_135122_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/11 18:00:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'voting_answers' already exists. The SQL statement executed was: CREATE TABLE `voting_answers` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`voting_id` int UNSIGNED NOT NULL,
+	`question_id` int UNSIGNED NOT NULL,
+	`count` int UNSIGNED NOT NULL,
+	`date` datetime NOT NULL
+).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1321)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (228)
+2013/03/11 18:00:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'voting_answers' already exists. The SQL statement executed was: CREATE TABLE `voting_answers` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`voting_id` int UNSIGNED NOT NULL,
+	`question_id` int UNSIGNED NOT NULL,
+	`count` int UNSIGNED NOT NULL,
+	`date` datetime NOT NULL
+)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('voting_answers', Array, NULL)
+#2 Z:\home\localhost\www\admin\common\migrations\m130311_135122_create_table_voting_answers.php(13): CDbMigration->createTable('voting_answers', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130311_135122_create_table_voting_answers->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130311_135122_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/11 18:00:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'voting_answers' already exists. The SQL statement executed was: CREATE TABLE `voting_answers` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`voting_id` int UNSIGNED NOT NULL,
+	`question_id` int UNSIGNED NOT NULL,
+	`count` int UNSIGNED NOT NULL,
+	`date` datetime NOT NULL
+).
+in Z:\home\localhost\www\framework\db\CDbCommand.php (352)
+in Z:\home\localhost\www\framework\db\CDbCommand.php (1321)
+in Z:\home\localhost\www\framework\db\CDbMigration.php (228)
+2013/03/11 18:00:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'voting_answers' already exists. The SQL statement executed was: CREATE TABLE `voting_answers` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`voting_id` int UNSIGNED NOT NULL,
+	`question_id` int UNSIGNED NOT NULL,
+	`count` int UNSIGNED NOT NULL,
+	`date` datetime NOT NULL
+)' in Z:\home\localhost\www\framework\db\CDbCommand.php:357
+Stack trace:
+#0 Z:\home\localhost\www\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 Z:\home\localhost\www\framework\db\CDbMigration.php(228): CDbCommand->createTable('voting_answers', Array, NULL)
+#2 Z:\home\localhost\www\admin\common\migrations\m130311_135122_create_table_voting_answers.php(13): CDbMigration->createTable('voting_answers', Array)
+#3 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(385): m130311_135122_create_table_voting_answers->up()
+#4 Z:\home\localhost\www\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130311_135122_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 Z:\home\localhost\www\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 Z:\home\localhost\www\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 Z:\home\localhost\www\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 Z:\home\localhost\www\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 Z:\home\localhost\www\admin\console\yiic.php(20): CApplication->run()
+#11 {main}
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

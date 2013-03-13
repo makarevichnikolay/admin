@@ -6,6 +6,7 @@ class DefaultController extends FrontendController
 
     public function actionIndex()
     {
+        $this->pageTitle="Головна";
         $this->render('index', array());
     }
 

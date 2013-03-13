@@ -1,6 +1,6 @@
 <?php
 
-Yii::import('common.ext.image.Image');
+Yii::import('application.extensions.image.Image');
 
 /**
  * Description of CImageComponent

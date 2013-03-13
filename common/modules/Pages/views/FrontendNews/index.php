@@ -2,7 +2,7 @@
 /* @var $this DefaultController */
 if($category['parent_title']){
     $this->breadcrumbs=array(
-        $category['parent_title']=>Yii::app()->createUrl('Pages/FrontendNews/index',array('category_id'=>$category['parent_id'])),
+        $category['parent_title']=>Yii::app()->createUrl('Pages/FrontendNews/index',array('category_id'=>($category['parent_id'] !=0)?$category['parent_id']:$category['id'])),
         $category['title'],
     );
 }else{
@@ -16,8 +16,8 @@ $this->title = $category['title'];
 <div class="new-content">
 <?php
 $this->widget('bootstrap.widgets.TbListView', array(
-    'dataProvider'=>$model->search(),
-    'itemView'=>'common.modules.Pages.views.frontendNews._new',
+    'dataProvider'=>$model->$typeSearch(),
+    'itemView'=>$_view,
     'template'=>'{items}{pager}',
     'pager' => array(
     'class' => 'bootstrap.widgets.TbPager',

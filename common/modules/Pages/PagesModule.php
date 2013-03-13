@@ -26,6 +26,8 @@ class PagesModule extends CWebModule implements IURLRule
                 'params'=>array(':url'=>isset($url[1])?$url[1]:$url[0])
         ));
         if($categorie){
+             if($categorie->id == 20)
+                return 'Pages/FrontendNews/feadback';
              $_GET['category_id'] = $categorie->id;
              return 'Pages/FrontendNews/index';
         }

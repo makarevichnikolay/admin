@@ -9,7 +9,7 @@ class AdminNewsController extends AdminController
             'toggle'=>array(
                 'class'=>'common.ext.JToggleColumn.ToggleAction',
             ),
-            'imageUploadRedacotr'=>array(
+            'imageUploadRedactor'=>array(
                 'class'=>'common.ext.redactorjs.actions.ImageUpload',
                 'uploadPath'=>Yii::app()->params['dataPath'].'NewsImages/',
                 'uploadUrl'=>Yii::app()->params['dataUrl'].'NewsImages/',
@@ -160,6 +160,7 @@ class AdminNewsController extends AdminController
             $config = Yii::app()->params['Pages']['images'];
             if($count <  $config['maxCount']){
                 Yii::import("common.ext.EAjaxUpload.qqFileUploader");
+                $dP =  Yii::app()->params['dataPath'];
                 $dataPath = Yii::app()->params['dataPath'].'pages/'.$id.'/images/gallery/';
                 Yii::app()->file->createDir(0777,$dataPath );
                 $uploader = new qqFileUploader($config['ext'], $config['maxSize']);
@@ -171,6 +172,7 @@ class AdminNewsController extends AdminController
                     $pages_image->file_name = $result['filename'];
                     $pages_image->save();
                     $originalPath = $dataPath.'/'.$pages_image->id.'/';
+                    $watermarkFile = $dP.'watermark.png';
                     foreach($config['dimensions'] as $key=>$value){
                         $Path = $originalPath .$key.'/';
                         Yii::app()->file->createDir(0777,$Path);
@@ -179,6 +181,11 @@ class AdminNewsController extends AdminController
                             $image->resize($value['width'], $value['height'] , $value['type'])->crop($value['width'],$value['height'])->save($Path.$pages_image->file_name);
                         else
                             $image->resize($value['width'], $value['height'] , $value['type'])->save($Path.$pages_image->file_name);
+                        if($value['watermark']){
+                            $image = new Image($Path.$pages_image->file_name);
+                            $image->watermark($watermarkFile);
+                            $image->save($Path.$pages_image->file_name);
+                        }
                     }
                     Yii::app()->file->set($dataPath.$result['filename'])->delete();
                     $result['data'] = array('id'=>$pages_image->id,'src'=>PagesImages::getImageSrc($id,$pages_image->id,$result['filename']));

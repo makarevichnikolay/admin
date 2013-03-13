@@ -56,7 +56,7 @@ class SearchController extends FrontendController
                 return ($a['count'] < $b['count']) ? 1 : -1;
             });
 
-            echo 'time:'.(microtime(true) - $start).'<br />';
+            //echo 'time:'.(microtime(true) - $start).'<br />';
         }
         $itemsProvider = new CArrayDataProvider($items, array(
             'keyField'   => 'count',
@@ -81,10 +81,14 @@ class SearchController extends FrontendController
 
     public static  function getItemData($id,$words){
         $connection=Yii::app()->db;
-        $sql = "SELECT body FROM news WHERE id =".$id;
+        $sql = "SELECT content,title,url,main_image,id FROM pages WHERE id =".$id;
         $command=$connection->createCommand($sql);
         $row=$command->query()->readAll();
-        $body = strip_tags($row[0]['body']);
+        $data['id'] = $row[0]['id'];
+        $data['main_image'] = $row[0]['main_image'];
+        $data['title'] = $row[0]['title'];
+        $data['url'] = $row[0]['url'];
+        $body = strip_tags($row[0]['content']);
         $words = explode(' ',$words);
         $len_text = 800;
         foreach($words as $word){
@@ -100,7 +104,8 @@ class SearchController extends FrontendController
         foreach($words as $word){
             $body = preg_replace('#([^a-zA-ZА-ЯІЇЄҐа-яіїєґ])('.$word.')([^a-zA-ZА-ЯІЇЄҐа-яіїєґ<])#ui',' $1<code>'.$word.'</code>$3',$body);
         }
-        return $body;
+        $data['body'] =  $body;
+        return  $data;
     }
 
     private  function mergeDataSearch($words_result){

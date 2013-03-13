@@ -8,11 +8,12 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="language" content="en"/>
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <?php Yii::app()->bootstrap->register(); ?>
     <?php
     $cs = Yii::app()->getClientScript();
     $cs->registerCoreScript('jquery');
+    $cs->registerCoreScript('bbq');
     //Yii::app()->clientScript->registerCoreScript('jquery.ui');
     $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/frontend.js', CClientScript::POS_END);
     $cs->registerCssFile(Yii::app()->baseUrl . '/css/styles.css');
@@ -41,11 +42,11 @@
         <div class="span12">
             <div class="row-fluid logo">
                 <figure class="span3">
-                     <img src="img/logo.png" alt="logo">
+                     <a href="http://akulamedia.com"><img src="/img/logo.png"  alt="logo"></a>
                 </figure>
                 <div class="span9 head-row">
                     <div class="row-fluid first-row">
-                       <div class="span3">
+                       <div class="calendar">
                            <div class="row-fluid">
                                <i class="icon-calendar"></i><span id="date"></span>
                            </div>
@@ -53,22 +54,34 @@
                                <i class="icon-time"></i><span id="time"></span>
                            </div>
                        </div>
-                        <div class="span4">
+                        <div class="phone">
                             <div class="row-fluid">
-                                <div class="span3 tel-icon">
+                                <div class="tel-icon">
                                    <i class="icon-tel"></i>
                                 </div>
-                                <div class="span9">
+                                <div class="tel-caption">
                                     <div class="row-fluid caption">
                                         Гаряча лінія редакції
                                     </div>
                                     <div class="row-fluid tel">
-                                       (0522) <span>12-34-56</span>
+                                        (095)<span>777-577-8</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="span4 offset1">
+                        <div class="social">
+                            <a class="fb" href="http://www.facebook.com/groups/436311916451248/"></a>
+                            <a class="vk" href="http://vk.com/id203640707"></a>
+                            <a class="tw" href="https://twitter.com/akulamedia"></a>
+                            <a class="od" href="http://www.odnoklassniki.ru/profile/557413749122"></a>
+                        </div>
+
+                    </div>
+                    <div class="row-fluid second-row">
+                          <div class="span7 slogon">
+                              <h3>ТВІЙ ІНФОРМАЦІЙНИЙ ПРОСТІР</h3>
+                          </div>
+                        <div class="span4 offset1 search">
                             <?php
                             $modelSearch = new SearchWords('search');
                             $modelSearch->word = isset($_POST['SearchWords']) ? $_POST['SearchWords']['word'] : null;
@@ -82,17 +95,14 @@
                             </div>
                             <?php $this->endWidget(); ?>
                         </div>
+
                     </div>
-                    <div class="row-fluid second-row">
-                          <div class="span7 slogon">
-                              <h3>ТВІЙ ІНФОРМАЦІЙНИЙ ПРОСТІР</h3>
-                          </div>
-                          <div class="span4  offset1 auth">
-                              <div class="user">
-                                <?php  $this->renderPartial('common.modules.Users.views.Users._login',null,false,false)?>
-                              </div>
-                              <div class="social"></div>
-                          </div>
+                    <div class="row-fluid third-row">
+                        <div class="span4  offset8 auth">
+                            <div class="user">
+                                <?php  $this->renderPartial('common.modules.Users.views.users._login',null,false,false)?>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -104,7 +114,7 @@
                         <?php
                         if($this->beginCache('menu', array('duration'=>$cacheTime))) {
                             echo Yii::app()->getModule('Menu')->getFrontendMenu();
-                            echo Yii::app()->getModule('Menu')->getFrontendMenu('second',6,7);
+                            echo Yii::app()->getModule('Menu')->getFrontendMenu('second',7,7);
                             $this->endCache(); }
                         ?>
                     </nav>
@@ -171,14 +181,74 @@
                             echo Banners::getBanner(6);
                             ?>
                         </div>
+                        <div class="row-fluid">
+                            <?php
+                               //$this->widget('application.components.Widgets.votingWidget');
+                            ?>
+                        </div>
                 </aside>
             </div>
 
         </div>
     </div>
+    <?php
+      $partner=Banners::getBanner(8);
+      if(!empty($partner)):
+    ?>
+    <div class="row-fluid partners">
+        <?php
+        echo $partner;
+        ?>
+    </div>
+        <?php endif ?>
 </section>
 <footer class="footer">
     <div class="container-fluid main-container footer-container">
+        <div class="row-fluid">
+            <div class="span12 text">
+                <?php
+                echo Banners::getBanner(7);
+                ?>
+            </div>
+        </div>
+        <div class="row-fluid  info">
+            <div class="span2">
+                <div class="copy">
+                    &copy akulamedia.com
+                </div>
+            </div>
+            <div class="span3 footermenu">
+               <?php  echo Yii::app()->getModule('Menu')->getFooterMenu();?>
+            </div>
+            <div class="span2 code">
+                <!--bigmir)net TOP 100-->
+                <script type="text/javascript" language="javascript"><!--
+                function BM_Draw(oBM_STAT){
+                    document.write('<table cellpadding="0" cellspacing="0" border="0" style="display:inline;margin-right:4px;"><tr><td><div style="margin:0px;padding:0px;font-size:1px;width:88px;"><div style="background:url(\'http://i.bigmir.net/cnt/samples/diagonal/b59_top.gif\') no-repeat bottom;"> </div><div style="font:10px Tahoma;background:url(\'http://i.bigmir.net/cnt/samples/diagonal/b59_center.gif\');"><div style="text-align:center;"><a href="http://www.bigmir.net/" target="_blank" style="color:#0000ab;text-decoration:none;font:10px Tahoma;">bigmir<span style="color:#ff0000;">)</span>net</a></div><div style="margin-top:3px;padding: 0px 6px 0px 6px;color:#003596;"><div style="float:left;font:10px Tahoma;">'+oBM_STAT.hosts+'</div><div style="float:right;font:10px Tahoma;">'+oBM_STAT.hits+'</div></div><br clear="all"/></div><div style="background:url(\'http://i.bigmir.net/cnt/samples/diagonal/b59_bottom.gif\') no-repeat top;"> </div></div></td></tr></table>');
+                }
+                //-->
+                </script>
+                <script type="text/javascript" language="javascript"><!--
+                bmN=navigator,bmD=document,bmD.cookie='b=b',i=0,bs=[],bm={o:1,v:16919896,s:16919896,t:0,c:bmD.cookie?1:0,n:Math.round((Math.random()* 1000000)),w:0};
+                for(var f=self;f!=f.parent;f=f.parent)bm.w++;
+                try{if(bmN.plugins&&bmN.mimeTypes.length&&(x=bmN.plugins['Shockwave Flash']))bm.m=parseInt(x.description.replace(/([a-zA-Z]|\s)+/,''));
+                else for(var f=3;f<20;f++)if(eval('new ActiveXObject("ShockwaveFlash.ShockwaveFlash.'+f+'")'))bm.m=f}catch(e){;}
+                try{bm.y=bmN.javaEnabled()?1:0}catch(e){;}
+                try{bmS=screen;bm.v^=bm.d=bmS.colorDepth||bmS.pixelDepth;bm.v^=bm.r=bmS.width}catch(e){;}
+                r=bmD.referrer.slice(7);if(r&&r.split('/')[0]!=window.location.host){bm.f=escape(r).slice(0,400);bm.v^=r.length}
+                bm.v^=window.location.href.length;for(var x in bm) if(/^[ovstcnwmydrf]$/.test(x)) bs[i++]=x+bm[x];
+                bmD.write('<sc'+'ript type="text/javascript" language="javascript" src="http://c.bigmir.net/?'+bs.join('&')+'"></sc'+'ript>');
+                //-->
+                </script>
+                <noscript>
+                    <a href="http://www.bigmir.net/" target="_blank"><img src="http://c.bigmir.net/?v16919896&s16919896&t2" width="88" height="31" alt="bigmir)net TOP 100" title="bigmir)net TOP 100" border="0" /></a>
+                </noscript>
+                <!--bigmir)net TOP 100-->
+            </div>
+            <div class="span2 offset3 onix">
+                <figure class=""><a href="http://www.onix.ua" target="_blank"><img src="frontend/www/img/onix.png"></a></figure>
+            </div>
+        </div>
     </div>
 </footer>
 <div>

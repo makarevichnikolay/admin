@@ -1,6 +1,6 @@
 <?php
 
-class DefaultController extends Controller
+class DefaultController extends AdminController
 {
 
 public $replace = array('#','!', ')','(',',',';',':','+','\'','&','"','?');
@@ -35,7 +35,7 @@ public $stopWords = array(
         $data = $this->getWords();
         foreach($data as  $val){
             $id = $val['id'];
-            $text = strip_tags($val['body']);
+            $text = strip_tags($val['content']);
             $text = str_replace($this->special_replace,' ',$text);
             $text = preg_replace ("/[^a-zA-ZА-ЯІЇЄҐа-яіїєґ0-9\s\t\r\n]/iu","",$text);
             $text = preg_replace("/(\s|\t|\r|\n|\v|\e)+/iu", " ", $text);
@@ -71,6 +71,10 @@ public $stopWords = array(
         //ksort($words);
         //print_r($words);
         echo '</pre>';
+        $command=$this->connection->createCommand('TRUNCATE TABLE search_words');
+        $command->execute();
+        $command=$this->connection->createCommand('TRUNCATE TABLE search_data');
+        $command->execute();
         $words_sql = 'INSERT INTO search_words(id,word) VALUES';
         $j=$jj= 0;
         $word_data_sql = 'INSERT INTO search_data(word_id,item_id,count) VALUES';
@@ -96,7 +100,7 @@ public $stopWords = array(
 		//$this->render('index');
 	}
     private function getWords(){
-        $sql = "SELECT id,body FROM news";
+        $sql = "SELECT id,content FROM pages";
         $command=$this->connection->createCommand($sql);
         return $command->queryAll();
     }

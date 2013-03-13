@@ -42,6 +42,10 @@ class MenuModule extends CWebModule
         return renderMenu::getFrontendMenu($class ,$limit,$offset);
     }
 
+    public  function getFooterMenu($limit=2){
+        return renderMenu::getFooterMenu($limit);
+    }
+
 	public function beforeControllerAction($controller, $action)
 	{
 		if(parent::beforeControllerAction($controller, $action))

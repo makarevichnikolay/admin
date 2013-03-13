@@ -18,6 +18,7 @@ class Pages extends CActiveRecord
     public  $defaultPageTypeId = 1;
     public $date_from;
     public $date_to;
+    public $orderby = 'date DESC';
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -58,7 +59,8 @@ class Pages extends CActiveRecord
             array('date_create,date_update','default',
                 'value'=>new CDbExpression('NOW()'),
                 'setOnEmpty'=>false,'on'=>'insert'),
-			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments, date_from, date_to, categories,page_id,hidden_in_main_list,video_new,photo_new', 'safe', 'on'=>'search'),
+			array('id,type_id, url, title, author_name, content, visible, visible_on_main, allow_comments, date_from, date_to, categories,page_id,hidden_in_main_list,video_new,photo_new,orderby', 'safe', 'on'=>'search,frontendSearch'),
+
 		);
 	}
 
@@ -97,12 +99,42 @@ class Pages extends CActiveRecord
 		);
 	}
 
-    public static  function  getFreshNews($limit = 5){
+    public static  function  getFreshNews($limit = 10){
         $criteria= new CDbCriteria();
         $criteria->limit = $limit;
         $criteria->compare('hidden_in_main_list',0);
         $criteria->compare('visible',1);
-        $criteria->order = 'date_update DESC';
+        $criteria->order = 'date DESC';
+        $criteria->with = array('pageInfo');
+        $criteria->together = true;
+        return  new CActiveDataProvider('Pages', array(
+                'criteria'=>$criteria,
+                'pagination'=>false
+            )
+        );
+    }
+
+    public static  function  getMoreRead($limit = 10){
+        $criteria= new CDbCriteria();
+        $criteria->limit = $limit;
+        $criteria->order = 'pageInfo.count_visited DESC';
+        $criteria->compare('visible',1);
+        $criteria->with = array('pageInfo');
+        $criteria->together = true;
+        return  new CActiveDataProvider('Pages', array(
+                'criteria'=>$criteria,
+                'pagination'=>false
+            )
+        );
+    }
+
+    public static  function  getMoreComment($limit = 10){
+        $criteria= new CDbCriteria();
+        $criteria->limit = $limit;
+        $criteria->order = 'pageInfo.count_comments DESC';
+        $criteria->compare('visible',1);
+        $criteria->with = array('pageInfo');
+        $criteria->together = true;
         return  new CActiveDataProvider('Pages', array(
                 'criteria'=>$criteria,
                 'pagination'=>false
@@ -116,7 +148,9 @@ class Pages extends CActiveRecord
         $criteria->compare('visible_on_main',1);
         $criteria->compare('visible',1);
         $criteria->addCondition('main_image != ""');
-        $criteria->order = 'date_update';
+        $criteria->order = 'date DESC';
+        $criteria->with = array('pageInfo');
+        $criteria->together = true;
         return  new CActiveDataProvider('Pages', array(
                 'criteria'=>$criteria,
                 'pagination'=>false
@@ -127,7 +161,8 @@ class Pages extends CActiveRecord
     private function tempToData($name){
         $tempPath = Yii::app()->params['tempPath'];
         if( file_exists($tempPath.$this->$name)){
-            $originalPath = Yii::app()->params['dataPath'].'pages/'.$this->id.'/images/'. $name .'/';
+            $dataPath =  Yii::app()->params['dataPath'];
+            $originalPath =$dataPath.'pages/'.$this->id.'/images/'. $name .'/';
             if(!is_dir($originalPath)){
                 Yii::app()->file->createDir(0777,$originalPath);
             }else{
@@ -137,14 +172,21 @@ class Pages extends CActiveRecord
             Yii::import('common.ext.image.Image');
             Yii::app()->file->set($tempPath.$this->$name)->move($originalPath.$this->$name);
             $config = Yii::app()->params['Pages'][$name];
+            $watermarkFile = $dataPath.'watermark.png';
             foreach($config['dimensions'] as $key=>$value){
                 $Path = $originalPath .$key.'/';
                 Yii::app()->file->createDir(0777,$Path);
                 $image = new Image($originalPath.$this->$name);
+                $image->resize($value['width'], $value['height'] , $value['type']);
                 if($value['crop'])
-                   $image->resize($value['width'], $value['height'] , $value['type'])->crop($value['width'],$value['height'])->save($Path.$this->$name);
-                else
-                   $image->resize($value['width'], $value['height'] , $value['type'])->save($Path.$this->$name);
+                   $image->crop($value['width'],$value['height']);
+                $image->save($Path.$this->$name);
+                if($value['watermark']){
+                    $image = new Image($Path.$this->$name);
+                    $image->watermark($watermarkFile);
+                    $image->save($Path.$this->$name);
+                }
+
             }
         }
     }
@@ -214,6 +256,8 @@ class Pages extends CActiveRecord
             'type'    => array(self::BELONGS_TO, 'pageTypes',    'type_id'),
             'category'    => array(self::HAS_MANY, 'PagesCategories','page_id','with'=>array('category_name')),
             'category_search'    => array(self::HAS_MANY, 'PagesCategories','page_id'),
+            'category_one'    => array(self::HAS_ONE, 'PagesCategories','page_id','with'=>array('category_name')),
+            'pageInfo'    => array(self::HAS_ONE, 'PageInfo',    'page_id'),
         );
     }
 
@@ -236,6 +280,7 @@ class Pages extends CActiveRecord
             $criteria->together = true;
             $criteria->group = 'category_search.page_id';
         }
+
 
 		$criteria->compare('id',$this->id);
         $criteria->compare('type_id',$this->type_id);
@@ -261,9 +306,66 @@ class Pages extends CActiveRecord
                 'pageSize'=>10
             ),
             'sort'=>array(
-                'defaultOrder'=>'date_update DESC',
+                'defaultOrder'=>'date DESC',
             ),
 
         ));
 	}
+
+    public static  function getByCategory($id){
+        $criteria=new CDbCriteria;
+        $criteria->with = array();
+        $criteria->together = true;
+        $criteria->with[] = 'category_search';
+        $criteria->compare('category_search.category_id',$id);
+        $criteria->group = 'category_search.page_id';
+        $criteria->compare('visible',1);
+        $criteria->limit = 3;
+
+        return new CActiveDataProvider('Pages', array(
+            'criteria'=>$criteria,
+            'pagination'=>false,
+            'sort'=>array(
+                'defaultOrder'=>'date DESC',
+            ),
+
+        ));
+    }
+
+
+    public function underCategorySearch(){
+        $criteria = new CDbCriteria();
+        $criteria->compare('parent_id',$this->category_id);
+        return new CActiveDataProvider('Categories', array(
+            'criteria'=>$criteria,
+            'pagination'=>false
+        ));
+    }
+
+    public function frontendSearch()
+    {
+        // Warning: Please modify the following code to remove attributes that
+        // should not be searched.
+
+        $criteria=new CDbCriteria;
+        $criteria->with = array('pageInfo','category_one');
+        $criteria->together = true;
+        if($this->category_id && !empty($this->category_id)){
+            $criteria->with[] = 'category_search';
+            $criteria->compare('category_search.category_id',$this->category_id);
+            $criteria->group = 'category_search.page_id';
+        }
+        $criteria->compare('visible',1);
+
+        return new CActiveDataProvider($this, array(
+            'criteria'=>$criteria,
+            'pagination'=>array(
+                'pageSize'=>10
+            ),
+            'sort'=>array(
+                'defaultOrder'=>$this->orderby,
+            ),
+
+        ));
+    }
 }

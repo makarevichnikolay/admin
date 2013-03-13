@@ -23,12 +23,30 @@ class UsersController extends FrontendController
     }
 
     public function actionRegister(){
+        $this->title = "Реєстрація";
+        $this->pageTitle = "Реєстрація";
+        $model=new Users;
+        $model->scenario='register';
 
+        $this->performAjaxValidation($model);
+
+        if(isset($_POST['Users']))
+        {
+            $model->Attributes = $_POST['Users'];
+            $model->role_id=1;
+            $model->save();
+            $model->authenticate();
+            $this->redirect(Yii::app()->createUrl('Default/index'));
+        }
+
+        $this->render('register',array(
+            'model'=>$model,
+        ));
     }
 
     public function actionLogout(){
         Yii::app()->user->logout();
-        $this->redirect(array('/'));
+        $this->redirect(Yii::app()->createUrl('Default/index'));
     }
 
 

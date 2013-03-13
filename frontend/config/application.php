@@ -32,7 +32,7 @@ return array(
 				array(
                     'class' => 'URLRule',
                 ),
-                ''=>'Default/index',
+                '/'=>'Default/index',
                 'Search'=>'Search/Search/Search',
 				'<module:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',

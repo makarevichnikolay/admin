@@ -15,6 +15,12 @@ class WebUser extends CWebUser {
         }
     }
 
+    function getBanned() {
+        if($user = $this->getModel()){
+            return $user->banned;
+        }
+    }
+
     private function getModel(){
         if (!$this->isGuest && $this->_model === null){
             $this->_model = Users::model()->findByPk($this->id);

@@ -61,6 +61,7 @@ class Categories extends CActiveRecord
 		return array(
             'parent'    => array(self::BELONGS_TO, 'Categories',    'parent_id'),
             'children' => array(self::HAS_MANY, 'Categories', 'parent_id'),
+            'page'=>array(self::HAS_MANY,'Pages','pages_id')
 		);
 	}
 

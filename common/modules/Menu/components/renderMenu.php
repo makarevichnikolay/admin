@@ -42,13 +42,19 @@ class renderMenu {
         }
         if($class == 'second'){
             $menu .= CHtml::openTag('li',array('class'=>'main-wrap'));
-            $menu .= CHtml::link('Контакти','#',array('class'=>'main-link'));
-            $menu .= CHtml::closeTag('li');
-            $menu .= CHtml::openTag('li',array('class'=>'main-wrap'));
-            $menu .= CHtml::link('Правила сайту','#',array('class'=>'main-link'));
+            $menu .= CHtml::link('Контакти',Yii::app()->createUrl('StaticPages/FrontendStaticPages/view',array('id'=>1)),array('class'=>'main-link'));
             $menu .= CHtml::closeTag('li');
         }
         $menu .= CHtml::closeTag('ul');
+        return $menu;
+    }
+    static function getFooterMenu($limit=2){
+      $items = StaticPages::model()->findAll(array('condition'=>'visible=1'));
+        $menu = array();
+      foreach($items as $val){
+         $menu[] = '&nbsp'.CHtml::link($val->title,Yii::app()->createUrl('StaticPages/FrontendStaticPages/view',array('url'=>$val->url))).'&nbsp';
+      }
+        $menu = implode('<span class="sep">|</span>',$menu);
         return $menu;
     }
 

@@ -38,7 +38,7 @@ class m130123_074610_create_table_categories extends CDbMigration
             'url'=>'s6'
         ));
         $this->insert('categories',array(
-            'title'=>'Відео новина',
+            'title'=>'Відео новини',
             'url'=>'s7'
         ));
         $this->insert('categories',array(

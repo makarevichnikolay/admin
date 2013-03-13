@@ -91,7 +91,7 @@ $this->widget(
             ),
             array(
                 'class' => 'JToggleColumn',
-                'name' => 'baned',
+                'name' => 'banned',
                 'filter' => array(0 => 'Незабанен', 1 => 'Забанен'),
                 'buttonImageName' => 'ru-active-inactive-male',
                 'checkedButtonLabel' => 'разрешено',

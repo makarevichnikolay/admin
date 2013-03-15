@@ -17,9 +17,8 @@ class PagesModule extends CWebModule implements IURLRule
 
     public function parseUrlF($manager,$request,$pathInfo,$rawPathInfo){
         $url = explode('/',$pathInfo);
-        if($url[0] == 'all'){
-            $_GET['category_id'] = 'all';
-            return 'Pages/FrontendNews/index';
+        if($url[0] == 'remind'){
+            return 'Users/Users/remind';
         }
         $categorie = Categories::model()->find(array(
                 'condition'=>'url=:url',
@@ -44,6 +43,9 @@ class PagesModule extends CWebModule implements IURLRule
     }
 
     public function createUrlF($manager,$route,$params,$ampersand){
+        if($route =='Users/Users/remind'){
+           return 'remind';
+        }
         if($route == 'Pages/FrontendPages/index'){
             if($params['id'] == 'all'){
                 return 'all';

@@ -38,8 +38,14 @@ class VotingAnswers extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('voting_id, question_id, count, date', 'required'),
+			array('voting_id, question_id, count', 'required'),
 			array('voting_id, question_id, count', 'length', 'max'=>10),
+            array('date','default',
+                'value'=>new CDbExpression('NOW()'),
+                'setOnEmpty'=>false,'on'=>'update'),
+            array('date','default',
+                'value'=>new CDbExpression('NOW()'),
+                'setOnEmpty'=>false,'on'=>'insert'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, voting_id, question_id, count, date', 'safe', 'on'=>'search'),

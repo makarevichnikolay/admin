@@ -16,18 +16,17 @@ class SearchController extends FrontendController
     public function actionSearch(){
         if(!$this->connection)
             $this->connection=Yii::app()->db;
+        $items = $params = array();
+        $words = '';
         if(isset($_POST['SearchWords'])){
             $words = $_POST['SearchWords']['word'];
             $params =array('SearchWords'=>$_POST['SearchWords']);
         }elseif(isset($_GET['SearchWords'])){
             $words = $_GET['SearchWords']['word'];
             $params =array('SearchWords'=>$_GET['SearchWords']);
-        }else{
-            $items = $params = array();
-            $words = '';
         }
         if(!empty($words)){
-            $start = microtime(true);
+            //$start = microtime(true);
             $words_result =array();
             $words = strip_tags($words);
             $words  = preg_replace ("/[^a-zA-ZА-ЯІЇЄҐа-яіїєґ0-9\s\t\r\n]/iu","",$words );

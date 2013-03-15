@@ -195,7 +195,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <?php echo $form->checkBoxRow($model, 'visible', array('checked' => ($model->isNewRecord || $model->visible)?'checked':'')); ?>
 <?php echo $form->checkBoxRow($model, 'visible_on_main'); ?>
 <?php echo $form->checkBoxRow($model, 'hidden_in_main_list'); ?>
-<?php echo $form->checkBoxRow($model, 'allow_comments', array('checked' => 'checked')); ?>
+<?php echo $form->checkBoxRow($model, 'allow_comments', array('checked' => ($model->isNewRecord || $model->allow_comments)?'checked':'')); ?>
 <?php echo $form->textFieldRow($model, 'title_meta', array('class' => 'input-xxlarge')); ?>
 <?php echo $form->textFieldRow($model, 'keywords_meta', array('class' => 'input-xxlarge')); ?>
 <?php echo $form->textFieldRow($model, 'description_meta', array('class' => 'input-xxlarge')); ?>

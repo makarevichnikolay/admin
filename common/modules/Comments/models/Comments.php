@@ -62,6 +62,16 @@ class Comments extends CActiveRecord
 		);
 	}
 
+    protected  function beforeDelete(){
+        Yii::app()->getModule('Pages');
+        $pageInfo = PageInfo::model()->findByAttributes(array('page_id'=>$this->page_id));
+        if($pageInfo){
+            $pageInfo->count_comments =  $pageInfo->count_comments - 1;
+            $pageInfo->update(array('count_comments'));
+        }
+        return parent::beforeDelete();
+    }
+
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */

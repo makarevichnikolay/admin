@@ -15,4 +15,19 @@ class AdminCommentsController extends AdminController
 
         $this->render('index',array('model'=>$model));
 	}
+
+    public function actionDelete($id)
+    {
+        $this->loadModel($id)->delete();
+        if(!isset($_GET['ajax']))
+            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+    }
+
+    public function loadModel($id)
+    {
+        $model=Comments::model()->findByPk($id);
+        if($model===null)
+            throw new CHttpException(404,'The requested page does not exist.');
+        return $model;
+    }
 }

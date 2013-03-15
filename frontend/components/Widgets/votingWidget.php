@@ -17,9 +17,6 @@ class votingWidget extends CWidget
     public function run()
     {
         $cookie = isset(Yii::app()->request->cookies['voting']) ? Yii::app()->request->cookies['voting'] : false;
-        print_r($cookie);
-        echo 'sdf';
-        Yii::app()->request->cookies['voting'] = new CHttpCookie('voting', 1);
         Yii::app()->getModule('Voting');
         $criteria = new CDbCriteria();
         $criteria->compare('t.visible', 1);
@@ -42,11 +39,32 @@ class votingWidget extends CWidget
                         if (!empty($question->image)) {
                             $html .= Chtml::image(VotingQuestions::getImageSrc('image', 'thumb', $question->id, $question->image));
                         }
-                        $html .= CHtml::openTag('div', array('class' => 'answer-text')) . CHtml::radioButton('questions') . $question->title . CHtml::closeTag('div');
+                        $html .= CHtml::openTag('div', array('class' => 'answer-text')) . CHtml::radioButton('questions',false,array('value'=>$question->id)) . $question->title . CHtml::closeTag('div');
                         $html .= CHtml::closeTag('div');
                     }
+                    $html .= CHtml::link('Голосувати','#',array('class'=>'main-btn','id'=>'send-voting'));
                     $html .= CHtml::closeTag('div');
                 }
+                $html .='<script type="text/javascript">
+                     $(document).ready(function() {
+                       $("#send-voting").on("click",function(){
+                           sendVoting();
+                           return false;
+                       })
+                     });
+                    function sendVoting(){
+                     var data = $("input[name=questions]:radio:checked").val();
+                     data = {id:data};
+                     $.ajax({
+                        type: "POST",
+                        url: "'.Yii::app()->createUrl('/Pages/FrontendNews/voting').'",
+                        data:data
+                        }).done(function( data ) {
+                           $("#voting-container").html(data);
+                        });
+                    }
+
+                         </script>';
                 $html .= CHtml::closeTag('div');
 
 
@@ -61,7 +79,7 @@ class votingWidget extends CWidget
                     $html .= CHtml::openTag('div', array('class' => 'answers'));
                     $i =0;
                     foreach ($voting->questions as $question) {
-                        if($i>count($this->colors_class))
+                        if($i>count($this->colors_class)-1)
                             $i = 0;
                         $html .= CHtml::openTag('div', array('class' => 'answer clearfix'));
                         if (!empty($question->image)) {
@@ -70,7 +88,7 @@ class votingWidget extends CWidget
                         $html .= CHtml::openTag('div', array('class' => 'answer-text'))  . $question->title . CHtml::closeTag('div');
 
                         if(isset($question->answers))
-                             $count = (round($question->answers->count/$voting->count_vote,1)*100);
+                             $count = (round($question->answers->count/$voting->count_vote,3)*100);
                         else
                              $count=0;
                         $html .= CHtml::openTag('div',array('class'=>'percent')). $count.'%'.CHtml::closeTag('div');
@@ -79,6 +97,7 @@ class votingWidget extends CWidget
                             'percent'=>  $count ,
                             'striped'=>false,
                             'animated'=>false,
+                            'htmlOptions'=>array('class'=>'myclass')
                         ),true). CHtml::closeTag('div');;
                         $html .= CHtml::closeTag('div');
                     }

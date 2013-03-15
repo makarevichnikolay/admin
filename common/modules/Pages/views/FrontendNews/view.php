@@ -53,14 +53,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
                 if(in_array(7,$cur_category_ids)){
                     echo $model->video;
                 }else{
-                    echo CHtml::link(
-                        CHtml::image(Pages::getImageSrc('main_image','new-view',$model->id,$model->main_image),$model->title,array('class'=>'main-image')),
-                        Pages::getImageSrc('main_image','large',$model->id,$model->main_image),
-                        array(
-                            'class'=>'fancybox',
-                            'title'=>$model->title,
-                        )
-                    );
+                     echo   CHtml::image(Pages::getImageSrc('main_image','new-view',$model->id,$model->main_image),$model->title,array('class'=>'main-image'));
                 }
 
                 ?>
@@ -91,6 +84,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
     </div>
 </div>
 </div>
+    <?php if($model->allow_comments):?>
 <div class="row-fluid">
     <div class="span12">
         <h4>Коментарі:</h4>
@@ -101,7 +95,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
 
     </div>
 </div>
-    <?php if(!Yii::app()->user->isGuest && !Yii::app()->user->banned && $model->allow_comments): ?>
+    <?php if(!Yii::app()->user->isGuest && !Yii::app()->user->banned): ?>
 <div class="row-fluid send-comment">
     <div class="span12">
         <div class="row-fluid header">
@@ -116,12 +110,12 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
         </div>
         <div class="row-fluid">
             <div class="span12">
-                <a id="send-comment" href="#" class="span2 main-btn">Відповісти</a>
+                <a id="send-comment" href="#" class="span2 main-btn">Відправити</a>
             </div>
         </div>
     </div>
 </div>
-    <?php endif;?>
+    <?php endif;endif;?>
     <script type="text/javascript">
         var page_id = <?php echo $model->id ?>;
         var userLogin = <?php echo (Yii::app()->user->isGuest)?0:1 ?>;
@@ -141,7 +135,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
                     $('.send-comment').scrollToMe();
                 }else{
                     $('.user').scrollToMe();
-                    $('.login-form').show();
+                    $('#login-modal').modal();
                 }
                 return false;
             });
@@ -191,7 +185,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
                         $('.send-comment').scrollToMe();
                     }else{
                         $('.user').scrollToMe();
-                        $('.login-form').show();
+                        $('#login-modal').modal();
                     }
                 };
             },1000);

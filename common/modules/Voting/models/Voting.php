@@ -78,6 +78,17 @@ class Voting extends CActiveRecord
 		);
 	}
 
+    protected   function  beforeSave(){
+        if($this->visible == 1){
+            $voting = Voting::model()->findAllByAttributes(array('visible'=>1));
+            foreach($voting as $vote){
+                $vote->visible = 0;
+                $vote->update(array('visible'));
+            }
+        }
+        return  parent::beforeSave();
+    }
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

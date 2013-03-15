@@ -51,7 +51,7 @@ if(!$emailSend){
     <?php
     $this->widget('bootstrap.widgets.TbButton', array(
         'buttonType' => 'submitLink',
-        'label' => 'Отправить',
+        'label' => 'Відправити',
         'htmlOptions' => array('submit' => '','class'=>'main-btn')
     ));
     ?>

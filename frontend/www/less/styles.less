@@ -141,7 +141,7 @@ a {
 .header {
     margin: 0;
     .navbar-inner {
-        height: 165px;
+        height: 100%;
         border: 0;
         border-radius: 0;
         box-shadow: none;
@@ -290,15 +290,20 @@ a {
                             display: inline-block;
                             margin-right: 5px;
                         }
+                         .modal{
+                             width: 220px;
+                             height: 105px;
+                             margin-left:-110px;
+                             top:40%;
+                             .close{
+                                 margin-right: -12px;
+                             }
+                         }
                         .login-form{
-                            display: none;
-                            top:35px;
                             width: 220px;
                             height: 105px;
                             padding: 20px 10px;
                             background-color: #e2e7ea;
-                            position: absolute;
-                            z-index: 1000;
                             .border-radius(4px);
                             .box-shadow(0 0 6px 1px rgba(0,0,0,0.5));
                             .error{
@@ -311,18 +316,21 @@ a {
                             .error{
                                 color: red;
                             }
-                            .remind{
-                                font-size:12px;
-                                input{margin: 0 5px 0 0}
-                                span{vertical-align: middle;color:#94a8a7}
-                                a{float:right;text-decoration: underline}
-                            }
                             .password{
                                 width: 100%;
                             }
                             .enter{
                                 width: 45px;
                             }
+                            .reg{
+                                text-align: left;
+                                font-size: 12px;
+                            }
+                            .remind{
+                                text-align: right;
+                                font-size: 12px;
+                            }
+
                         }
                     }
                     .social{
@@ -336,7 +344,7 @@ a {
         }
     }
     .menu {
-        z-index: 2000;
+        z-index: 200;
         height: auto;
         position: relative;
         #gradient > .vertical(lighten(@color-main,6%),darken(@color-main,10%));
@@ -610,7 +618,6 @@ a {
                     display: none;
                 }
                 .menu-inner {
-                    //top:34px;
                     li {
                         background-color: #e6e5e0;
                         border-top: 1px dashed #cac9c5;
@@ -644,9 +651,6 @@ a {
             min-width: 100%;
             position: absolute;
             margin: 0;
-            background-color: transparent;
-            .border-radius(0 0 4px 4px);
-            overflow:hidden;
             li {
                 display: block;
                 float: none;
@@ -1229,7 +1233,9 @@ a {
             .percent{width: 15%; float: left;color:#ce4c13;font-weight: bold;font-size: 12px;margin-top: 1px;}
             .result{width: 85%; float: left;}
         }
-
+        #send-voting{
+            font-size: 12px;
+        }
         img{
             width:100%;
         }

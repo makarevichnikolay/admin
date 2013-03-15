@@ -50,7 +50,7 @@ class FrontendNewsController extends FrontendController
         Yii::app()->clientScript->registerMetaTag($category['title'], 'description');
         Yii::app()->clientScript->registerMetaTag($category['title'], 'keywords');
         if(isset($_GET['ajax']))
-            $this->renderPartial('index',array('model'=>$model,'category'=>$category,'_view'=>$_view));
+            $this->renderPartial('index',array('model'=>$model,'category'=>$category,'_view'=>$_view,'typeSearch'=>$typeSearch));
         else
 		$this->render('index',array('model'=>$model,'category'=>$category,'_view'=>$_view,'typeSearch'=>$typeSearch));
 	}
@@ -122,7 +122,7 @@ class FrontendNewsController extends FrontendController
                     $image->saveAs(Yii::app()->params['tempPath'].$image);
                     $files[''.$image] = file_get_contents(Yii::app()->params['tempPath'].$image);
                 }
-                if($this->sendMail($to, $from, $subj, $text, $files)){
+                if(Helper::sendMail($to, $from, $subj, $text, $files)){
                     Yii::app()->user->setFlash('success', '<strong>Відправленно!</strong>');
                     $emailSend = true;
                 }else{
@@ -138,44 +138,40 @@ class FrontendNewsController extends FrontendController
         ));
     }
 
-    private function sendMail($to, $from, $subj, $text, $files=null){
-        $boundary = md5(uniqid(time()));
-	$headers[] ="MIME-Version: 1.0";
-	$headers[] ="Content-Type: multipart/mixed;boundary=\"$boundary\"; type=\"text/html;\"";
-	$headers[] ="From: ".$from;
-	$headers[] ="Reply-To: ".$from;
-	$headers[] ="Return-Path: ".$from;
-	$headers[] ="X-Mailer: PHP/" . phpversion();
-
-	$multipart[]= "--".$boundary;
-	$multipart[]= "Content-Type: text/html; charset=utf-8";
-	$multipart[]= "Content-Transfer-Encoding: Quot-Printed";
-	$multipart[]= ""; // раздел между заголовками и телом html-части
-	$multipart[]= $text;
-	$multipart[]= "";
-
-	if ((is_array($files))&&(!empty($files)))
-	    {
-	    foreach($files as $filename => $filecontent)
-	        {
-	        $multipart[]="--".$boundary;
-	        $multipart[]= "Content-Type: application/octet-stream; name=\"".$filename."\"";
-	        $multipart[]= "Content-Transfer-Encoding: base64";
-	        $multipart[]= "Content-Disposition: attachment; filename=\"".$filename."\"";
-	        $multipart[]= "";
-	        $multipart[]= chunk_split(base64_encode($filecontent));
-	        }
-	    }
-
-	$multipart[]= "--$boundary--";
-	$multipart[]= "";
-	$headers=implode("\r\n", $headers);
-	$multipart=implode("\r\n", $multipart);
-	if (mb_detect_encoding($subj, "UTF-8")==FALSE)
-	$subj= mb_encode_mimeheader($subj,"UTF-8", "B", "\n");
-
-	return mail($to, $subj, $multipart, $headers);
+    public function actionVoting(){
+        if(isset($_POST['id'])){
+            Yii::app()->getModule('Voting');
+            $id = $_POST['id'];
+            $cookie = isset(Yii::app()->request->cookies['voting']) ? Yii::app()->request->cookies['voting'] : false;
+            $criteria = new CDbCriteria();
+            $criteria->compare('t.visible', 1);
+            $voting = Voting::model()->find($criteria);
+            if($voting && (!$cookie || $cookie->value !=  $voting->id)){
+                $answer = VotingAnswers::model()->findByAttributes(array('voting_id'=>$voting->id,'question_id'=>$id));
+                if($answer){
+                    Yii::app()->request->cookies['voting'] = new CHttpCookie('voting', $voting->id);
+                    $voting->count_vote =  $voting->count_vote +1;
+                    $voting->update('count_vote');
+                    $answer->count =  $answer->count +1;
+                    $answer->update('count');
+                }else{
+                    $answer = new VotingAnswers();
+                    $answer->voting_id = $voting->id;
+                    $answer->question_id = $id;
+                    $answer->count = 1;
+                    if($answer->save()){
+                        Yii::app()->request->cookies['voting'] = new CHttpCookie('voting', $voting->id);
+                        $voting->count_vote =  $voting->count_vote +1;
+                        $voting->update('count_vote');
+                    }
+                }
+                $this->renderPartial('_voting');
+                Yii::app()->end();
+            }
+        }
     }
+
+
 
 
 	public function loadModel($id)

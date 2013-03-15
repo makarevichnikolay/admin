@@ -1002,3 +1002,919 @@ REQUEST_URI=/admin/www/img/onix.png
 HTTP_REFERER=http://localhost/admin/admin/News/index
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 12:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 12:09:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/feadback
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 13:56:30 [error] [exception.CException] exception 'CException' with message 'В классе votingWidget и его поведениях не найден метод или замыкание с именем "createUrl".' in Z:\home\localhost\www\framework\base\CComponent.php:265
+Stack trace:
+#0 Z:\home\localhost\www\admin\frontend\components\Widgets\votingWidget.php(60): CComponent->__call('createUrl', Array)
+#1 Z:\home\localhost\www\admin\frontend\components\Widgets\votingWidget.php(60): votingWidget->createUrl('/Pages/Frontend...')
+#2 Z:\home\localhost\www\framework\web\CBaseController.php(173): votingWidget->run()
+#3 Z:\home\localhost\www\admin\frontend\views\layouts\main.php(186): CBaseController->widget('application.com...')
+#4 Z:\home\localhost\www\framework\web\CBaseController.php(126): require('Z:\home\localho...')
+#5 Z:\home\localhost\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\framework\web\CController.php(784): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(10): CController->render('index', Array)
+#8 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#9 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 Z:\home\localhost\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 Z:\home\localhost\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('index')
+#13 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Default/index')
+#14 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#16 {main}
+REQUEST_URI=/admin/
+HTTP_REFERER=http://localhost/admin/s8
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 13:57:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 13:59:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 13:59:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 13:59:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 14:01:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 14:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 14:05:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 14:06:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 14:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "voting".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('voting')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('voting')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+HTTP_REFERER=http://localhost/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 14:21:11 [error] [php] include(Voting.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(147): spl_autoload_call()
+#1 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): FrontendNewsController->actionVoting()
+#2 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#4 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#7 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#8 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/03/13 14:21:33 [error] [php] include(Voting.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(147): spl_autoload_call()
+#1 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): FrontendNewsController->actionVoting()
+#2 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#4 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#7 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#8 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/03/13 14:22:17 [error] [php] include(Voting.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\localhost\www\framework\YiiBase.php:421)
+Stack trace:
+#0 Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php(147): spl_autoload_call()
+#1 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): FrontendNewsController->actionVoting()
+#2 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#4 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#5 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#6 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#7 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#8 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+in Z:\home\localhost\www\framework\YiiBase.php (421)
+2013/03/13 14:23:09 [error] [php] Object of class CHttpCookie could not be converted to int (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:149)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#1 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#4 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#5 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (149)
+in Z:\home\localhost\www\framework\web\actions\CInlineAction.php (49)
+2013/03/13 14:24:56 [error] [php] Object of class CHttpCookie could not be converted to int (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:150)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#1 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#4 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#5 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (150)
+in Z:\home\localhost\www\framework\web\actions\CInlineAction.php (49)
+2013/03/13 14:25:26 [error] [php] Object of class CHttpCookie could not be converted to int (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:150)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#1 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#4 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#5 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (150)
+in Z:\home\localhost\www\framework\web\actions\CInlineAction.php (49)
+2013/03/13 14:30:13 [error] [php] Object of class CHttpCookie could not be converted to int (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:149)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#1 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#4 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#5 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (149)
+in Z:\home\localhost\www\framework\web\actions\CInlineAction.php (49)
+2013/03/13 14:31:09 [error] [php] Object of class CHttpCookie could not be converted to int (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:149)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#1 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#4 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#5 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (149)
+in Z:\home\localhost\www\framework\web\actions\CInlineAction.php (49)
+2013/03/13 14:31:57 [error] [php] Object of class CHttpCookie could not be converted to int (Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php:150)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(286): FrontendNewsController->runAction()
+#1 Z:\home\localhost\www\framework\web\CController.php(265): FrontendNewsController->runActionWithFilters()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(282): FrontendNewsController->run()
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#4 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#5 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Pages/FrontendNews/voting
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Pages\controllers\FrontendNewsController.php (150)
+in Z:\home\localhost\www\framework\web\actions\CInlineAction.php (49)
+2013/03/13 17:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:01:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Menu/AdminMenu/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:12:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:12:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:12:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:13:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:13:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:13:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:13:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:13:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:14:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:14:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:14:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:15:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:15:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:32:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:33:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/AdminVotingQuestions/index?voting_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:33:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/AdminVotingQuestions/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:33:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/AdminVotingQuestions/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:33:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/AdminVotingQuestions/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:33:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/AdminVotingQuestions/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:33:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/AdminVotingQuestions/create
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:33:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Voting/AdminVotingQuestions/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:33:33 [error] [php] Undefined offset: 4 (Z:\home\localhost\www\admin\frontend\components\Widgets\votingWidget.php:96)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CBaseController.php(126): require()
+#1 Z:\home\localhost\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#2 Z:\home\localhost\www\framework\web\CController.php(784): DefaultController->renderFile()
+#3 Z:\home\localhost\www\admin\frontend\controllers\DefaultController.php(10): DefaultController->render()
+#4 Z:\home\localhost\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#5 Z:\home\localhost\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 Z:\home\localhost\www\framework\web\CController.php(286): DefaultController->runAction()
+#7 Z:\home\localhost\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#8 Z:\home\localhost\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#9 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#10 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#11 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\frontend\components\Widgets\votingWidget.php (96)
+in Z:\home\localhost\www\framework\web\CBaseController.php (173)
+2013/03/13 17:44:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/feadback
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 17:44:30 [warning] [application] Не удалось присвоить небезопасный атрибут "file" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:30 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:30 [warning] [application] Не удалось присвоить небезопасный атрибут "file" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:30 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:32 [warning] [application] Не удалось присвоить небезопасный атрибут "file" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:32 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:39 [warning] [application] Не удалось присвоить небезопасный атрибут "file" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:39 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:40 [warning] [application] Не удалось присвоить небезопасный атрибут "file" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:40 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Feadback".
+in Z:\home\localhost\www\framework\base\CModel.php (502)
+in Z:\home\localhost\www\framework\base\CModel.php (473)
+in Z:\home\localhost\www\framework\base\CComponent.php (152)
+2013/03/13 17:44:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/feadback
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:03:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "remind".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('remind')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('remind')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:03:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:03:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "Remind".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('Remind')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('Remind')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/Remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:03:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/Remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:04:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "Remind".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('Remind')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('Remind')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/Remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:04:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/Remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:04:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "remind".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('remind')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('remind')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:04:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Pages/FrontendN...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Pages/FrontendNews/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Pages/FrontendNews/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:04:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:05:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:05:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:05:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:07:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:14:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:14:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:14:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "frontend".' in Z:\home\localhost\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(270): CController->missingAction('frontend')
+#1 Z:\home\localhost\www\framework\web\CWebApplication.php(282): CController->run('frontend')
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('Users/Users/fro...')
+#3 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/Users/Users/frontend/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/Users/Users/remind
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:36:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:36:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?page_id=1&user_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:37:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?page_id=1&user_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?page_id=1&user_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/13 18:44:26 [error] [php] Undefined variable: items (Z:\home\localhost\www\admin\common\modules\Search\controllers\SearchController.php:61)
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CController.php(286): SearchController->runAction()
+#1 Z:\home\localhost\www\framework\web\CController.php(265): SearchController->runActionWithFilters()
+#2 Z:\home\localhost\www\framework\web\CWebApplication.php(282): SearchController->run()
+#3 Z:\home\localhost\www\framework\web\CWebApplication.php(141): FWebApplication->runController()
+#4 Z:\home\localhost\www\framework\base\CApplication.php(169): FWebApplication->processRequest()
+#5 Z:\home\localhost\www\admin\frontend\www\index.php(24): FWebApplication->run()
+REQUEST_URI=/admin/Search
+in Z:\home\localhost\www\framework\base\CApplication.php (793)
+in Z:\home\localhost\www\admin\common\modules\Search\controllers\SearchController.php (61)
+in Z:\home\localhost\www\framework\web\actions\CInlineAction.php (49)
+2013/03/14 12:07:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?page_id=1&user_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/14 12:07:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Users/update?id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/14 12:08:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?page_id=1&user_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/14 12:08:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?page_id=1&user_id=1
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

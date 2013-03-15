@@ -26,16 +26,19 @@
 
 <body>
 
-
+<?php
+Yii::app()->getModule('Banners');
+$banner = Banners::getBanner(1);
+if(!empty($banner)):
+?>
 <header class="navbar header">
     <div class="navbar-inner">
             <?php
-            Yii::app()->getModule('Banners');
-            echo Banners::getBanner(1);
+            echo $banner;
             ?>
     </div>
 </header>
-
+<?php endif ?>
 <section class="container-fluid main-container">
 
     <header class="row-fluid head">
@@ -181,9 +184,9 @@
                             echo Banners::getBanner(6);
                             ?>
                         </div>
-                        <div class="row-fluid">
+                        <div class="row-fluid" id="voting-container">
                             <?php
-                               //$this->widget('application.components.Widgets.votingWidget');
+                               $this->widget('application.components.Widgets.votingWidget');
                             ?>
                         </div>
                 </aside>

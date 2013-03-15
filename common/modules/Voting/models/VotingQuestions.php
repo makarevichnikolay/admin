@@ -43,6 +43,12 @@ class VotingQuestions extends CActiveRecord
 			array('visible', 'numerical', 'integerOnly'=>true),
 			array('voting_id', 'length', 'max'=>10),
 			array('title, image', 'length', 'max'=>255),
+            array('date','default',
+                'value'=>new CDbExpression('NOW()'),
+                'setOnEmpty'=>false,'on'=>'update'),
+            array('date','default',
+                'value'=>new CDbExpression('NOW()'),
+                'setOnEmpty'=>false,'on'=>'insert'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, voting_id, title, image, visible, date', 'safe', 'on'=>'search'),

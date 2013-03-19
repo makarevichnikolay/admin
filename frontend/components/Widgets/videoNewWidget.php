@@ -15,7 +15,7 @@ class videoNewWidget extends CWidget{
         $criteria= new CDbCriteria();
         $criteria->limit = 1;
         $criteria->compare('video_new',1);
-        $criteria->addCondition('video != ""');
+        //$criteria->addCondition('video != ""');
         $criteria->order = 'date DESC';
         $page = Pages::model()->find($criteria);
         if($page){

@@ -9,6 +9,7 @@ $this->pageTitle = 'Пошук';
 $this->widget('bootstrap.widgets.TbListView', array(
     'dataProvider'=>$itemsProvider,
     'itemView'=>'_post',
+    'template'=>'{items}',
 ));
 ?>
 </div>

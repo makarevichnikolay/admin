@@ -41,6 +41,7 @@ class FrontendNewsController extends FrontendController
             $typeSearch = "underCategorySearch";
         }elseif($category_data->parent_id == 10 || $category_data->parent_id==12 || $category_data->parent_id==13){
             $_view = 'common.modules.Pages.views.frontendNews._dose';
+            $typeSearch = "frontendDoseSearch";
         }else{
             $_view = 'common.modules.Pages.views.frontendNews._new';
         }

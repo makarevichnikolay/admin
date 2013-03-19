@@ -1918,3 +1918,33 @@ REQUEST_URI=/admin/www/img/onix.png
 HTTP_REFERER=http://localhost/admin/admin/Comments/AdminComments/index?page_id=1&user_id=1
 ---
 in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/18 17:49:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/18 17:49:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)
+2013/03/18 17:49:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "www/img/onix.png".' in Z:\home\localhost\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\localhost\www\framework\web\CWebApplication.php(141): CWebApplication->runController('www/img/onix.pn...')
+#1 Z:\home\localhost\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 Z:\home\localhost\www\admin\frontend\www\index.php(24): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/www/img/onix.png
+HTTP_REFERER=http://localhost/admin/admin/News/update?id=8
+---
+in Z:\home\localhost\www\framework\base\CApplication.php (710)

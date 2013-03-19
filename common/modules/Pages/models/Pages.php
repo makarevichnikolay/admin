@@ -368,4 +368,32 @@ class Pages extends CActiveRecord
 
         ));
     }
+
+    public function frontendDoseSearch()
+    {
+        // Warning: Please modify the following code to remove attributes that
+        // should not be searched.
+
+        $criteria=new CDbCriteria;
+        $criteria->with = array('pageInfo','category_one');
+        $criteria->together = true;
+        if($this->category_id && !empty($this->category_id)){
+            $criteria->with[] = 'category_search';
+            $criteria->compare('category_search.category_id',$this->category_id);
+            $criteria->group = 'category_search.page_id';
+        }
+        $criteria->compare('visible',1);
+
+        return new CActiveDataProvider($this, array(
+            'criteria'=>$criteria,
+            'pagination'=>array(
+                'pageSize'=>9
+            ),
+            'sort'=>array(
+                'defaultOrder'=>$this->orderby,
+            ),
+
+        ));
+    }
+
 }

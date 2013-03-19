@@ -25,7 +25,7 @@ class renderMenu {
             $menu .= CHtml::closeTag('li').$aux;
         }
         foreach($Categories as $value){
-            if($value->parent_id == 0){
+            if($value->parent_id == 0 && $value->id!=19 && $value->id!=13){
                 $menu .= CHtml::openTag('li',array('class'=>'main-wrap','data-id'=>$value->id));
                 $menu .= CHtml::link($value->title,Yii::app()->createUrl('Pages/FrontendPages/index',array('id'=>$value->id)),array('class'=>'main-link'));
                 if(!empty($value->children)){

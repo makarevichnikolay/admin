@@ -1,5 +1,6 @@
 <?php
   $item_data = SearchController::getItemData($data['item_id'],$data['words']);
+if($item_data):
 $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$item_data['url']));
 ?>
 <article class="row-fluid new">
@@ -13,3 +14,4 @@ $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$item_data['
         </div>
     </div>
 </article>
+<?php endif; ?>

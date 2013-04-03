@@ -10,6 +10,7 @@
 
 <div class="form-login">
 <?php
+    if(!$emailSend){
     $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'id' => 'users-form',
         'type' => 'horizontal',
@@ -31,8 +32,8 @@
     <fieldset>
         <?php echo $form->textFieldRow($model, 'login'); ?>
         <?php echo $form->textFieldRow($model, 'nickname'); ?>
-        <?php echo $form->passwordFieldRow($model, 'password'); ?>
-        <?php echo $form->passwordFieldRow($model, 'password_repeat'); ?>
+        <?php //echo $form->passwordFieldRow($model, 'password'); ?>
+        <?php //echo $form->passwordFieldRow($model, 'password_repeat'); ?>
     </fieldset>
 
     <div class="form-actions">
@@ -48,5 +49,16 @@
         ?>
     </div>
 
-    <?php $this->endWidget(); ?>
+    <?php $this->endWidget();  }else{?>
+    <fieldset>
+    <?php
+        $this->widget('bootstrap.widgets.TbAlert', array(
+            'block'=>true,
+            'fade'=>true,
+            'closeText'=>'60',
+            'alerts'=>array(
+                'success'=>array('block'=>true, 'fade'=>true, 'closeText'=>'60'),
+            )));?>
+        <?php } ?>
+</fieldset>
 </div>

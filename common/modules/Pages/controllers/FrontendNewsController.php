@@ -42,6 +42,12 @@ class FrontendNewsController extends FrontendController
         }elseif($category_data->parent_id == 10 || $category_data->parent_id==12 || $category_data->parent_id==13){
             $_view = 'common.modules.Pages.views.frontendNews._dose';
             $typeSearch = "frontendDoseSearch";
+        }elseif($category_id == 16){
+            $_view = 'common.modules.Pages.views.frontendNews._main_work';
+            $typeSearch = "underCategorySearch";
+        }elseif($category_data->parent_id == 16){
+            $_view = 'common.modules.Pages.views.frontendNews._inner_work';
+            $typeSearch = "frontendDoseSearch";
         }else{
             $_view = 'common.modules.Pages.views.frontendNews._new';
         }
@@ -55,6 +61,10 @@ class FrontendNewsController extends FrontendController
         else
 		$this->render('index',array('model'=>$model,'category'=>$category,'_view'=>$_view,'typeSearch'=>$typeSearch));
 	}
+
+
+
+
 
     public function actionView($id){
         $model= Pages::model()->with(array('category'))->findByPk($id);
@@ -77,7 +87,7 @@ class FrontendNewsController extends FrontendController
         Yii::app()->clientScript->registerMetaTag($model->keywords_meta, 'keywords');
         $pageInfo = PageInfo::model()->findByAttributes(array('page_id'=>$id));
         if($pageInfo){
-           $pageInfo->count_visited = $pageInfo->count_visited + 1;
+           $pageInfo->count_visited = (int)$pageInfo->count_visited + 1;
             $pageInfo->update(array('count_visited'));
         }else{
             $pageInfo = new PageInfo();
@@ -87,6 +97,10 @@ class FrontendNewsController extends FrontendController
         }
         $this->render('view',array('model'=>$model,'category'=>$category,'pageInfo'=>$pageInfo,'cur_category_ids'=>$cur_category_ids));
     }
+
+
+
+
 
     public function actionFeadback(){
 
@@ -115,20 +129,27 @@ class FrontendNewsController extends FrontendController
                 $file=CUploadedFile::getInstance($model,'file');
                 $image = CUploadedFile::getInstance($model,'image');
                 $files = array();
-                if($file){
-                    $file->saveAs(Yii::app()->params['tempPath'].$file);
-                    $files[''.$file] = file_get_contents(Yii::app()->params['tempPath'].$file);
-                }
+                $mailer = Yii::createComponent('common.ext.mailer.EMailer');
                 if($image){
                     $image->saveAs(Yii::app()->params['tempPath'].$image);
-                    $files[''.$image] = file_get_contents(Yii::app()->params['tempPath'].$image);
+                    $mailer->AddAttachment(Yii::app()->params['tempPath'].$image, $image);
+                    //$files[''.$image] = file_get_contents(Yii::app()->params['tempPath'].$image);
                 }
-                if(Helper::sendMail($to, $from, $subj, $text, $files)){
-                    Yii::app()->user->setFlash('success', '<strong>Відправленно!</strong>');
+                if($file){
+                    $file->saveAs(Yii::app()->params['tempPath'].$file);
+                    $mailer->AddAttachment(Yii::app()->params['tempPath'].$file, $file);
+                    //$files[''.$file] = file_get_contents(Yii::app()->params['tempPath'].$file);
+                }
+
+                $mailer->From =  $from;
+                $mailer->AddAddress($to);
+                $mailer->CharSet = 'UTF-8';
+                $mailer->Subject =  $subj;
+                $mailer->Body = $text;
+                $mailer->Send();
+                    Yii::app()->user->setFlash('success', '<strong>Вашу інформацію буде розміщено після перегляду редактором!</strong>');
                     $emailSend = true;
-                }else{
-                    Yii::app()->user->setFlash('error', '<strong>Помилка при відправці!</strong>');
-                }
+
             }
         }
 
@@ -143,33 +164,43 @@ class FrontendNewsController extends FrontendController
         if(isset($_POST['id'])){
             Yii::app()->getModule('Voting');
             $id = $_POST['id'];
-            $cookie = isset(Yii::app()->request->cookies['voting']) ? Yii::app()->request->cookies['voting'] : false;
             $criteria = new CDbCriteria();
             $criteria->compare('t.visible', 1);
             $voting = Voting::model()->find($criteria);
-            if($voting && (!$cookie || $cookie->value !=  $voting->id)){
+            $user_voted= VotingUsers::model()->findByAttributes(array('voting_id'=>$voting->id,'user_id'=>Yii::app()->user->id));
+            if($voting && !$user_voted ){
                 $answer = VotingAnswers::model()->findByAttributes(array('voting_id'=>$voting->id,'question_id'=>$id));
                 if($answer){
-                    Yii::app()->request->cookies['voting'] = new CHttpCookie('voting', $voting->id);
                     $voting->count_vote =  $voting->count_vote +1;
                     $voting->update('count_vote');
                     $answer->count =  $answer->count +1;
                     $answer->update('count');
+                    $votedUsers = new VotingUsers();
+                    $votedUsers->voting_id = $voting->id;
+                    $votedUsers->user_id = Yii::app()->user->id;
+                    $votedUsers->voted = 1;
+                    $votedUsers->save();
                 }else{
                     $answer = new VotingAnswers();
                     $answer->voting_id = $voting->id;
                     $answer->question_id = $id;
                     $answer->count = 1;
                     if($answer->save()){
-                        Yii::app()->request->cookies['voting'] = new CHttpCookie('voting', $voting->id);
+                        $votedUsers = new VotingUsers();
+                        $votedUsers->voting_id = $voting->id;
+                        $votedUsers->user_id = Yii::app()->user->id;
+                        $votedUsers->voted = 1;
+                        $votedUsers->save();
                         $voting->count_vote =  $voting->count_vote +1;
                         $voting->update('count_vote');
                     }
                 }
-                $this->renderPartial('_voting');
-                Yii::app()->end();
+
             }
+
         }
+        $this->renderPartial('_voting');
+        Yii::app()->end();
     }
 
 

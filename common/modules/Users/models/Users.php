@@ -53,8 +53,8 @@ class Users extends CActiveRecord
 			array('login, password, nickname, first_name, last_name, phone, ip', 'length', 'max'=>255),
 			array('role_id', 'length', 'max'=>10),
 			array('id, login, password, nickname, first_name, last_name, phone, ip, role_id, last_visited, banned, date_from, date_to', 'safe', 'on'=>'search'),
-            array('password_repeat', 'compare', 'compareAttribute'=>'password', 'on'=>'register','message'=>'Неправельний пароль!'),
-            array('password_repeat,password,	nickname', 'required', 'on'=>'register','message'=>'Обов\'язкове для заповнення!'),
+           // array('password_repeat', 'compare', 'compareAttribute'=>'password', 'on'=>'register','message'=>'Неправильний пароль!'),
+            array('nickname', 'required', 'on'=>'register','message'=>'Обов\'язкове для заповнення!'),
             array('password', 'required', 'on'=>'login'),
             array('nickname, banned,role_id,first_name, last_name, phone, ip, last_visited, password_repeat', 'safe','on'=>'login'),
 

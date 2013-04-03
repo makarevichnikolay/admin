@@ -31,6 +31,8 @@ class VotingQuestions extends CActiveRecord
 		return 'voting_questions';
 	}
 
+
+    public  $count;
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -40,7 +42,7 @@ class VotingQuestions extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('voting_id', 'required'),
-			array('visible', 'numerical', 'integerOnly'=>true),
+			array('visible,count', 'numerical', 'integerOnly'=>true),
 			array('voting_id', 'length', 'max'=>10),
 			array('title, image', 'length', 'max'=>255),
             array('date','default',
@@ -118,6 +120,25 @@ class VotingQuestions extends CActiveRecord
     public function afterSave(){
         if(!empty($this->image)){
             $this->tempToData('image');
+        }
+        $answer = VotingAnswers::model()->findByAttributes(array('question_id'=>$this->id));
+        if($answer){
+            $answer->count = $this->count;
+            $answer->update(array('count'));
+        }else{
+            $mod = new VotingAnswers();
+            $mod->voting_id = $this->voting_id;
+            $mod->question_id = $this->id;
+            $mod->count = $this->count;
+            $mod->save();
+        }
+        $answers= VotingAnswers::model()->findAllByAttributes(array('voting_id'=>$this->voting_id));
+        if($answers){
+            $totalCount = 0;
+            foreach($answers as $val){
+                $totalCount += $val->count;
+            }
+            Voting::model()->updateByPk($this->voting_id,array('count_vote'=>$totalCount));
         }
     }
 

@@ -35,7 +35,7 @@ class newCarouselWidget extends CWidget
                 }
                 $data .= CHtml::closeTag('ul');
                 $data .= CHtml::closeTag('div');
-                $data .= CHtml::link('','#',array('class'=>"jcarousel-prev"));
+                $data .= CHtml::link('','#9',array('class'=>"jcarousel-prev"));
                 $data .= CHtml::link('','#',array('class'=>"jcarousel-next"));
                 $data .= CHtml::closeTag('div');
                 echo $data;

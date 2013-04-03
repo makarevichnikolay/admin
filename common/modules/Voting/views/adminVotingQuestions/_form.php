@@ -100,6 +100,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
             <?php echo $form->error($model, 'image'); ?>
         </div>
     </div>
+ <?php echo $form->textFieldRow($model, 'count', array('class' => 'input-xxlarge')); ?>
 <?php echo $form->checkBoxRow($model, 'visible', array('checked' => ($model->isNewRecord || $model->visible)?'checked':'')); ?>
 </fieldset>
 

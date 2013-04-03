@@ -3,7 +3,7 @@
 if (Yii::app()->user->isGuest) {
     echo  CHtml::link('Вхід', '#', array('data-toggle' => 'modal', 'data-target' => '#login-modal'));
     ?>
-<a>|</a>
+&nbsp<a>|</a>
 <?php
     echo  CHtml::link('Реєстрація', Yii::app()->createUrl('/Users/Users/register'), array());
 } else {
@@ -24,11 +24,11 @@ if (Yii::app()->user->isGuest) {
                         </div>
                     </div>
                     <div class="row-fluid">
-                        <input class="span12" name="Users[login]" type="text">
+                        <input class="span12" name="Users[login]" type="text" placeholder="Електронна адреса">
                     </div>
                     <div class="row-fluid">
                         <div class="span7">
-                            <input class="password" name="Users[password]" type="password">
+                            <input class="password" name="Users[password]" type="password" placeholder="Пароль">
                         </div>
                         <div class="span5">
                             <a id="login" href="#" class="pull-right main-btn enter">Вхід</a>

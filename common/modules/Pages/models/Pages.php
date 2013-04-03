@@ -101,7 +101,7 @@ class Pages extends CActiveRecord
 
     public static  function  getFreshNews($limit = 10){
         $criteria= new CDbCriteria();
-        $criteria->limit = $limit;
+        //$criteria->limit = $limit;
         $criteria->compare('hidden_in_main_list',0);
         $criteria->compare('visible',1);
         $criteria->order = 'date DESC';
@@ -109,7 +109,9 @@ class Pages extends CActiveRecord
         $criteria->together = true;
         return  new CActiveDataProvider('Pages', array(
                 'criteria'=>$criteria,
-                'pagination'=>false
+                'pagination'=>array(
+                    'pageSize'=>$limit
+                ),
             )
         );
     }
@@ -177,7 +179,17 @@ class Pages extends CActiveRecord
                 $Path = $originalPath .$key.'/';
                 Yii::app()->file->createDir(0777,$Path);
                 $image = new Image($originalPath.$this->$name);
-                $image->resize($value['width'], $value['height'] , $value['type']);
+                $type = 3;
+                $width = $image->width;
+                $height = $image->height;
+                if ($image->width > $image->height ){
+                    $type = 3;
+                    $height = $value['height'];
+                }else{
+                    $type = 4;
+                    $width = $value['width'];
+                }
+                $image->resize($width, $height , $type);
                 if($value['crop'])
                    $image->crop($value['width'],$value['height']);
                 $image->save($Path.$this->$name);
@@ -226,8 +238,9 @@ class Pages extends CActiveRecord
             'page_id = :page_id',
             array(':page_id' => $this->id)
         );
-
-        $originalPath = Yii::app()->params['dataPath'].'pages/'.$this->id;
+        PageInfo::model()->deleteAll('page_id = :page_id', array(':page_id' => $this->id));
+        PagesImages::model()->deleteAll('page_id = :page_id', array(':page_id' => $this->id));
+        $originalPath = Yii::app()->params['dataPath'].'pages/'.$this->id.'/';
 
         if(is_dir($originalPath)){
             Yii::app()->file->set($originalPath)->delete(true);
@@ -312,7 +325,7 @@ class Pages extends CActiveRecord
         ));
 	}
 
-    public static  function getByCategory($id){
+    public static  function getByCategory($id,$limit = 3){
         $criteria=new CDbCriteria;
         $criteria->with = array();
         $criteria->together = true;
@@ -320,7 +333,7 @@ class Pages extends CActiveRecord
         $criteria->compare('category_search.category_id',$id);
         $criteria->group = 'category_search.page_id';
         $criteria->compare('visible',1);
-        $criteria->limit = 3;
+        $criteria->limit = $limit;
 
         return new CActiveDataProvider('Pages', array(
             'criteria'=>$criteria,
@@ -387,7 +400,7 @@ class Pages extends CActiveRecord
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,
             'pagination'=>array(
-                'pageSize'=>9
+                'pageSize'=>27
             ),
             'sort'=>array(
                 'defaultOrder'=>$this->orderby,

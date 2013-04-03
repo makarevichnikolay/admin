@@ -14,6 +14,7 @@ $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.fancybox.js', CClientScript::POS_HEAD);
 $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/jquery.json2html-3.1-min.js', CClientScript::POS_HEAD);
 $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image);
+$mainImageSrc = Pages::getImageSrc('main_image','new-view',$model->id,$model->main_image);
 ?>
 <div class="row-fluid new-view">
 <div class="span12">
@@ -25,7 +26,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
                     <?php echo CHtml::image($src,$model->author_name,array('class'=>'author-image'))?>
                 </div>
                 <div class="span6 author-name">
-                    <?php echo date('d.m.Y',strtotime($model->date)) ?><br />
+                    <?php echo date('d.m.Y | H:i',strtotime($model->date)) ?><br />
                     <?php echo $model->author_name ?>
                 </div>
             </div>
@@ -36,7 +37,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
         <?php }else{ ?>
         <div class="row-fluid">
             <div class="span3 author_name">
-                <?php echo date('d.m.Y',strtotime($model->date)) ?>
+                <?php echo date('d.m.Y | H:i',strtotime($model->date)) ?>
             </div>
         </div>
             <div class="row-fluid">
@@ -53,7 +54,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
                 if(in_array(7,$cur_category_ids)){
                     echo $model->video;
                 }else{
-                     echo   CHtml::image(Pages::getImageSrc('main_image','new-view',$model->id,$model->main_image),$model->title,array('class'=>'main-image'));
+                     echo   CHtml::image($mainImageSrc,$model->title,array('class'=>'main-image'));
                 }
 
                 ?>
@@ -67,13 +68,17 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
             <div class="row-fluid">
                 <div class="info-bar">
                     <?php $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$model->url));?>
+                    <i class="icon-eye-open"></i><span><?php echo $pageInfo->count_visited ?></span>&nbsp
+                    <i class="icon-pen"></i>
                     <a href="<?php echo $url ?>"><i class="css-icon css-icon-comment"><?php echo $pageInfo->count_comments ?></i></a>
-                    <i class="icon-eye-open"></i>
-                    <span><?php echo $pageInfo->count_visited ?></span>&nbsp
-                    <i class="icon-pen"></i><a id="to-comment" href="<?php echo $url ?>" class="comment">Коментувати</a><span id="not-login"></span>
+                    <a id="to-comment" href="<?php echo $url ?>" class="comment">Коментувати</a><span id="not-login"></span>
+                </div>
+                <div class="print">
+                    <i class="icon-print" onclick="window.print();return false;"></i>
+                    <a href="#" onclick="window.print();return false;">Версія для друку</a>
                 </div>
                 <div class="social">
-                    <div class="share42init" data-path="img/" data-title="<?php echo $model->title ?>" data-image="<?php echo 'http://'.$src ?>"></div>
+                    <div class="share42init" data-path="img/" data-title="<?php echo $model->title ?>" data-image="<?php echo Yii::app()->createAbsoluteUrl('/').$mainImageSrc ?>"></div>
                     <?php
                     $cs = Yii::app()->getClientScript();
                     $cs->registerScriptFile(Yii::app()->request->baseUrl . '/js/share42.js', CClientScript::POS_END);
@@ -85,9 +90,9 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
 </div>
 </div>
     <?php if($model->allow_comments):?>
-<div class="row-fluid">
-    <div class="span12">
-        <h4>Коментарі:</h4>
+<div class="row-fluid comment-title">
+    <div class="span12" id="com-title">
+
     </div>
 </div>
 <div class="row-fluid" >
@@ -105,7 +110,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
         </div>
         <div class="row-fluid">
             <div class="span12">
-                <textarea maxlength="240" class="span12" id="text-comment" rows="10" cols=""></textarea>
+                <textarea maxlength="3000" class="span12" id="text-comment" rows="10" cols=""></textarea>
             </div>
         </div>
         <div class="row-fluid">
@@ -145,33 +150,33 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
 
         var transforms = {
             comment: [
-                {tag:'article',class:'row-fluid comment',children:[
-                    {tag:'div',class:'span12',children:[
-                        {tag:'div',class:'row-fluid header',children:[
-                            {tag:'div',class:'span12',children:[
-                                {tag:'i',class:'icon-user'},
+                {tag:'article','class':'row-fluid comment',children:[
+                    {tag:'div','class':'span12',children:[
+                        {tag:'div','class':'row-fluid header',children:[
+                            {tag:'div','class':'span12',children:[
+                                {tag:'i','class':'icon-user'},
                                 {tag:'span',html:'${nickname}'},
                                 {tag:'time',html:'${date}'}
                             ]}
                         ]},
-                        {tag:'div',class:'row-fluid',children:[
-                            {tag:'div',class:'span12 content',html:'${content}'}
+                        {tag:'div','class':'row-fluid',children:[
+                            {tag:'div','class':'span12 content',html:'${content}'}
                         ]}
                     ]}
                 ]}
             ],
             comment_new: [
-                {tag:'article',class:'row-fluid comment',children:[
-                    {tag:'div',class:'span12',children:[
-                        {tag:'div',class:'row-fluid header',children:[
-                            {tag:'div',class:'span12',children:[
-                                {tag:'i',class:'icon-user'},
+                {tag:'article','class':'row-fluid comment',children:[
+                    {tag:'div','class':'span12',children:[
+                        {tag:'div','class':'row-fluid header',children:[
+                            {tag:'div','class':'span12',children:[
+                                {tag:'i','class':'icon-user'},
                                 {tag:'span',html:'${nickname}'},
                                 {tag:'time',html:'${date}'}
                             ]}
                         ]},
-                        {tag:'div',class:'row-fluid',children:[
-                            {tag:'div',class:'span12 content  comment-new',html:'${content}'}
+                        {tag:'div','class':'row-fluid',children:[
+                            {tag:'div','class':'span12 content  comment-new',html:'${content}'}
                         ]}
                     ]}
                 ]}
@@ -215,7 +220,7 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
                     canSend = true;
                 });
         }
-
+        var first_get = true;
         var lastComment;
         function getComments(transform_type){
             if(lastComment){
@@ -230,6 +235,10 @@ $src = Pages::getImageSrc('author_image','thumb',$model->id,$model->author_image
                 dataType:'json'
             }).done(function( data ) {
                     if(data.length > 0){
+                        if(first_get){
+                            $('#com-title').html('<h4>Коментарі:</h4>');
+                            first_get = false;
+                        }
                         $('#comments').json2html(data,transform_type);
                         lastComment = data[data.length - 1];
                         setTimeout(function(){

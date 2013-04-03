@@ -1,7 +1,7 @@
 <?php
 
 
-//date_default_timezone_set('Europe/Kiev');
+date_default_timezone_set('Europe/Kiev');
 
 
 return array(
@@ -42,7 +42,8 @@ return array(
 	),
 
 	'params' => array(
-        'adminEmail'=>"zhelamskaya.n@ukr.net",
+        'adminEmail'=>"makarevich.nikolay@gmail.com",
+        //'adminEmail'=>"uchihaveha@gmail.com",
 		'sitePath' 	=> dirname(dirname(dirname(__FILE__))) . '/',
         'site'=> dirname(dirname(__DIR__)),
         'dataRelPath' => 'data/',

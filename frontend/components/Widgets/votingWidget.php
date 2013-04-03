@@ -16,7 +16,6 @@ class votingWidget extends CWidget
 
     public function run()
     {
-        $cookie = isset(Yii::app()->request->cookies['voting']) ? Yii::app()->request->cookies['voting'] : false;
         Yii::app()->getModule('Voting');
         $criteria = new CDbCriteria();
         $criteria->compare('t.visible', 1);
@@ -25,7 +24,8 @@ class votingWidget extends CWidget
         $voting = Voting::model()->with(array('questions'))->find($criteria);
         if ($voting) {
             $html = '';
-            if (!$cookie || $cookie != $voting->id) {
+            $user_voted= VotingUsers::model()->findByAttributes(array('voting_id'=>$voting->id,'user_id'=>Yii::app()->user->id));
+            if (!Yii::app()->user->isGuest && !$user_voted) {
                 $html .= CHtml::openTag('div', array('class' => 'voting'));
                 $html .= CHtml::openTag('div', array('class' => 'title'));
                 $html .= CHtml::openTag('i', array('class' => 'icon-vote')) . CHtml::closeTag('i');

@@ -1,6 +1,6 @@
 <?php
 
-class DefaultController extends AdminController
+class DefaultController extends CController
 {
 
 public $replace = array('#','!', ')','(',',',';',':','+','\'','&','"','?');
@@ -35,7 +35,7 @@ public $stopWords = array(
         $data = $this->getWords();
         foreach($data as  $val){
             $id = $val['id'];
-            $text = strip_tags($val['content']);
+            $text = strip_tags($val['content']).' '.strip_tags($val['author_name']);
             $text = str_replace($this->special_replace,' ',$text);
             $text = preg_replace ("/[^a-zA-ZА-ЯІЇЄҐа-яіїєґ0-9\s\t\r\n]/iu","",$text);
             $text = preg_replace("/(\s|\t|\r|\n|\v|\e)+/iu", " ", $text);
@@ -100,7 +100,7 @@ public $stopWords = array(
 		//$this->render('index');
 	}
     private function getWords(){
-        $sql = "SELECT id,content FROM pages";
+        $sql = "SELECT id,content,author_name FROM pages";
         $command=$this->connection->createCommand($sql);
         return $command->queryAll();
     }

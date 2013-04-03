@@ -80,7 +80,7 @@ class SearchController extends FrontendController
 
     public static  function getItemData($id,$words){
         $connection=Yii::app()->db;
-        $sql = "SELECT content,title,url,main_image,id FROM pages WHERE id =".$id;
+        $sql = "SELECT content,title,url,main_image,id,date,author_name FROM pages WHERE id =".$id;
         $command=$connection->createCommand($sql);
         $row=$command->query()->readAll();
         if(isset($row[0])){
@@ -88,6 +88,8 @@ class SearchController extends FrontendController
             $data['main_image'] = $row[0]['main_image'];
             $data['title'] = $row[0]['title'];
             $data['url'] = $row[0]['url'];
+            $data['date'] = $row[0]['date'];
+            $data['author_name'] = $row[0]['author_name'];
             $body = strip_tags($row[0]['content']);
             $words = explode(' ',$words);
             $len_text = 800;

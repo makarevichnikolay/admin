@@ -10,7 +10,7 @@ $url = Yii::app()->createUrl('Pages/FrontendNews/view',array('url'=>$data->url))
 ?>
 <article class="row-fluid dose">
     <figure class="left-block">
-        <?php echo CHtml::link(Chtml::image(Pages::getImageSrc('main_image','thumb2',$data->id,$data->main_image)),$url) ?>
+        <?php echo CHtml::link(Chtml::image(Pages::getImageSrc('main_image','thumb',$data->id,$data->main_image)),$url) ?>
     </figure>
     <div class="right-block">
         <div class="content">

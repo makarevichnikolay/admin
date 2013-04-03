@@ -25,7 +25,19 @@
 </head>
 
 <body>
+<script type="text/javascript">
 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39504842-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
 <?php
 Yii::app()->getModule('Banners');
 $banner = Banners::getBanner(1);
@@ -155,11 +167,16 @@ if(!empty($banner)):
                     </div>
                 </section>
                 <aside class="span3 right-column">
+                        <?php
+                          $banner = Banners::getBanner(4);
+                          if(!empty($banner)):
+                        ?>
                         <div class="row-fluid">
                             <?php
-                            echo Banners::getBanner(4);
+                            echo $banner;
                             ?>
                         </div>
+                        <?php endif;?>
                         <div class="row-fluid">
                             <?php
                             if($this->beginCache('photo_new', array('duration'=>$cacheTime))) {
@@ -174,16 +191,26 @@ if(!empty($banner)):
                                 $this->endCache(); }
                             ?>
                         </div>
+                        <?php
+                          $banner = Banners::getBanner(5);
+                          if(!empty($banner)):
+                        ?>
                         <div class="row-fluid">
                             <?php
-                            echo Banners::getBanner(5);
+                            echo $banner;
                             ?>
                         </div>
+                        <?php endif;?>
+                        <?php
+                           $banner = Banners::getBanner(6);
+                            if(!empty($banner)):
+                        ?>
                         <div class="row-fluid">
                             <?php
-                            echo Banners::getBanner(6);
+                            echo $banner;
                             ?>
                         </div>
+                        <?php endif;?>
                         <div class="row-fluid" id="voting-container">
                             <?php
                                $this->widget('application.components.Widgets.votingWidget');

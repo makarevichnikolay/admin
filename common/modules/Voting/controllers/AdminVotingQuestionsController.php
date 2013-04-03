@@ -26,6 +26,7 @@ class AdminVotingQuestionsController extends AdminController
     public function actionCreate()
     {
         $model=new VotingQuestions;
+        $model->count = 0;
         $this->performAjaxValidation($model);
         if(isset($_POST['VotingQuestions']))
         {
@@ -52,6 +53,12 @@ class AdminVotingQuestionsController extends AdminController
     public function actionUpdate($id)
     {
         $model=$this->loadModel($id);
+        $count = VotingAnswers::model()->findByAttributes(array('question_id'=>$id));
+        if($count){
+            $model->count = $count->count;
+        }else{
+            $model->count = 0;
+        }
         $this->performAjaxValidation($model);
         if(isset($_POST['VotingQuestions']))
         {

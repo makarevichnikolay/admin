@@ -25,7 +25,7 @@ $this->breadcrumbs = array();
              'content'=>$this->widget('bootstrap.widgets.TbListView', array(
                  'dataProvider'=>Pages::getFreshNews(),
                  'itemView'=>'common.modules.Pages.views.frontendNews._new',
-                 'template'=>'{items}'
+                 'template'=>'{items}{pager}'
              ),true),
              'active'=>true),
          array('label'=>'Найбільше читають', 'content'=>$this->widget('bootstrap.widgets.TbListView', array(

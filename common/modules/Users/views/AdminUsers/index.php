@@ -100,7 +100,7 @@ $this->widget(
             ),
             array(
                 'class' => 'bootstrap.widgets.TbButtonColumn',
-                'template' => '{comments}{update}{delete}',
+                'template' => '{comments}{update}',
                 'buttons' => array(
                     'comments' => array(
                         'url' => function($data)
@@ -115,12 +115,12 @@ $this->widget(
                             return Yii::app()->controller->createUrl("AdminUsers/update", array("id" => $data['id']));
                         },
                     ),
-                    'delete' => array(
+                   /* 'delete' => array(
                         'url' => function($data)
                         {
                             return Yii::app()->controller->createUrl("AdminUsers/delete", array("id" => $data['id'], "command" => "delete"));
                         },
-                    ),
+                    ),*/
                 ),
             ),
         ),

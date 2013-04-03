@@ -23,10 +23,9 @@ if(isset($data->pageInfo)){
         </figcaption>
     </figure>
     <div>
-        <a href="<?php echo $url ?>"><i class="css-icon css-icon-comment"><?php echo $count_comments  ?></i></a>
-        <i class="icon-eye-open"></i>
-        <span><?php echo $count_visited  ?></span>&nbsp
-        <i class="icon-pen"></i><a href="<?php echo $url.'#comment=1' ?>" class="comment">Коментувати</a>
+        <i class="icon-eye-open"></i><span><?php echo $count_visited  ?></span>&nbsp
+        <i class="icon-pen"></i><a href="<?php echo $url ?>"><i class="css-icon css-icon-comment"><?php echo $count_comments  ?></a></i>
+        <a href="<?php echo $url.'#comment=1' ?>" class="comment">Коментувати</a>
     </div>
 </article>
 

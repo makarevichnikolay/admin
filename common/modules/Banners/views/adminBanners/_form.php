@@ -1,7 +1,5 @@
 <?php
-/* @var $this AdminUsersController */
-/* @var $model Users */
-/* @var $form CActiveForm */
+
 ?>
 
 <div class="form">
@@ -35,7 +33,14 @@
                     'lang' => 'ru',
                     'minHeight' => 350,
                     'imageUpload' => Yii::app()->createAbsoluteUrl('Banners/adminBanners/imageUploadRedacotr', array('attr' => 'content2')),
-                    'imageGetJson' => Yii::app()->createUrl('Pages/adminBanners/imageListRedactor', array('attr' => 'content2')),
+                    'imageGetJson' => Yii::app()->createUrl('Banners/adminBanners/imageListRedactor', array('attr' => 'content2')),
+                    'fileUploadErrorCallback'=>new CJavaScriptExpression(
+                        'function(obj,json) { alert(json.error); }'
+                    ),
+                    'fileUpload'=>Yii::app()->createUrl('Banners/adminBanners/fileUpload',array(
+                        'attr'=>'content2'
+                    )),
+
 
                 )));?>
                 <?php echo $form->error($model, 'content'); ?>

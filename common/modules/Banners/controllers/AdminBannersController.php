@@ -8,15 +8,20 @@ class AdminBannersController extends AdminController
         return array(
             'imageUploadRedacotr'=>array(
                 'class'=>'common.ext.redactorjs.actions.ImageUpload',
-                'uploadPath'=>Yii::app()->params['dataPath'].'BannersImages/',
-                'uploadUrl'=>Yii::app()->params['dataUrl'].'BannersImages/',
+                'uploadPath'=>Yii::app()->params['dataPath'].'BannersImages',
+                'uploadUrl'=>Yii::app()->params['dataUrl'].'BannersImages',
                 'uploadCreate'=>true,
                 'permissions'=>0777,
             ),
             'imageListRedactor'=>array(
                 'class'=>'common.ext.redactorjs.actions.ImageList',
-                'uploadPath'=>Yii::app()->params['dataPath'].'BannersImages/',
-                'uploadUrl'=>Yii::app()->params['dataUrl'].'BannersImages/',
+                'uploadPath'=>Yii::app()->params['dataPath'].'BannersImages',
+                'uploadUrl'=>Yii::app()->params['dataUrl'].'BannersImages',
+            ),
+            'fileUpload'=>array(
+                'class'=>'common.ext.redactorjs.actions.FileUpload',
+                'uploadPath'=>Yii::app()->params['dataPath'].'BannersFiles',
+                'uploadUrl'=>Yii::app()->params['dataUrl'].'BannersFiles',
             ),
             // прочие действия
         );

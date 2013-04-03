@@ -33,6 +33,7 @@ return array(
                     'class' => 'URLRule',
                 ),
                 '/'=>'Default/index',
+                'rss'=>'Rss/index',
                 'Search'=>'Search/Search/Search',
 				'<module:\w+>/<controller:\w+>/<action:\w+>'=>'<module>/<controller>/<action>',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
